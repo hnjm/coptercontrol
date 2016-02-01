@@ -1,0 +1,630 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"76 ..\src\usb/usb_ch9.h
+[s S545 `uc 1 `uc 1 `ui 1 `uc 1 `uc 1 `uc 1 `uc 1 `ui 1 `ui 1 `ui 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S545 _USB_DEVICE_DESCRIPTOR bLength bDescriptorType bcdUSB bDeviceClass bDeviceSubClass bDeviceProtocol bMaxPacketSize0 idVendor idProduct bcdDevice iManufacturer iProduct iSerialNumber bNumConfigurations ]
+"231 ../src/usb_descriptors.c
+[s S595 `uc 1 `uc 1 `ui -> -> 1 `i `ux ]
+[n S595 . bLength bDscType string ]
+"236
+[s S596 `uc 1 `uc 1 `ui -> 27 `i ]
+[n S596 . bLength bDscType string ]
+"243
+[s S597 `uc 1 `uc 1 `ui -> 35 `i ]
+[n S597 . bLength bDscType string ]
+"260
+[s S598 `uc -> 29 `i ]
+[n S598 . report ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f2550.h
+[; <" UFRM equ 0F66h ;# ">
+"55
+[; <" UFRML equ 0F66h ;# ">
+"132
+[; <" UFRMH equ 0F67h ;# ">
+"171
+[; <" UIR equ 0F68h ;# ">
+"226
+[; <" UIE equ 0F69h ;# ">
+"281
+[; <" UEIR equ 0F6Ah ;# ">
+"331
+[; <" UEIE equ 0F6Bh ;# ">
+"381
+[; <" USTAT equ 0F6Ch ;# ">
+"440
+[; <" UCON equ 0F6Dh ;# ">
+"490
+[; <" UADDR equ 0F6Eh ;# ">
+"553
+[; <" UCFG equ 0F6Fh ;# ">
+"634
+[; <" UEP0 equ 0F70h ;# ">
+"765
+[; <" UEP1 equ 0F71h ;# ">
+"896
+[; <" UEP2 equ 0F72h ;# ">
+"1027
+[; <" UEP3 equ 0F73h ;# ">
+"1158
+[; <" UEP4 equ 0F74h ;# ">
+"1289
+[; <" UEP5 equ 0F75h ;# ">
+"1420
+[; <" UEP6 equ 0F76h ;# ">
+"1551
+[; <" UEP7 equ 0F77h ;# ">
+"1682
+[; <" UEP8 equ 0F78h ;# ">
+"1769
+[; <" UEP9 equ 0F79h ;# ">
+"1856
+[; <" UEP10 equ 0F7Ah ;# ">
+"1943
+[; <" UEP11 equ 0F7Bh ;# ">
+"2030
+[; <" UEP12 equ 0F7Ch ;# ">
+"2117
+[; <" UEP13 equ 0F7Dh ;# ">
+"2204
+[; <" UEP14 equ 0F7Eh ;# ">
+"2291
+[; <" UEP15 equ 0F7Fh ;# ">
+"2378
+[; <" PORTA equ 0F80h ;# ">
+"2534
+[; <" PORTB equ 0F81h ;# ">
+"2643
+[; <" PORTC equ 0F82h ;# ">
+"2796
+[; <" PORTE equ 0F84h ;# ">
+"3029
+[; <" LATA equ 0F89h ;# ">
+"3164
+[; <" LATB equ 0F8Ah ;# ">
+"3296
+[; <" LATC equ 0F8Bh ;# ">
+"3411
+[; <" TRISA equ 0F92h ;# ">
+"3416
+[; <" DDRA equ 0F92h ;# ">
+"3608
+[; <" TRISB equ 0F93h ;# ">
+"3613
+[; <" DDRB equ 0F93h ;# ">
+"3829
+[; <" TRISC equ 0F94h ;# ">
+"3834
+[; <" DDRC equ 0F94h ;# ">
+"4000
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"4058
+[; <" PIE1 equ 0F9Dh ;# ">
+"4131
+[; <" PIR1 equ 0F9Eh ;# ">
+"4204
+[; <" IPR1 equ 0F9Fh ;# ">
+"4277
+[; <" PIE2 equ 0FA0h ;# ">
+"4347
+[; <" PIR2 equ 0FA1h ;# ">
+"4417
+[; <" IPR2 equ 0FA2h ;# ">
+"4487
+[; <" EECON1 equ 0FA6h ;# ">
+"4552
+[; <" EECON2 equ 0FA7h ;# ">
+"4558
+[; <" EEDATA equ 0FA8h ;# ">
+"4564
+[; <" EEADR equ 0FA9h ;# ">
+"4570
+[; <" RCSTA equ 0FABh ;# ">
+"4575
+[; <" RCSTA1 equ 0FABh ;# ">
+"4779
+[; <" TXSTA equ 0FACh ;# ">
+"4784
+[; <" TXSTA1 equ 0FACh ;# ">
+"5076
+[; <" TXREG equ 0FADh ;# ">
+"5081
+[; <" TXREG1 equ 0FADh ;# ">
+"5087
+[; <" RCREG equ 0FAEh ;# ">
+"5092
+[; <" RCREG1 equ 0FAEh ;# ">
+"5098
+[; <" SPBRG equ 0FAFh ;# ">
+"5103
+[; <" SPBRG1 equ 0FAFh ;# ">
+"5109
+[; <" SPBRGH equ 0FB0h ;# ">
+"5115
+[; <" T3CON equ 0FB1h ;# ">
+"5237
+[; <" TMR3 equ 0FB2h ;# ">
+"5243
+[; <" TMR3L equ 0FB2h ;# ">
+"5249
+[; <" TMR3H equ 0FB3h ;# ">
+"5255
+[; <" CMCON equ 0FB4h ;# ">
+"5350
+[; <" CVRCON equ 0FB5h ;# ">
+"5434
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5439
+[; <" CCP1AS equ 0FB6h ;# ">
+"5563
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"5568
+[; <" CCP1DEL equ 0FB7h ;# ">
+"5602
+[; <" BAUDCON equ 0FB8h ;# ">
+"5607
+[; <" BAUDCTL equ 0FB8h ;# ">
+"5781
+[; <" CCP2CON equ 0FBAh ;# ">
+"5844
+[; <" CCPR2 equ 0FBBh ;# ">
+"5850
+[; <" CCPR2L equ 0FBBh ;# ">
+"5856
+[; <" CCPR2H equ 0FBCh ;# ">
+"5862
+[; <" CCP1CON equ 0FBDh ;# ">
+"5925
+[; <" CCPR1 equ 0FBEh ;# ">
+"5931
+[; <" CCPR1L equ 0FBEh ;# ">
+"5937
+[; <" CCPR1H equ 0FBFh ;# ">
+"5943
+[; <" ADCON2 equ 0FC0h ;# ">
+"6013
+[; <" ADCON1 equ 0FC1h ;# ">
+"6103
+[; <" ADCON0 equ 0FC2h ;# ">
+"6225
+[; <" ADRES equ 0FC3h ;# ">
+"6231
+[; <" ADRESL equ 0FC3h ;# ">
+"6237
+[; <" ADRESH equ 0FC4h ;# ">
+"6243
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6304
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6373
+[; <" SSPSTAT equ 0FC7h ;# ">
+"6639
+[; <" SSPADD equ 0FC8h ;# ">
+"6645
+[; <" SSPBUF equ 0FC9h ;# ">
+"6651
+[; <" T2CON equ 0FCAh ;# ">
+"6748
+[; <" PR2 equ 0FCBh ;# ">
+"6753
+[; <" MEMCON equ 0FCBh ;# ">
+"6857
+[; <" TMR2 equ 0FCCh ;# ">
+"6863
+[; <" T1CON equ 0FCDh ;# ">
+"6967
+[; <" TMR1 equ 0FCEh ;# ">
+"6973
+[; <" TMR1L equ 0FCEh ;# ">
+"6979
+[; <" TMR1H equ 0FCFh ;# ">
+"6985
+[; <" RCON equ 0FD0h ;# ">
+"7133
+[; <" WDTCON equ 0FD1h ;# ">
+"7160
+[; <" HLVDCON equ 0FD2h ;# ">
+"7165
+[; <" LVDCON equ 0FD2h ;# ">
+"7429
+[; <" OSCCON equ 0FD3h ;# ">
+"7511
+[; <" T0CON equ 0FD5h ;# ">
+"7580
+[; <" TMR0 equ 0FD6h ;# ">
+"7586
+[; <" TMR0L equ 0FD6h ;# ">
+"7592
+[; <" TMR0H equ 0FD7h ;# ">
+"7598
+[; <" STATUS equ 0FD8h ;# ">
+"7676
+[; <" FSR2 equ 0FD9h ;# ">
+"7682
+[; <" FSR2L equ 0FD9h ;# ">
+"7688
+[; <" FSR2H equ 0FDAh ;# ">
+"7694
+[; <" PLUSW2 equ 0FDBh ;# ">
+"7700
+[; <" PREINC2 equ 0FDCh ;# ">
+"7706
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"7712
+[; <" POSTINC2 equ 0FDEh ;# ">
+"7718
+[; <" INDF2 equ 0FDFh ;# ">
+"7724
+[; <" BSR equ 0FE0h ;# ">
+"7730
+[; <" FSR1 equ 0FE1h ;# ">
+"7736
+[; <" FSR1L equ 0FE1h ;# ">
+"7742
+[; <" FSR1H equ 0FE2h ;# ">
+"7748
+[; <" PLUSW1 equ 0FE3h ;# ">
+"7754
+[; <" PREINC1 equ 0FE4h ;# ">
+"7760
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"7766
+[; <" POSTINC1 equ 0FE6h ;# ">
+"7772
+[; <" INDF1 equ 0FE7h ;# ">
+"7778
+[; <" WREG equ 0FE8h ;# ">
+"7784
+[; <" FSR0 equ 0FE9h ;# ">
+"7790
+[; <" FSR0L equ 0FE9h ;# ">
+"7796
+[; <" FSR0H equ 0FEAh ;# ">
+"7802
+[; <" PLUSW0 equ 0FEBh ;# ">
+"7808
+[; <" PREINC0 equ 0FECh ;# ">
+"7814
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"7820
+[; <" POSTINC0 equ 0FEEh ;# ">
+"7826
+[; <" INDF0 equ 0FEFh ;# ">
+"7832
+[; <" INTCON3 equ 0FF0h ;# ">
+"7923
+[; <" INTCON2 equ 0FF1h ;# ">
+"7999
+[; <" INTCON equ 0FF2h ;# ">
+"8135
+[; <" PROD equ 0FF3h ;# ">
+"8141
+[; <" PRODL equ 0FF3h ;# ">
+"8147
+[; <" PRODH equ 0FF4h ;# ">
+"8153
+[; <" TABLAT equ 0FF5h ;# ">
+"8161
+[; <" TBLPTR equ 0FF6h ;# ">
+"8167
+[; <" TBLPTRL equ 0FF6h ;# ">
+"8173
+[; <" TBLPTRH equ 0FF7h ;# ">
+"8179
+[; <" TBLPTRU equ 0FF8h ;# ">
+"8187
+[; <" PCLAT equ 0FF9h ;# ">
+"8194
+[; <" PC equ 0FF9h ;# ">
+"8200
+[; <" PCL equ 0FF9h ;# ">
+"8206
+[; <" PCLATH equ 0FFAh ;# ">
+"8212
+[; <" PCLATU equ 0FFBh ;# ">
+"8218
+[; <" STKPTR equ 0FFCh ;# ">
+"8293
+[; <" TOS equ 0FFDh ;# ">
+"8299
+[; <" TOSL equ 0FFDh ;# ">
+"8305
+[; <" TOSH equ 0FFEh ;# ">
+"8311
+[; <" TOSU equ 0FFFh ;# ">
+"163 ../src/usb_descriptors.c
+[v _device_dsc `CS545 ~T0 @X0 1 e ]
+[i _device_dsc
+:U ..
+:U ..
+"165
+-> -> 18 `i `uc
+"166
+-> -> 1 `i `uc
+"167
+-> -> 512 `i `ui
+"168
+-> -> 0 `i `uc
+"169
+-> -> 0 `i `uc
+"170
+-> -> 0 `i `uc
+"171
+-> -> 8 `i `uc
+"172
+-> -> 1240 `i `ui
+"173
+-> -> 63 `i `ui
+"174
+-> -> 2 `i `ui
+"175
+-> -> 1 `i `uc
+"176
+-> -> 2 `i `uc
+"177
+-> -> 0 `i `uc
+"179
+-> -> 1 `i `uc
+..
+..
+]
+"182
+[v _configDescriptor1 `Cuc ~T0 @X0 -> 0 `x e ]
+[i _configDescriptor1
+:U ..
+"184
+-> -> 9 `i `uc
+"185
+-> -> 2 `i `uc
+"186
+-> -> 41 `i `uc
+-> -> 0 `i `uc
+"187
+-> -> 1 `i `uc
+"188
+-> -> 1 `i `uc
+"189
+-> -> 0 `i `uc
+"190
+-> | << -> 1 `i -> 7 `i << -> 1 `i -> 6 `i `uc
+"191
+-> -> 50 `i `uc
+"194
+-> -> 9 `i `uc
+"195
+-> -> 4 `i `uc
+"196
+-> -> 0 `i `uc
+"197
+-> -> 0 `i `uc
+"198
+-> -> 2 `i `uc
+"199
+-> -> 3 `i `uc
+"200
+-> -> 0 `i `uc
+"201
+-> -> 0 `i `uc
+"202
+-> -> 0 `i `uc
+"205
+-> -> 9 `i `uc
+"206
+-> -> 33 `i `uc
+"207
+-> -> 17 `i `uc
+-> -> 1 `i `uc
+"208
+-> -> 0 `i `uc
+"209
+-> -> 1 `i `uc
+"210
+-> -> 34 `i `uc
+"211
+-> -> 29 `i `uc
+-> -> 0 `i `uc
+"214
+-> -> 7 `i `uc
+"215
+-> -> 5 `i `uc
+"216
+-> | -> 1 `i -> 128 `i `uc
+"217
+-> -> 3 `i `uc
+"218
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+"219
+-> -> 1 `i `uc
+"222
+-> -> 7 `i `uc
+"223
+-> -> 5 `i `uc
+"224
+-> | -> 1 `i -> 0 `i `uc
+"225
+-> -> 3 `i `uc
+"226
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+"228
+-> -> 1 `i `uc
+..
+]
+"231
+[v _sd000 `CS595 ~T0 @X0 1 e ]
+[i _sd000
+:U ..
+:U ..
+"232
+-> -> # _sd000 `ui `uc
+-> -> 3 `i `uc
+:U ..
+"233
+-> -> 1033 `i `ui
+..
+..
+..
+]
+"236
+[v _sd001 `CS596 ~T0 @X0 1 e ]
+[i _sd001
+:U ..
+:U ..
+"237
+-> -> # _sd001 `ui `uc
+-> -> 3 `i `uc
+:U ..
+"238
+-> 65 `ui
+-> 32 `ui
+-> 77 `ui
+-> 105 `ui
+-> 99 `ui
+-> 114 `ui
+-> 111 `ui
+-> 99 `ui
+-> 104 `ui
+-> 105 `ui
+-> 112 `ui
+-> 32 `ui
+"239
+-> 84 `ui
+-> 101 `ui
+-> 99 `ui
+-> 104 `ui
+-> 110 `ui
+-> 111 `ui
+-> 108 `ui
+-> 111 `ui
+-> 103 `ui
+-> 121 `ui
+-> 32 `ui
+-> 73 `ui
+-> 110 `ui
+-> 99 `ui
+"240
+-> 46 `ui
+..
+..
+..
+]
+"243
+[v _sd002 `CS597 ~T0 @X0 1 e ]
+[i _sd002
+:U ..
+:U ..
+"244
+-> -> # _sd002 `ui `uc
+-> -> 3 `i `uc
+:U ..
+"245
+-> 83 `ui
+-> 105 `ui
+-> 109 `ui
+-> 112 `ui
+-> 108 `ui
+-> 101 `ui
+-> 32 `ui
+-> 72 `ui
+-> 73 `ui
+-> 68 `ui
+"246
+-> 32 `ui
+-> 68 `ui
+-> 101 `ui
+-> 118 `ui
+-> 105 `ui
+-> 99 `ui
+-> 101 `ui
+-> 32 `ui
+-> 68 `ui
+-> 101 `ui
+"247
+-> 109 `ui
+-> 111 `ui
+-> 32 `ui
+-> 40 `ui
+-> 45 `ui
+-> 62 `ui
+..
+..
+..
+]
+"260
+[v _hid_rpt01 `CS598 ~T0 @X0 1 e ]
+[i _hid_rpt01
+:U ..
+:U ..
+:U ..
+"262
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 255 `i `uc
+"263
+-> -> 9 `i `uc
+-> -> 1 `i `uc
+"264
+-> -> 161 `i `uc
+-> -> 1 `i `uc
+"265
+-> -> 25 `i `uc
+-> -> 1 `i `uc
+"266
+-> -> 41 `i `uc
+-> -> 64 `i `uc
+"267
+-> -> 21 `i `uc
+-> -> 1 `i `uc
+"269
+-> -> 38 `i `uc
+-> -> 255 `i `uc
+-> -> 0 `i `uc
+"270
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+"271
+-> -> 149 `i `uc
+-> -> 64 `i `uc
+"272
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+"273
+-> -> 25 `i `uc
+-> -> 1 `i `uc
+"274
+-> -> 41 `i `uc
+-> -> 64 `i `uc
+"275
+-> -> 145 `i `uc
+-> -> 0 `i `uc
+"276
+-> -> 192 `i `uc
+..
+..
+..
+]
+[v F5436 `*Cuc ~T0 @X0 1 t ]
+"281
+[v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
+[i _USB_CD_Ptr
+:U ..
+"284
+[v F5437 `*Cuc ~T0 @X0 1 t ]
+-> -> &U _configDescriptor1 `C*Cuc `*Cuc
+..
+]
+[v F5441 `*Cuc ~T0 @X0 1 t ]
+"287
+[v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
+[i _USB_SD_Ptr
+:U ..
+"289
+[v F5442 `*Cuc ~T0 @X0 1 t ]
+-> -> &U _sd000 `C*Cuc `*Cuc
+"290
+[v F5444 `*Cuc ~T0 @X0 1 t ]
+-> -> &U _sd001 `C*Cuc `*Cuc
+"292
+[v F5446 `*Cuc ~T0 @X0 1 t ]
+-> -> &U _sd002 `C*Cuc `*Cuc
+..
+]
