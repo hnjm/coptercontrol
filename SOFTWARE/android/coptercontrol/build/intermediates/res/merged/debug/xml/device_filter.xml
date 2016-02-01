@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- 04d8 is hex. 1240 in decimal -->
+    <!-- 003f is hex. 63 in decimal -->
+    <usb-device vendor-id="1240" product-id="63"  />
+</resources>

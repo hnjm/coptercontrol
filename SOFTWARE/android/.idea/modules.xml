@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/coptercontrol.iml" filepath="$PROJECT_DIR$/coptercontrol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coptercontrol/coptercontrol-coptercontrol.iml" filepath="$PROJECT_DIR$/coptercontrol/coptercontrol-coptercontrol.iml" />
+    </modules>
+  </component>
+</project>
