@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/coptercontrol.iml" filepath="$PROJECT_DIR$/coptercontrol.iml" />
-      <module fileurl="file://$PROJECT_DIR$/coptercontrol/coptercontrol-coptercontrol.iml" filepath="$PROJECT_DIR$/coptercontrol/coptercontrol-coptercontrol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coptercontrol/coptercontrol.iml" filepath="$PROJECT_DIR$/coptercontrol/coptercontrol.iml" />
     </modules>
   </component>
 </project>

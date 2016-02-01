@@ -12,12 +12,12 @@
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
@@ -122,6 +122,10 @@
     {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",

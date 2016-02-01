@@ -12,6 +12,10 @@
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_switch_track_mtrl_alpha.9.png"
     },

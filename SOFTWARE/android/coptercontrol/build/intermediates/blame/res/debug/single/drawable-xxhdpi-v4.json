@@ -136,6 +136,10 @@
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\coptercontrol\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
