@@ -1,20 +1,16 @@
 /********************************************************************
  FileName:     	usb_descriptors.c
  Dependencies:	See INCLUDES section
- Processor:	PIC18 USB Microcontrollers
- Hardware:	The code is natively intended to be used on the following
-                  hardware platforms: PICDEM� FS USB Demo Board,
-                  PIC18F87J50 FS USB Plug-In Module.  The firmware may be
-                  modified for use on other USB platforms by editing the
-                  HardwareProfile.h file.
- Complier:      Microchip C18 (for PIC18) or C30 (for PIC24)
- Company:       Microchip Technology, Inc.
+ Processor:		PIC16, PIC18, PIC24, or dsPIC USB Microcontrollers
+ Complier:  	Microchip XC8 (for PIC16/PIC18), C18 (for PIC18)
+ 				or XC16 (for PIC24/dsPIC33 devices)
+ Company:		Microchip Technology, Inc.
 
  Software License Agreement:
 
  The software supplied herewith by Microchip Technology Incorporated
- (the �Company�) for its PIC� Microcontroller is intended and
- supplied to you, the Company�s customer, for use solely and
+ (the "Company") for its PIC(R) Microcontroller is intended and
+ supplied to you, the Company's customer, for use solely and
  exclusively on Microchip PIC Microcontroller products. The
  software is owned by the Company and/or its supplier, and is
  protected under applicable copyright laws. All rights are reserved.
@@ -23,7 +19,7 @@
  civil liability for the breach of the terms and conditions of this
  license.
 
- THIS SOFTWARE IS PROVIDED IN AN �AS IS� CONDITION. NO WARRANTIES,
+ THIS SOFTWARE IS PROVIDED IN AN "AS IS" CONDITION. NO WARRANTIES,
  WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED
  TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
  PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT,
@@ -43,7 +39,7 @@ needs to be the correct length for the data type of the entry.
 
 [Configuration Descriptors]
 The configuration descriptor was changed in v2.x from a structure
-to a BYTE array.  Given that the configuration is now a byte array
+to a uint8_t array.  Given that the configuration is now a byte array
 each byte of multi-byte fields must be listed individually.  This
 means that for fields like the total size of the configuration where
 the field is a 16-bit value "64,0," is the correct entry for a
@@ -59,7 +55,7 @@ _RWU tells the USB host that this device supports Remote Wakeup.
 
 [Endpoint Descriptors]
 Like the configuration descriptor, the endpoint descriptors were 
-changed in v2.x of the stack from a structure to a BYTE array.  As
+changed in v2.x of the stack from a structure to a uint8_t array.  As
 endpoint descriptors also has a field that are multi-byte entities,
 please be sure to specify both bytes of the field.  For example, for
 the endpoint size an endpoint that is 64 bytes needs to have the size
@@ -153,11 +149,13 @@ state according to the definition in the USB specification.
 #define __USB_DESCRIPTORS_C
 
 /** INCLUDES *******************************************************/
-#include "USB/usb.h"
-#include "USB/usb_device_hid.h"
+#include "usb.h"
+#include "usb_device_hid.h"
 
 /** CONSTANTS ******************************************************/
-
+#if defined(__18CXX)
+#pragma romdata
+#endif
 
 /* Device Descriptor */
 const USB_DEVICE_DESCRIPTOR device_dsc=
@@ -170,8 +168,8 @@ const USB_DEVICE_DESCRIPTOR device_dsc=
     0x00,                   // Protocol code
     USB_EP0_BUFF_SIZE,          // Max packet size for EP0, see usb_config.h
     0x04D8,                 // Vendor ID
-    0x003F,                 // Product ID: Mouse in a circle fw demo
-    0x0002,                 // Device release number in BCD format
+    0x003F,                 // Product ID: Custom HID device demo
+    0x0100,                 // Device release number in BCD format
     0x01,                   // Manufacturer string index
     0x02,                   // Product string index
     0x00,                   // Device serial number string index
@@ -181,50 +179,50 @@ const USB_DEVICE_DESCRIPTOR device_dsc=
 /* Configuration 1 Descriptor */
 const uint8_t configDescriptor1[]={
     /* Configuration Descriptor */
-    0x09,//sizeof(USB_CFG_DSC),     // Size of this descriptor in bytes
-    USB_DESCRIPTOR_CONFIGURATION,   // CONFIGURATION descriptor type
-    0x29,0x00,                      // Total length of data for this cfg
-    1,                              // Number of interfaces in this cfg
-    1,                              // Index value of this configuration
-    0,                              // Configuration string index
+    0x09,//sizeof(USB_CFG_DSC),    // Size of this descriptor in bytes
+    USB_DESCRIPTOR_CONFIGURATION,                // CONFIGURATION descriptor type
+    0x29,0x00,            // Total length of data for this cfg
+    1,                      // Number of interfaces in this cfg
+    1,                      // Index value of this configuration
+    0,                      // Configuration string index
     _DEFAULT | _SELF,               // Attributes, see usb_device.h
-    50,                             // Max power consumption (2X mA)
-
+    50,                     // Max power consumption (2X mA)
+							
     /* Interface Descriptor */
-    0x09,//sizeof(USB_INTF_DSC),    // Size of this descriptor in bytes
-    USB_DESCRIPTOR_INTERFACE,       // INTERFACE descriptor type
-    0,                              // Interface Number
-    0,                              // Alternate Setting Number
-    2,                              // Number of endpoints in this intf
-    HID_INTF,                       // Class code
-    0,                              // Subclass code
-    0,                              // Protocol code
-    0,                              // Interface string index
+    0x09,//sizeof(USB_INTF_DSC),   // Size of this descriptor in bytes
+    USB_DESCRIPTOR_INTERFACE,               // INTERFACE descriptor type
+    0,                      // Interface Number
+    0,                      // Alternate Setting Number
+    2,                      // Number of endpoints in this intf
+    HID_INTF,               // Class code
+    0,     // Subclass code
+    0,     // Protocol code
+    0,                      // Interface string index
 
     /* HID Class-Specific Descriptor */
-    0x09,//sizeof(USB_HID_DSC)+3,   // Size of this descriptor in bytes
-    DSC_HID,                        // HID descriptor type
-    0x11,0x01,                      // HID Spec Release Nr. in BCD format (1.11)
-    0x00,                           // Country Code (0x00 for Not supported)
-    HID_NUM_OF_DSC,                 // Number of class descriptors, see usbcfg.h
-    DSC_RPT,                        // Report descriptor type
-    HID_RPT01_SIZE,0x00,            //sizeof(hid_rpt01) report descriptor
+    0x09,//sizeof(USB_HID_DSC)+3,    // Size of this descriptor in bytes
+    DSC_HID,                // HID descriptor type
+    0x11,0x01,                 // HID Spec Release Number in BCD format (1.11)
+    0x00,                   // Country Code (0x00 for Not supported)
+    HID_NUM_OF_DSC,         // Number of class descriptors, see usbcfg.h
+    DSC_RPT,                // Report descriptor type
+    HID_RPT01_SIZE,0x00,//sizeof(hid_rpt01),      // Size of the report descriptor
+    
+    /* Endpoint Descriptor */
+    0x07,/*sizeof(USB_EP_DSC)*/
+    USB_DESCRIPTOR_ENDPOINT,    //Endpoint Descriptor
+    CUSTOM_DEVICE_HID_EP | _EP_IN,                   //EndpointAddress
+    _INTERRUPT,                       //Attributes
+    0x40,0x00,                  //size
+    0x01,                        //Interval
 
     /* Endpoint Descriptor */
     0x07,/*sizeof(USB_EP_DSC)*/
-    USB_DESCRIPTOR_ENDPOINT,        //Endpoint Descriptor
-    HID_EP | _EP_IN,                //EndpointAddress
-    _INTERRUPT,                     //Attributes
-    0x40,0x00,                      //size
-    0x01,                           //Interval
-
-    /* Endpoint Descriptor */
-    0x07,/*sizeof(USB_EP_DSC)*/
-    USB_DESCRIPTOR_ENDPOINT,        //Endpoint Descriptor
-    HID_EP | _EP_OUT,               //EndpointAddress
-    _INTERRUPT,                     //Attributes
-    0x40,0x00,                      //size
-    0x01                            //Interval
+    USB_DESCRIPTOR_ENDPOINT,    //Endpoint Descriptor
+    CUSTOM_DEVICE_HID_EP | _EP_OUT,                   //EndpointAddress
+    _INTERRUPT,                       //Attributes
+    0x40,0x00,                  //size
+    0x01                        //Interval
 };
 
 //Language code string descriptor
@@ -233,47 +231,36 @@ sizeof(sd000),USB_DESCRIPTOR_STRING,{0x0409
 }};
 
 //Manufacturer string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[27];}sd001={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[25];}sd001={
 sizeof(sd001),USB_DESCRIPTOR_STRING,
-{'A',' ','M','i','c','r','o','c','h','i','p',' ',
+{'M','i','c','r','o','c','h','i','p',' ',
 'T','e','c','h','n','o','l','o','g','y',' ','I','n','c','.'
 }};
 
 //Product string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[35];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[22];}sd002={
 sizeof(sd002),USB_DESCRIPTOR_STRING,
-{'S','i','m','p','l','e',' ','H','I','D',
- ' ','D','e','v','i','c','e',' ','D','e',
- 'm','o',' ','(','-','>',
-#if defined(__18F14K50)       
-    '1','8','F','1','4','K','5','0',')'
-#elif defined (__18F4550)
-    ' ','1','8','F','4','5','5','0',')'
-#elif defined(__18F27J53)
-    '1','8','F','2','7','J','5','3',')'
-#else
-    #warning "PIC ???"
-#endif
+{'S','i','m','p','l','e',' ','H','I','D',' ',
+'D','e','v','i','c','e',' ','D','e','m','o'
 }};
 
 //Class specific descriptor - HID 
 const struct{uint8_t report[HID_RPT01_SIZE];}hid_rpt01={
 {
-    0x06, 0x00, 0xFF,   // Usage Page = 0xFF00 (Vendor Defined Page 1)
-    0x09, 0x01,         // Usage (Vendor Usage 1)
-    0xA1, 0x01,         // Collection (Application)
-    0x19, 0x01,         //      Usage Minimum 
-    0x29, 0x40,         //      Usage Maximum 	//64 input usages total (0x01 to 0x40)
-    0x15, 0x01,         //      Logical Minimum (data bytes in the report may have minimum value = 0x00)
-//    0x25, 0x40,      	//      Logical Maximum (data bytes in the report may have maximum value = 0x00FF = unsigned 255)
+    0x06, 0x00, 0xFF,       // Usage Page = 0xFF00 (Vendor Defined Page 1)
+    0x09, 0x01,             // Usage (Vendor Usage 1)
+    0xA1, 0x01,             // Collection (Application)
+    0x19, 0x01,             //      Usage Minimum 
+    0x29, 0x40,             //      Usage Maximum   //64 input usages total (0x01 to 0x40)
+    0x15, 0x00,             //      Logical Minimum (data bytes in the report may have minimum value = 0x00)
     0x26, 0xFF, 0x00,       //      Logical Maximum (data bytes in the report may have maximum value = 0x00FF = unsigned 255)
-    0x75, 0x08,         //      Report Size: 8-bit field size
-    0x95, 0x40,         //      Report Count: Make sixty-four 8-bit fields (the next time the parser hits an "Input", "Output", or "Feature" item)
-    0x81, 0x00,         //      Input (Data, Array, Abs): Instantiates input packet fields based on the above report size, count, logical min/max, and usage.
-    0x19, 0x01,         //      Usage Minimum 
-    0x29, 0x40,         //      Usage Maximum 	//64 output usages total (0x01 to 0x40)
-    0x91, 0x00,         //      Output (Data, Array, Abs): Instantiates output packet fields.  Uses same report size and count as "Input" fields, since nothing new/different was specified to the parser since the "Input" item.
-    0xC0}                // End Collection
+    0x75, 0x08,             //      Report Size: 8-bit field size
+    0x95, 0x40,             //      Report Count: Make sixty-four 8-bit fields (the next time the parser hits an "Input", "Output", or "Feature" item)
+    0x81, 0x00,             //      Input (Data, Array, Abs): Instantiates input packet fields based on the above report size, count, logical min/max, and usage.
+    0x19, 0x01,             //      Usage Minimum 
+    0x29, 0x40,             //      Usage Maximum 	//64 output usages total (0x01 to 0x40)
+    0x91, 0x00,             //      Output (Data, Array, Abs): Instantiates output packet fields.  Uses same report size and count as "Input" fields, since nothing new/different was specified to the parser since the "Input" item.
+    0xC0}                   // End Collection
 };                  
 
 

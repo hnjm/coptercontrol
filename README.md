@@ -5,7 +5,7 @@ A dron with Android brain <br />
 <br />
 
 A drone with Android brain.<br />
-Consist in a little external USB module plugged into a Android. This module also have outputs PWM (0v-3v) that allow connect any self-powered engines. Velocity of engines are controlled by the PWM.<br />
+Consist in a little external USB module plugged into a Android. This module also have PWM outputs (0v-3v) that allow connect any self-powered engines. Velocity of engines are controlled by the PWM.<br />
 Android device, the USB module and the desired engines designates the drone, at same time other Android application in the client allowing the control of the first through the AppWarp API for communication.<br />
 <br />
 
@@ -15,9 +15,11 @@ Materials: <br />
 <br />
 
 Includes: <br />
-- Android project using SCEJ API for 3D visualization, USB API, etc... <br />
-- Proteus project <br />
-- MPLABX project for pic 18F2550 <br />
+- Software: <br />
+- Android brain project using SCEJ API for 3D visualization, USB API, etc... <br />
+<br />
+- Firmware (pic 18F2550. XC8 v1.36): <br />
+- Proteus & MPLABX project <br />
 <br />
 
 Changelog: <br />

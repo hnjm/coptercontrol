@@ -1,0 +1,1736 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+cinit CODE 0 2482 2482 26 1
+intcode_body CODE 0 2028 2028 72 1
+text0 CODE 0 2538 2538 20 1
+text1 CODE 0 CFE CFE 168 1
+text2 CODE 0 2390 2390 34 1
+text3 CODE 0 23F8 23F8 30 1
+text4 CODE 0 1408 1408 F2 1
+text5 CODE 0 2244 2244 3A 1
+text6 CODE 0 24A8 24A8 26 1
+text7 CODE 0 24F4 24F4 22 1
+text8 CODE 0 2574 2574 16 1
+text9 CODE 0 B44 B44 1BA 1
+text10 CODE 0 178A 178A D8 1
+text11 CODE 0 227E 227E 3A 1
+text12 CODE 0 21CC 21CC 3C 1
+text13 CODE 0 20F6 20F6 54 1
+text15 CODE 0 FB0 FB0 12C 1
+text16 CODE 0 E66 E66 14A 1
+text17 CODE 0 23C4 23C4 34 1
+text18 CODE 0 2428 2428 2E 1
+text19 CODE 0 214A 214A 42 1
+text20 CODE 0 24CE 24CE 26 1
+text21 CODE 0 1E12 1E12 90 1
+text22 CODE 0 218C 218C 40 1
+text23 CODE 0 1EA2 1EA2 86 1
+text24 CODE 0 1308 1308 100 1
+text25 CODE 0 1CE2 1CE2 9C 1
+text26 CODE 0 15D6 15D6 DA 1
+text27 CODE 0 14FA 14FA DC 1
+text28 CODE 0 2456 2456 2C 1
+text29 CODE 0 1C34 1C34 AE 1
+text30 CODE 0 10DC 10DC 120 1
+text31 CODE 0 8C8 8C8 27C 1
+text32 CODE 0 1FAA 1FAA 7E 1
+text33 CODE 0 1930 1930 CA 1
+text34 CODE 0 22B8 22B8 36 1
+text35 CODE 0 2516 2516 22 1
+text36 CODE 0 2558 2558 1C 1
+text37 CODE 0 258A 258A 12 1
+text38 CODE 0 16B0 16B0 DA 1
+text39 CODE 0 1F28 1F28 82 1
+text40 CODE 0 22EE 22EE 36 1
+text41 CODE 0 2324 2324 36 1
+text42 CODE 0 235A 235A 36 1
+text43 CODE 0 1AC4 1AC4 BA 1
+text44 CODE 0 2208 2208 3C 1
+text45 CODE 0 1D7E 1D7E 94 1
+text46 CODE 0 209A 209A 5C 1
+text47 CODE 0 11FC 11FC 10C 1
+text48 CODE 0 19FA 19FA CA 1
+text49 CODE 0 1B7E 1B7E B6 1
+text50 CODE 0 1862 1862 CE 1
+cstackCOMRAM COMRAM 1 2B 2B 2A 1
+cstackBANK0 BANK0 1 75 75 A 1
+temp COMRAM 1 55 55 1 1
+bssBANK0 BANK0 1 60 60 15 1
+intcode CODE 0 8 8 E 1
+smallconst SMALLCONST 0 800 800 C8 1
+bssCOMRAM COMRAM 1 1 1 2A 1
+$C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 16 16 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 7F-3FF 1
+RAM 430-4FF 1
+RAM 580-7FF 1
+SFR F60-FFF 1
+BANK0 7F-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 430-4FF 1
+BANK5 580-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 1A-7FF 1
+CONST 259C-7FFF 1
+STACK 7F-3FF 1
+SMALLCONST 259C-7FFF 1
+CODE 4-7 1
+CODE 1A-7FF 1
+CODE 259C-7FFF 1
+BIGRAM 56-5F 1
+BIGRAM 7F-3FF 1
+BIGRAM 430-4FF 1
+BIGRAM 580-7FF 1
+COMRAM 56-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 259C-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+8 intcode CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+8 intcode CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1862 text50 CODE >1789:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1862 text50 CODE >1795:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1866 text50 CODE >1796:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1872 text50 CODE >1798:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1876 text50 CODE >1805:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+187C text50 CODE >1807:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1880 text50 CODE >1809:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1886 text50 CODE >1811:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+188A text50 CODE >1817:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1892 text50 CODE >1822:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18A2 text50 CODE >1826:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18AE text50 CODE >1827:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18B4 text50 CODE >1831:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18E8 text50 CODE >1832:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18EA text50 CODE >1829:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+18F2 text50 CODE >1839:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1926 text50 CODE >1840:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1928 text50 CODE >1837:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B7E text49 CODE >2609:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B7E text49 CODE >2613:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B8E text49 CODE >2616:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B92 text49 CODE >2621:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B9A text49 CODE >2623:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BA2 text49 CODE >2624:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BA8 text49 CODE >2626:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BAC text49 CODE >2630:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BB0 text49 CODE >2635:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BB6 text49 CODE >2637:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BCA text49 CODE >2638:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BCE text49 CODE >2644:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BD6 text49 CODE >2648:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BE2 text49 CODE >2649:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BEE text49 CODE >2650:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BF0 text49 CODE >2653:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1BF6 text49 CODE >2655:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C02 text49 CODE >2656:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C0E text49 CODE >2657:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C10 text49 CODE >2660:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C1C text49 CODE >2661:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C28 text49 CODE >2664:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C2A text49 CODE >2665:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C2A text49 CODE >2670:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C2C text49 CODE >2676:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C2E text49 CODE >2679:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+19FA text48 CODE >1434:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+19FA text48 CODE >1441:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A02 text48 CODE >1443:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A08 text48 CODE >1444:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A10 text48 CODE >1446:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A16 text48 CODE >1450:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A1E text48 CODE >1452:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A2E text48 CODE >1453:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A3A text48 CODE >1454:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A46 text48 CODE >1455:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A48 text48 CODE >1456:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A4E text48 CODE >1458:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A52 text48 CODE >1463:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A62 text48 CODE >1464:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A76 text48 CODE >1465:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A82 text48 CODE >1466:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A8E text48 CODE >1467:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1A92 text48 CODE >1471:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AA2 text48 CODE >1472:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AB6 text48 CODE >1473:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AC2 text48 CODE >1475:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11FC text47 CODE >1870:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11FC text47 CODE >1877:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+120C text47 CODE >1883:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1216 text47 CODE >1885:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+121A text47 CODE >1888:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1222 text47 CODE >1892:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1228 text47 CODE >1894:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1248 text47 CODE >1892:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1252 text47 CODE >1899:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+125A text47 CODE >1901:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+126A text47 CODE >1902:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+127E text47 CODE >1903:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+128A text47 CODE >1905:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1296 text47 CODE >1906:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12A2 text47 CODE >1907:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12A4 text47 CODE >1910:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12B0 text47 CODE >1911:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12BC text47 CODE >1913:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12BE text47 CODE >1919:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12CE text47 CODE >1920:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12E2 text47 CODE >1924:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12EE text47 CODE >1925:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12FA text47 CODE >1945:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+12FC text47 CODE >1959:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1302 text47 CODE >1961:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1306 text47 CODE >1962:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+209A text46 CODE >2555:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+209A text46 CODE >2557:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20A2 text46 CODE >2559:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20A6 text46 CODE >2560:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20A8 text46 CODE >2565:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20AC text46 CODE >2572:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20B2 text46 CODE >2574:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20C2 text46 CODE >2575:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20D6 text46 CODE >2576:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20E2 text46 CODE >2577:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20EE text46 CODE >2578:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20F0 text46 CODE >2581:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+20F4 text46 CODE >2582:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D7E text45 CODE >1561:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D80 text45 CODE >1567:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D88 text45 CODE >1568:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1DC2 text45 CODE >1570:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1DCC text45 CODE >1575:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1DD2 text45 CODE >1577:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1DE0 text45 CODE >1581:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1DF8 text45 CODE >1585:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E02 text45 CODE >1586:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E10 text45 CODE >1603:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2208 text44 CODE >896:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+220A text44 CODE >902:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+220E text44 CODE >904:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2218 text44 CODE >906:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+221C text44 CODE >908:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2226 text44 CODE >917:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2236 text44 CODE >919:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2242 text44 CODE >920:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AC4 text43 CODE >1013:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AC6 text43 CODE >1018:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1ACC text43 CODE >1021:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1ADA text43 CODE >1026:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AF2 text43 CODE >1031:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1AFA text43 CODE >1033:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B04 text43 CODE >1047:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B18 text43 CODE >1048:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B28 text43 CODE >1049:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B34 text43 CODE >1050:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B40 text43 CODE >1051:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B4C text43 CODE >1054:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B52 text43 CODE >1057:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B60 text43 CODE >1062:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1B74 text43 CODE >1064:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+235A text42 CODE >89:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+235A text42 CODE >93:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+2366 text42 CODE >96:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+2370 text42 CODE >99:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+238E text42 CODE >100:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+2324 text41 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2326 text41 CODE >139:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2328 text41 CODE >141:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2328 text41 CODE >142:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+232A text41 CODE >143:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+232C text41 CODE >145:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+232C text41 CODE >146:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+232E text41 CODE >147:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2330 text41 CODE >149:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2330 text41 CODE >150:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2332 text41 CODE >151:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2334 text41 CODE >153:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2334 text41 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2336 text41 CODE >159:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2338 text41 CODE >139:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22EE text40 CODE >96:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F0 text40 CODE >98:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F2 text40 CODE >100:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F2 text40 CODE >101:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F4 text40 CODE >102:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F6 text40 CODE >104:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F6 text40 CODE >105:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22F8 text40 CODE >106:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22FA text40 CODE >108:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22FA text40 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22FC text40 CODE >110:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22FE text40 CODE >112:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22FE text40 CODE >113:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2300 text40 CODE >118:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2302 text40 CODE >98:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+1F28 text39 CODE >75:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F28 text39 CODE >79:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F2E text39 CODE >81:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F34 text39 CODE >82:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F36 text39 CODE >90:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F3E text39 CODE >92:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F44 text39 CODE >93:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F46 text39 CODE >94:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F50 text39 CODE >96:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F56 text39 CODE >97:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F58 text39 CODE >98:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F64 text39 CODE >100:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F6C text39 CODE >102:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F6E text39 CODE >107:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F76 text39 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F7C text39 CODE >110:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F7E text39 CODE >111:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F88 text39 CODE >113:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F8E text39 CODE >114:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F90 text39 CODE >115:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1F9A text39 CODE >85:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1FA4 text39 CODE >123:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+1FA8 text39 CODE >124:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+16B0 text38 CODE >153:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16B0 text38 CODE >155:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16BC text38 CODE >156:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16C4 text38 CODE >163:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16D0 text38 CODE >168:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16D6 text38 CODE >170:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16EA text38 CODE >175:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16EC text38 CODE >179:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+16FE text38 CODE >165:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1710 text38 CODE >201:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1720 text38 CODE >219:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1734 text38 CODE >223:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1736 text38 CODE >225:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+173A text38 CODE >226:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+173E text38 CODE >228:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1740 text38 CODE >230:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1754 text38 CODE >234:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1756 text38 CODE >236:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+175A text38 CODE >237:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+175E text38 CODE >239:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+1760 text38 CODE >206:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+258A text37 CODE >152:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+258C text37 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+258E text37 CODE >156:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+258E text37 CODE >157:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2590 text37 CODE >162:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2592 text37 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2558 text36 CODE >177:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+255A text36 CODE >179:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2560 text36 CODE >181:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2564 text36 CODE >182:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+256C text36 CODE >183:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2570 text36 CODE >184:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2572 text36 CODE >185:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2516 text35 CODE >128:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+2518 text35 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+251A text35 CODE >132:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+251A text35 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+251C text35 CODE >134:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+251E text35 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+251E text35 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+2520 text35 CODE >142:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+2522 text35 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+22B8 text34 CODE >257:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22BA text34 CODE >259:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22BC text34 CODE >261:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22BC text34 CODE >262:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22BE text34 CODE >263:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C0 text34 CODE >265:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C0 text34 CODE >266:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C2 text34 CODE >267:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C4 text34 CODE >269:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C4 text34 CODE >270:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C6 text34 CODE >271:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C8 text34 CODE >273:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22C8 text34 CODE >274:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22CA text34 CODE >279:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+22CC text34 CODE >259:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+1930 text33 CODE >87:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1932 text33 CODE >88:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1934 text33 CODE >90:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+193A text33 CODE >91:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1940 text33 CODE >93:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1946 text33 CODE >95:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+194C text33 CODE >96:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1952 text33 CODE >104:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1954 text33 CODE >107:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+195A text33 CODE >108:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1974 text33 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1990 text33 CODE >110:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1994 text33 CODE >113:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+199A text33 CODE >114:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19B4 text33 CODE >115:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19D0 text33 CODE >116:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19D4 text33 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19D6 text33 CODE >120:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19D8 text33 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19DA text33 CODE >131:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19DC text33 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19DE text33 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19E0 text33 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19E2 text33 CODE >139:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19E4 text33 CODE >140:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19E6 text33 CODE >148:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+19E8 text33 CODE >88:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1FAA text32 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FAA text32 CODE >111:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FAC text32 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FB0 text32 CODE >120:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FB2 text32 CODE >124:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FB6 text32 CODE >132:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FBC text32 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FBE text32 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FC2 text32 CODE >143:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FC8 text32 CODE >144:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FCA text32 CODE >149:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FCE text32 CODE >153:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FD0 text32 CODE >158:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FD4 text32 CODE >169:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+1FD6 text32 CODE >111:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+8C8 text31 CODE >2771:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8C8 text31 CODE >2817:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8DC text31 CODE >2819:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8DE text31 CODE >2820:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8E8 text31 CODE >2821:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8EC text31 CODE >2823:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8F0 text31 CODE >2824:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+8F0 text31 CODE >2830:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+926 text31 CODE >2834:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+928 text31 CODE >2837:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+92E text31 CODE >2839:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+94E text31 CODE >2840:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+964 text31 CODE >2844:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+984 text31 CODE >2845:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9A0 text31 CODE >2852:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9A4 text31 CODE >2854:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9A6 text31 CODE >2855:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9A8 text31 CODE >2858:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9AA text31 CODE >2864:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9B0 text31 CODE >2866:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9C6 text31 CODE >2870:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9E6 text31 CODE >2874:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9F0 text31 CODE >2876:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+9FC text31 CODE >2880:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A02 text31 CODE >2882:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A18 text31 CODE >2886:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A32 text31 CODE >2891:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A3E text31 CODE >2892:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A4A text31 CODE >2893:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A4C text31 CODE >2899:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A50 text31 CODE >2901:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A5C text31 CODE >2905:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A68 text31 CODE >2906:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A74 text31 CODE >2907:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A90 text31 CODE >2908:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A92 text31 CODE >2912:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+A9E text31 CODE >2917:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+AA2 text31 CODE >2923:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+AB2 text31 CODE >2925:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+AB8 text31 CODE >2927:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ACE text31 CODE >2931:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+AE8 text31 CODE >2934:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+AF4 text31 CODE >2937:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B10 text31 CODE >2938:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B12 text31 CODE >2942:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B1E text31 CODE >2990:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B36 text31 CODE >2994:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B42 text31 CODE >2995:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10DC text30 CODE >2061:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10DC text30 CODE >2063:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10E6 text30 CODE >2065:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10EA text30 CODE >2067:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10EC text30 CODE >2073:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10F4 text30 CODE >2075:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10FC text30 CODE >2076:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10FE text30 CODE >2081:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1106 text30 CODE >2086:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1124 text30 CODE >2092:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1152 text30 CODE >2093:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1180 text30 CODE >2094:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1182 text30 CODE >2097:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1186 text30 CODE >2099:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1188 text30 CODE >2104:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1190 text30 CODE >2107:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11AE text30 CODE >2109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11D6 text30 CODE >2110:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11D8 text30 CODE >2122:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11DC text30 CODE >2124:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11DE text30 CODE >2126:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11E2 text30 CODE >2128:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+11E4 text30 CODE >2067:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C34 text29 CODE >2147:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C34 text29 CODE >2149:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C3A text29 CODE >2150:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C40 text29 CODE >2152:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C42 text29 CODE >2154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C42 text29 CODE >2155:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C44 text29 CODE >2162:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C48 text29 CODE >2165:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C4E text29 CODE >2167:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C52 text29 CODE >2169:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C54 text29 CODE >2170:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C54 text29 CODE >2171:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C56 text29 CODE >2172:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C58 text29 CODE >2173:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C58 text29 CODE >2174:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C5A text29 CODE >2181:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C60 text29 CODE >2183:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C76 text29 CODE >2187:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1C96 text29 CODE >2190:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CAE text29 CODE >2191:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CB4 text29 CODE >2194:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CB6 text29 CODE >2152:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CCE text29 CODE >2194:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CCE text29 CODE >2196:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CD2 text29 CODE >2198:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CDA text29 CODE >2199:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CDC text29 CODE >2200:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2456 text28 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+2456 text28 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+245E text28 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+2460 text28 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+2470 text28 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+14FA text27 CODE >1986:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+14FA text27 CODE >1991:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+14FC text27 CODE >1994:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1518 text27 CODE >1997:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1534 text27 CODE >2000:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1536 text27 CODE >2005:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1542 text27 CODE >2007:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1556 text27 CODE >2008:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+156A text27 CODE >2005:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+156E text27 CODE >2012:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+158A text27 CODE >2015:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+158C text27 CODE >2017:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1594 text27 CODE >2020:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+159C text27 CODE >2021:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15A4 text27 CODE >2024:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15A8 text27 CODE >2027:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15AE text27 CODE >2030:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15B2 text27 CODE >2031:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15B4 text27 CODE >2035:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15D0 text27 CODE >2040:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15D6 text26 CODE >2703:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15D6 text26 CODE >2705:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15E6 text26 CODE >2709:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15E6 text26 CODE >2710:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15E8 text26 CODE >2711:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15EC text26 CODE >2713:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15EE text26 CODE >2715:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15F2 text26 CODE >2716:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15F4 text26 CODE >2718:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15F8 text26 CODE >2719:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+15FA text26 CODE >2721:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1602 text26 CODE >2722:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1604 text26 CODE >2723:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1608 text26 CODE >2724:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+160A text26 CODE >2725:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+160C text26 CODE >2727:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1610 text26 CODE >2728:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1612 text26 CODE >2731:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1616 text26 CODE >2732:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1618 text26 CODE >2734:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+162A text26 CODE >2735:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+162C text26 CODE >2736:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1630 text26 CODE >2737:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1632 text26 CODE >2738:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1634 text26 CODE >2739:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1634 text26 CODE >2740:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1636 text26 CODE >2741:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+164C text26 CODE >2742:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+164E text26 CODE >2744:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+166A text26 CODE >2749:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+166C text26 CODE >2707:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CE2 text25 CODE >1506:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CE2 text25 CODE >1508:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CE8 text25 CODE >1509:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CEE text25 CODE >1511:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1CF6 text25 CODE >1514:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D06 text25 CODE >1515:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D1A text25 CODE >1516:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D26 text25 CODE >1517:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D32 text25 CODE >1518:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D34 text25 CODE >1523:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D44 text25 CODE >1525:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D4C text25 CODE >1527:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D50 text25 CODE >1532:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D64 text25 CODE >1533:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1D70 text25 CODE >1534:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1308 text24 CODE >1634:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1308 text24 CODE >1640:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+130A text24 CODE >1646:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+130E text24 CODE >1648:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1312 text24 CODE >1650:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1316 text24 CODE >1661:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+131C text24 CODE >1663:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1320 text24 CODE >1668:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1326 text24 CODE >1669:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+132C text24 CODE >1670:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+132E text24 CODE >1677:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+133E text24 CODE >1678:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1352 text24 CODE >1679:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+135E text24 CODE >1680:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+136A text24 CODE >1681:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1376 text24 CODE >1682:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1382 text24 CODE >1684:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1384 text24 CODE >1685:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1384 text24 CODE >1687:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+138A text24 CODE >1689:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+138E text24 CODE >1703:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1394 text24 CODE >1705:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1398 text24 CODE >1728:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+139E text24 CODE >1729:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13A4 text24 CODE >1730:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13AA text24 CODE >1732:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13AE text24 CODE >1734:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13B0 text24 CODE >1747:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13B4 text24 CODE >1750:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13C4 text24 CODE >1751:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13D8 text24 CODE >1752:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13E4 text24 CODE >1753:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13F0 text24 CODE >1756:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13F6 text24 CODE >1757:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+13FC text24 CODE >1758:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1402 text24 CODE >1760:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1406 text24 CODE >1762:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EA2 text23 CODE >2483:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EA2 text23 CODE >2488:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EA6 text23 CODE >2489:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EAA text23 CODE >2490:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EB0 text23 CODE >2491:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EB6 text23 CODE >2492:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EBA text23 CODE >2493:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EBE text23 CODE >2502:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1ECA text23 CODE >2503:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1ECE text23 CODE >2504:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EDA text23 CODE >2505:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EDE text23 CODE >2506:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EEA text23 CODE >2508:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EEE text23 CODE >2509:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EF6 text23 CODE >2510:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EFA text23 CODE >2511:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1F02 text23 CODE >2517:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1F06 text23 CODE >2518:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1F22 text23 CODE >2531:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1F26 text23 CODE >2532:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+218C text22 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+218C text22 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+2194 text22 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+219C text22 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+219E text22 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+21BA text22 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+1E12 text21 CODE >2390:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E12 text21 CODE >2396:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E16 text21 CODE >2400:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E22 text21 CODE >2404:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E3E text21 CODE >2412:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E46 text21 CODE >2414:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E4A text21 CODE >2417:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E5E text21 CODE >2423:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E86 text21 CODE >2426:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E8A text21 CODE >2427:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E8C text21 CODE >2431:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E90 text21 CODE >2433:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E92 text21 CODE >2434:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1E9C text21 CODE >2438:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1EA0 text21 CODE >2439:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24CE text20 CODE >3042:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24CE text20 CODE >3050:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24DC text20 CODE >3051:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24E2 text20 CODE >3053:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24E6 text20 CODE >3055:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24EE text20 CODE >3057:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+24F2 text20 CODE >3058:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+214A text19 CODE >2220:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+214A text19 CODE >2232:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+214E text19 CODE >2235:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+216E text19 CODE >2238:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+217A text19 CODE >2239:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2186 text19 CODE >2241:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2188 text19 CODE >2242:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2188 text19 CODE >2244:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+218A text19 CODE >2245:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2428 text18 CODE >2263:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2428 text18 CODE >2288:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+242A text18 CODE >2289:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+242C text18 CODE >2292:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+242E text18 CODE >2295:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2432 text18 CODE >2296:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2438 text18 CODE >2303:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2454 text18 CODE >2304:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23C4 text17 CODE >2321:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23C4 text17 CODE >2323:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23C8 text17 CODE >2329:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23E4 text17 CODE >2336:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23E6 text17 CODE >2341:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23E8 text17 CODE >2359:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23EA text17 CODE >2362:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23EC text17 CODE >2359:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23F0 text17 CODE >2365:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23F6 text17 CODE >2367:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E66 text16 CODE >295:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E66 text16 CODE >299:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E68 text16 CODE >306:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E6C text16 CODE >309:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E70 text16 CODE >312:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E74 text16 CODE >314:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E90 text16 CODE >316:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E9C text16 CODE >325:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EA8 text16 CODE >327:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EC0 text16 CODE >325:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EC4 text16 CODE >331:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EC6 text16 CODE >334:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ECA text16 CODE >337:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ECC text16 CODE >340:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ECE text16 CODE >345:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ED0 text16 CODE >347:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ED4 text16 CODE >348:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+ED8 text16 CODE >349:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EE0 text16 CODE >350:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EE4 text16 CODE >354:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EEA text16 CODE >355:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EF0 text16 CODE >357:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EF6 text16 CODE >358:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+EFC text16 CODE >359:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F00 text16 CODE >363:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F0C text16 CODE >365:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F24 text16 CODE >366:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F3C text16 CODE >367:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F50 text16 CODE >368:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F64 text16 CODE >363:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F68 text16 CODE >372:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F70 text16 CODE >374:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F74 text16 CODE >376:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F7E text16 CODE >377:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F84 text16 CODE >378:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F8A text16 CODE >379:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F8E text16 CODE >382:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+F92 text16 CODE >384:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FA4 text16 CODE >385:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FAA text16 CODE >388:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FAE text16 CODE >389:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FB0 text15 CODE >495:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FB0 text15 CODE >608:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FB4 text15 CODE >619:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FB8 text15 CODE >626:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FBC text15 CODE >632:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FBE text15 CODE >633:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FC0 text15 CODE >634:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FC4 text15 CODE >652:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FCA text15 CODE >654:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FCC text15 CODE >658:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FD0 text15 CODE >665:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FD4 text15 CODE >667:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FD6 text15 CODE >668:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FD8 text15 CODE >669:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FD8 text15 CODE >681:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FDE text15 CODE >683:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FE2 text15 CODE >687:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FE4 text15 CODE >689:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FE8 text15 CODE >699:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FEA text15 CODE >705:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FF0 text15 CODE >712:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FF4 text15 CODE >726:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FF8 text15 CODE >729:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+FFC text15 CODE >731:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1018 text15 CODE >733:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+101A text15 CODE >736:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+101E text15 CODE >753:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1022 text15 CODE >755:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1024 text15 CODE >762:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1028 text15 CODE >764:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+102C text15 CODE >769:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1032 text15 CODE >771:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1036 text15 CODE >774:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+103C text15 CODE >776:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1056 text15 CODE >777:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+105A text15 CODE >792:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1060 text15 CODE >794:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1062 text15 CODE >795:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1064 text15 CODE >796:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1064 text15 CODE >801:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1068 text15 CODE >803:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1074 text15 CODE >804:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1074 text15 CODE >805:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1078 text15 CODE >808:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+107C text15 CODE >809:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1086 text15 CODE >811:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1088 text15 CODE >816:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+108C text15 CODE >818:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+109A text15 CODE >822:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10AC text15 CODE >828:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10B2 text15 CODE >830:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10B6 text15 CODE >831:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10B8 text15 CODE >834:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10D4 text15 CODE >803:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10D8 text15 CODE >842:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10D8 text15 CODE >844:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+10DA text15 CODE >845:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2028 intcode_body CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+205A intcode_body CODE >156:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+205E intcode_body CODE >158:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+20F6 text13 CODE >115:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+20FA text13 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+20FC text13 CODE >123:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+20FC text13 CODE >124:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2104 text13 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+210E text13 CODE >127:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2124 text13 CODE >129:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2126 text13 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+212A text13 CODE >132:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2132 text13 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+213A text13 CODE >134:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2140 text13 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+21CC text12 CODE >95:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21D0 text12 CODE >97:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21D2 text12 CODE >99:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21D2 text12 CODE >100:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21DE text12 CODE >102:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21DE text12 CODE >103:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21EA text12 CODE >106:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+21EE text12 CODE >97:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+2204 text12 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+227E text11 CODE >178:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2282 text11 CODE >180:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2284 text11 CODE >182:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2284 text11 CODE >183:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2286 text11 CODE >184:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2288 text11 CODE >186:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2288 text11 CODE >187:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+228A text11 CODE >188:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+228C text11 CODE >190:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+228C text11 CODE >191:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+228E text11 CODE >192:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2290 text11 CODE >194:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2290 text11 CODE >195:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2292 text11 CODE >200:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2294 text11 CODE >180:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+178A text10 CODE >1013:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+178E text10 CODE >1018:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1798 text10 CODE >1021:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+17A8 text10 CODE >1026:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+17C2 text10 CODE >1031:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+17CE text10 CODE >1033:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+17DC text10 CODE >1047:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+17F2 text10 CODE >1048:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1804 text10 CODE >1049:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1810 text10 CODE >1050:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+181C text10 CODE >1051:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1828 text10 CODE >1054:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1832 text10 CODE >1057:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1842 text10 CODE >1062:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+1858 text10 CODE >1064:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+B44 text9 CODE >116:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B44 text9 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B60 text9 CODE >127:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B66 text9 CODE >128:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B68 text9 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B68 text9 CODE >131:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B6E text9 CODE >134:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+B8E text9 CODE >135:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+BB0 text9 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+BB4 text9 CODE >138:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+BBA text9 CODE >140:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+BDA text9 CODE >141:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+BFC text9 CODE >142:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C00 text9 CODE >145:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C02 text9 CODE >149:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C1C text9 CODE >151:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C22 text9 CODE >152:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C2E text9 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C32 text9 CODE >158:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C38 text9 CODE >161:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C58 text9 CODE >170:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C72 text9 CODE >177:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C80 text9 CODE >179:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C86 text9 CODE >180:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C8A text9 CODE >181:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+C92 text9 CODE >185:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+CB8 text9 CODE >189:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+CBA text9 CODE >124:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+CD6 text9 CODE >192:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+2574 text8 CODE >152:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2578 text8 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+257A text8 CODE >156:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+257A text8 CODE >157:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+257C text8 CODE >162:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+257E text8 CODE >154:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+24F4 text7 CODE >177:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+24F8 text7 CODE >179:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2502 text7 CODE >181:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2506 text7 CODE >182:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+250E text7 CODE >183:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2512 text7 CODE >184:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+2514 text7 CODE >185:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+24A8 text6 CODE >128:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24AC text6 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24AE text6 CODE >132:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24AE text6 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24B0 text6 CODE >134:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24B2 text6 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24B2 text6 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24B4 text6 CODE >142:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+24B6 text6 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+2244 text5 CODE >257:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2248 text5 CODE >259:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+224A text5 CODE >261:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+224A text5 CODE >262:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+224C text5 CODE >263:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+224E text5 CODE >265:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+224E text5 CODE >266:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2250 text5 CODE >267:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2252 text5 CODE >269:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2252 text5 CODE >270:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2254 text5 CODE >271:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2256 text5 CODE >273:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2256 text5 CODE >274:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+2258 text5 CODE >279:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+225A text5 CODE >259:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+1408 text4 CODE >87:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+140C text4 CODE >88:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+140E text4 CODE >90:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1414 text4 CODE >91:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+141A text4 CODE >93:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1420 text4 CODE >95:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1426 text4 CODE >96:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+142C text4 CODE >104:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+142E text4 CODE >107:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1436 text4 CODE >108:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1458 text4 CODE >109:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+147C text4 CODE >110:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1480 text4 CODE >113:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+1488 text4 CODE >114:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14AA text4 CODE >115:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14CE text4 CODE >116:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14D2 text4 CODE >119:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14D4 text4 CODE >120:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14D6 text4 CODE >130:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14D8 text4 CODE >131:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14DA text4 CODE >133:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14DC text4 CODE >136:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14DE text4 CODE >137:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14E0 text4 CODE >139:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14E2 text4 CODE >140:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14E4 text4 CODE >148:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+14E6 text4 CODE >88:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+23F8 text3 CODE >1370:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23F8 text3 CODE >1373:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+23FE text3 CODE >1378:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2402 text3 CODE >1381:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2406 text3 CODE >1385:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2412 text3 CODE >1387:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+241A text3 CODE >1390:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2422 text3 CODE >1393:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2426 text3 CODE >1398:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2390 text2 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+2390 text2 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+2398 text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+239A text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+23AC text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+CFE text1 CODE >295:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+CFE text1 CODE >299:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D00 text1 CODE >306:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D04 text1 CODE >309:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D08 text1 CODE >312:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D0C text1 CODE >314:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D30 text1 CODE >316:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D3C text1 CODE >325:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D4C text1 CODE >327:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D66 text1 CODE >325:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D6C text1 CODE >331:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D6E text1 CODE >334:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D72 text1 CODE >337:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D74 text1 CODE >340:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D76 text1 CODE >345:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D78 text1 CODE >347:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D7C text1 CODE >348:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D80 text1 CODE >349:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D88 text1 CODE >350:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D8C text1 CODE >354:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D92 text1 CODE >355:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D98 text1 CODE >357:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+D9E text1 CODE >358:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+DA4 text1 CODE >359:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+DA8 text1 CODE >363:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+DB8 text1 CODE >365:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+DD2 text1 CODE >366:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+DEC text1 CODE >367:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E02 text1 CODE >368:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E18 text1 CODE >363:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E1E text1 CODE >372:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E26 text1 CODE >374:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E2A text1 CODE >376:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E34 text1 CODE >377:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E3A text1 CODE >378:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E40 text1 CODE >379:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E44 text1 CODE >382:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E48 text1 CODE >384:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E5A text1 CODE >385:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E60 text1 CODE >388:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+E64 text1 CODE >389:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+2538 text0 CODE >35:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2538 text0 CODE >37:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+253E text0 CODE >39:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2542 text0 CODE >40:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2546 text0 CODE >65:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+254E text0 CODE >69:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+254E text0 CODE >75:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2552 text0 CODE >82:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2556 text0 CODE >42:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+2482 cinit CODE >3782:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2482 cinit CODE >3784:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2482 cinit CODE >3787:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2482 cinit CODE >3895:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2486 cinit CODE >3896:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2488 cinit CODE >3897:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2488 cinit CODE >3898:C:\Users\roberto\AppData\Local\Temp\s3vk.
+248A cinit CODE >3899:C:\Users\roberto\AppData\Local\Temp\s3vk.
+248C cinit CODE >3900:C:\Users\roberto\AppData\Local\Temp\s3vk.
+248E cinit CODE >3903:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2492 cinit CODE >3904:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2494 cinit CODE >3905:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2494 cinit CODE >3906:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2496 cinit CODE >3907:C:\Users\roberto\AppData\Local\Temp\s3vk.
+2498 cinit CODE >3908:C:\Users\roberto\AppData\Local\Temp\s3vk.
+249A cinit CODE >3914:C:\Users\roberto\AppData\Local\Temp\s3vk.
+249A cinit CODE >3916:C:\Users\roberto\AppData\Local\Temp\s3vk.
+249C cinit CODE >3917:C:\Users\roberto\AppData\Local\Temp\s3vk.
+249E cinit CODE >3919:C:\Users\roberto\AppData\Local\Temp\s3vk.
+24A0 cinit CODE >3920:C:\Users\roberto\AppData\Local\Temp\s3vk.
+24A2 cinit CODE >3921:C:\Users\roberto\AppData\Local\Temp\s3vk.
+24A4 cinit CODE >3922:C:\Users\roberto\AppData\Local\Temp\s3vk.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_c 15 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBStdGetStatusHandler@p 2C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hspace_1 7F 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USB1msTickCount 60 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_USBTransferOnePacket 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBTransferOnePacket@dir 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBTransferOnePacket@len 78 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+__size_of_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBStdSetCfgHandler 15D6 0 CODE 0 text27 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBEnableEndpoint@options 33 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_LED_On 2324 0 CODE 0 text40 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_VREGEN$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBIncrement1msInternalTimers 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_ADC_Enable 258A 0 CODE 0 text37 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UCFG F6F 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UCON F6D 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UEIE F6B 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UEIR F6A 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UEP0 F70 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UEP1 F71 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+_main 2538 0 CODE 0 text0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_pDst 6C 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+btemp 55 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+start 16 0 CODE 0 init C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+__end_of_USBCheckHIDRequest 178A 0 CODE 0 text38 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2memset@p1 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBTransferOnePacket 178A 0 CODE 0 text10 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_active_protocol 73 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeviceInit CFE 0 CODE 0 text1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_pBDTEntryEP0OutNext 1D 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_SYSTEM_Initialize 1930 0 CODE 0 text33 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBDeviceTasks 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_SYS_InterruptHigh 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBCtrlTrfInHandler@lastDTS 2C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBConfigureEndpoint 1D7E 0 CODE 0 text45 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hpowerup 16 0 CODE 0 powerup dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_LED_Off 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UEP0bits F70 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_APP_LEDUpdateUSBStatus 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_APP_DeviceCustomHIDInitialize 2390 0 CODE 0 text42 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+APP_LEDUpdateUSBStatus@ledCount 13 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CtrlTrfData 428 0 ABS 1 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+ADC_Read10bit@result 78 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_LED_Enable 227E 0 CODE 0 text5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_LED_Toggle 227E 0 CODE 0 text11 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+ADC_SetConfiguration@configuration 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+intlevel0 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+intlevel1 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+intlevel2 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+intlevel3 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_USBDIV$2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_pBDTEntryIn F 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCheckHIDRequest 16B0 0 CODE 0 text38 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlTrfRxService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_ADC_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBEnableEndpoint 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2SYSTEM_Initialize@state 2D 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_controlTransferState 25 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlTrfTxService 1862 0 CODE 0 text50 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlEPAllowDataStage 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBDeviceInit@i 7D 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADCON0 FC2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADCON2 FC0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADRESH FC4 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADRESL FC3 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_BUTTON_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_idle_rate 74 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+_ADC_Read10bit 20F6 0 CODE 0 text13 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP1M2 7DEA 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP1M3 7DEB 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP2M2 7DD2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP2M3 7DD3 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCPR1L FBE 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCPR2L FBB 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlEPServiceComplete 1408 0 CODE 0 text24 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_ADC_Enable 259C 0 CODE 0 text37 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+BUTTON_IsPressed@button 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+?_USBTransferOnePacket 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBStdGetStatusHandler 1CE2 0 CODE 0 text29 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_SetupPkt 420 0 ABS 1 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlTrfOutHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBEnableEndpoint@ep 36 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_ADC_SetConfiguration 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintcodelo 16 0 CODE 0 intcodelo dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBStdGetDscHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBStallHandler 218C 0 CODE 0 text19 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2LED_Enable@led 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlTrfSetupHandler 1EA2 0 CODE 0 text23 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlEPAllowStatusStage 1AC4 0 CODE 0 text48 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_LED_Toggle 22B8 0 CODE 0 text11 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlTrfRxService 11FC 0 CODE 0 text47 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBStdFeatureReqHandler@pUEP 40 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBInHandle 68 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBCtrlTrfRxService@byteToRead 2C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_BUTTON_Enable 24CE 0 CODE 0 text6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBDeviceInit 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlTrfOutHandler 20F6 0 CODE 0 text46 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADC_SetConfiguration 24F4 0 CODE 0 text7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_SYSTEM_Initialize 19FA 0 CODE 0 text33 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBBusIsSuspended 21 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_LED_On 22EE 0 CODE 0 text40 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_LED_Off 235A 0 CODE 0 text41 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeferOUTDataStagePackets 6F 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintcodelo 16 0 CODE 0 intcodelo dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2ADC_Enable@channel 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+start_initialization 2482 0 CODE 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_SYS_InterruptHigh 209A 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBTransferOnePacket@ep 2F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_memset 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_TRISBbits F93 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCheckStdRequest 16B0 0 CODE 0 text26 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_device_dsc 8B1 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_memcpy 21CC 0 CODE 0 text22 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_memset 23C4 0 CODE 0 text2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBTicksSinceSuspendEnd 72 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_SYSTEM_Initialize 14FA 0 CODE 0 text4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBDeviceInit E66 0 CODE 0 text1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_APP_DeviceCustomHIDTasks B44 0 CODE 0 text9 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStdGetDscHandler 10DC 0 CODE 0 text30 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+ADC_Read10bit@channel 7A 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pcstackBANK0 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USER_USB_CALLBACK_EVENT_HANDLER 2028 0 CODE 0 text32 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_IPR2bits FA2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2BUTTON_Enable@button 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_TMR2ON 7E52 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlTrfTxService 1930 0 CODE 0 text50 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStallHandler 214A 0 CODE 0 text19 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_APP_DeviceCustomHIDInitialize 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBEnableEndpoint 2244 0 CODE 0 text44 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_LED_On 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+LED_Toggle@led 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UIEbits F69 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_USBTransferOnePacket 1AC4 0 CODE 0 text43 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UIRbits F68 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hconst 0 0 CONST 0 const dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBWakeFromSuspend 23F8 0 CODE 0 text17 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_ADC_Read10bit 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlEPService 1E12 0 CODE 0 text21 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+_USBCheckStdRequest 15D6 0 CODE 0 text26 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBIncrement1msInternalTimers 24CE 0 CODE 0 text20 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBStdFeatureReqHandler@p 43 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_LED_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADC_Enable 2574 0 CODE 0 text8 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USER_USB_CALLBACK_EVENT_HANDLER@event 37 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USER_USB_CALLBACK_EVENT_HANDLER@size 3B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBTransferOnePacket@handle 7A 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USER_USB_CALLBACK_EVENT_HANDLER@pdata 39 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lconst 0 0 CONST 0 const dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_memset 2456 0 CODE 0 text28 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlTrfRxService 1308 0 CODE 0 text47 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memcpy@d1 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memcpy@s1 2D 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hdata 0 0 ABS 0 data dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hinit 16 0 CODE 0 init dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htemp 56 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext 0 0 ABS 0 text dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ldata 0 0 ABS 0 data dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Linit 16 0 CODE 0 init dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltemp 55 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext 0 0 ABS 0 text dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memcpy@d 31 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memcpy@n 2F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memcpy@s 33 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_BUTTON_Enable 2538 0 CODE 0 text35 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memset@c 77 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memset@n 79 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memset@p 7B 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+int$flags 55 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_device_dsc 8C3 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ToSendDataBuffer 540 0 ABS 1 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_memset 2482 0 CODE 0 text28 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlTrfInHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBSuspend 2428 0 CODE 0 text18 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_ADC_Read10bit 214A 0 CODE 0 text13 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_BDT 400 0 ABS 1 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_PR2 FCB 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UIE F69 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UIR F68 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__S0 30000E 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__S1 7F 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__S2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+?i2_USBTransferOnePacket 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2ADC_SetConfiguration@configuration 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_APP_LEDUpdateUSBStatus 1F28 0 CODE 0 text39 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBWakeFromSuspend 23C4 0 CODE 0 text17 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStdFeatureReqHandler 8C8 0 CODE 0 text31 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_BothEP0OutUOWNsSet 1F 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UCONbits F6D 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBCtrlTrfRxService@i 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_SYS_InterruptHigh 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCheckHIDRequest 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBStdFeatureReqHandler B44 0 CODE 0 text31 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_BUTTON_IsPressed 21CC 0 CODE 0 text12 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ReceivedDataBuffer 500 0 ABS 1 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_SYSTEM_Initialize 1408 0 CODE 0 text4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBAlternateInterface 29 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeviceState 23 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeviceTasks FB0 0 CODE 0 text15 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+int_func 2028 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBStdGetStatusHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_USBDeviceInit FB0 0 CODE 0 text16 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBStdGetDscHandler 11FC 0 CODE 0 text30 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBStallHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlTrfSetupHandler 1F28 0 CODE 0 text23 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_LED_Toggle 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_ADC_Enable 258A 0 CODE 0 text8 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBEnableEndpoint 2208 0 CODE 0 text44 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext39 0 0 ABS 0 text39 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext40 0 0 ABS 0 text40 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext41 0 0 ABS 0 text41 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext42 0 0 ABS 0 text42 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext43 0 0 ABS 0 text43 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext44 0 0 ABS 0 text44 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext45 0 0 ABS 0 text45 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext46 0 0 ABS 0 text46 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext47 0 0 ABS 0 text47 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext48 0 0 ABS 0 text48 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext49 0 0 ABS 0 text49 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Htext50 0 0 ABS 0 text50 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_BUTTON_Enable 2516 0 CODE 0 text35 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+SYSTEM_Initialize@state 77 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlEPService 1EA2 0 CODE 0 text21 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBTransferOnePacket@data 2C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlTrfInHandler 1B7E 0 CODE 0 text49 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_APP_DeviceCustomHIDTasks 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBTransferOnePacket 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_PIE2bits FA0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_memcpy 218C 0 CODE 0 text22 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_memset 2390 0 CODE 0 text2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBConfigureEndpoint@handle 31 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+memset@p1 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2memset@c 2D 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2memset@n 2F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2memset@p 31 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_LED_Enable 22B8 0 CODE 0 text34 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext10 178A 0 CODE 0 text10 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext11 227E 0 CODE 0 text11 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext12 21CC 0 CODE 0 text12 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext13 20F6 0 CODE 0 text13 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext15 FB0 0 CODE 0 text15 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext16 E66 0 CODE 0 text16 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext17 23C4 0 CODE 0 text17 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext18 2428 0 CODE 0 text18 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext19 214A 0 CODE 0 text19 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext20 24CE 0 CODE 0 text20 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext21 1E12 0 CODE 0 text21 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext22 218C 0 CODE 0 text22 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext23 1EA2 0 CODE 0 text23 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext24 1308 0 CODE 0 text24 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext25 1CE2 0 CODE 0 text25 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext26 15D6 0 CODE 0 text26 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext27 14FA 0 CODE 0 text27 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext28 2456 0 CODE 0 text28 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext29 1C34 0 CODE 0 text29 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext30 10DC 0 CODE 0 text30 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext31 8C8 0 CODE 0 text31 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext32 1FAA 0 CODE 0 text32 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext33 1930 0 CODE 0 text33 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext34 22B8 0 CODE 0 text34 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext35 2516 0 CODE 0 text35 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext36 2558 0 CODE 0 text36 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext37 258A 0 CODE 0 text37 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext38 16B0 0 CODE 0 text38 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext39 1F28 0 CODE 0 text39 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext40 22EE 0 CODE 0 text40 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext41 2324 0 CODE 0 text41 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext42 235A 0 CODE 0 text42 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext43 1AC4 0 CODE 0 text43 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext44 2208 0 CODE 0 text44 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext45 1D7E 0 CODE 0 text45 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext46 209A 0 CODE 0 text46 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext47 11FC 0 CODE 0 text47 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext48 19FA 0 CODE 0 text48 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext49 1B7E 0 CODE 0 text49 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext50 1862 0 CODE 0 text50 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlEPService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_configDescriptor1 894 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBSuspend 2456 0 CODE 0 text18 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+SYSTEM_Initialize@dut 78 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pintcode_body 2028 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_ADC_SetConfiguration 2558 0 CODE 0 text36 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USB_CD_Ptr 807 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ep_data_in 17 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBActiveConfiguration 28 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlEPAllowStatusStage 19FA 0 CODE 0 text48 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBConfigureEndpoint 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_LATBbits F8A 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBTransferOnePacket 1862 0 CODE 0 text10 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_RemoteWakeup 20 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_LED_Off 2324 0 CODE 0 text41 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBDeviceInit@i 33 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBDeviceAttach 2428 0 CODE 0 text3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBDeviceTasks 10DC 0 CODE 0 text15 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ep_data_out 19 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+LED_Enable@led 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2_USBDeviceInit E66 0 CODE 0 text16 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+APP_DeviceCustomHIDTasks@pot 7D 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBEnableEndpoint@p 34 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+stackhi 3FF 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+stacklo 7F 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+__end_of_USBConfigureEndpoint 1E12 0 CODE 0 text45 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlEPAllowDataStage 1CE2 0 CODE 0 text25 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADCON0bits FC2 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADCON1bits FC1 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_ADCON2bits FC0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_BUTTON_IsPressed 2208 0 CODE 0 text12 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlEPAllowDataStage 1D7E 0 CODE 0 text25 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_LED_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_USBTransferOnePacket 1B7E 0 CODE 0 text43 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_memcpy 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_memset 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlTrfOutHandler 209A 0 CODE 0 text46 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_PIR2bits FA1 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lend_init 16 0 CODE 0 end_init dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_BUTTON_IsPressed 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBStdSetCfgHandler@i 3F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+end_of_initialization 249A 0 CODE 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBStdSetCfgHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeferStatusStagePacket 22 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_RCONbits FD0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USER_USB_CALLBACK_EVENT_HANDLER 1FAA 0 CODE 0 text32 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_APP_DeviceCustomHIDInitialize 235A 0 CODE 0 text42 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_inPipes 9 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_shortPacketStatus 27 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USB_CD_Ptr 809 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBTransferOnePacket@ep 79 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_endpoint_number 26 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+ADC_Enable@channel 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBConfigureEndpoint@EPNum 30 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_APP_DeviceCustomHIDTasks CFE 0 CODE 0 text9 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_LED_Enable 22EE 0 CODE 0 text34 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USB_SD_Ptr 801 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pcinit 2482 0 CODE 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_BUTTON_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext0 2538 0 CODE 0 text0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext1 CFE 0 CODE 0 text1 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext2 2390 0 CODE 0 text2 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext3 23F8 0 CODE 0 text3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext4 1408 0 CODE 0 text4 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext5 2244 0 CODE 0 text5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext6 24A8 0 CODE 0 text6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext7 24F4 0 CODE 0 text7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext8 2574 0 CODE 0 text8 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ptext9 B44 0 CODE 0 text9 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeviceAttach 23F8 0 CODE 0 text3 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCheckStdRequest 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBIncrement1msInternalTimers 24F4 0 CODE 0 text20 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext41 0 0 ABS 0 text41 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext42 0 0 ABS 0 text42 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext43 0 0 ABS 0 text43 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext44 0 0 ABS 0 text44 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext45 0 0 ABS 0 text45 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext46 0 0 ABS 0 text46 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext47 0 0 ABS 0 text47 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext48 0 0 ABS 0 text48 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext49 0 0 ABS 0 text49 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Ltext50 0 0 ABS 0 text50 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USBCtrlTrfInHandler 1C34 0 CODE 0 text49 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\roberto\AppData\Local\Temp\s3vk.obj
+__end_of_APP_LEDUpdateUSBStatus 1FAA 0 CODE 0 text39 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBCtrlEPServiceComplete 1308 0 CODE 0 text24 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lpowerup 16 0 CODE 0 powerup dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_configDescriptor1 86B 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBStdFeatureReqHandler@current_ep_data 42 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_pBDTEntryEP0OutCurrent 1B 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBTransferOnePacket@data 76 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_ADC_SetConfiguration 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_pBDTEntryOut 64 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+___param_bank 10 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStdSetCfgHandler 14FA 0 CODE 0 text27 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of__initialization 249A 0 CODE 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+BUTTON_Enable@button 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_hid_rpt01 8B1 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBWakeFromSuspend 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_USBDeviceInit 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBCtrlTrfTxService@byteToSend 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USTATcopy 2A 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_ADC_SetConfiguration 2516 0 CODE 0 text7 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_outPipes 1 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStatusStageTimeoutCounter 24 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+LED_On@led 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_ADC_Enable 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pcstackCOMRAM 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_T2CKPS0 7E50 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_T2CKPS1 7E51 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hend_init 1A 0 CODE 0 end_init dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBOutHandle 6A 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_hid_rpt01 894 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_USB_SD_Ptr 807 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_main 2558 0 CODE 0 text0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP2CONbits FBA 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_UADDR F6E 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USTAT F6C 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_sd000 8C7 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_sd001 83D 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_of_sd002 86B 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__HRAM 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hram 0 0 ABS 0 ram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__LRAM 1 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lram 0 0 ABS 0 ram dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStdGetStatusHandler 1C34 0 CODE 0 text29 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__end_ofi2_ADC_SetConfiguration 2574 0 CODE 0 text36 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBDeferINDataStagePackets 6E 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBTransferOnePacket@dir 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBTransferOnePacket@len 2E 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+LED_Off@led 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_sd000 8C3 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_sd001 809 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_sd002 83D 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBSuspend 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__CFG_FOSC$XTPLL_XT 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+?_ADC_Read10bit 75 0 BANK0 1 cstackBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2SYSTEM_Initialize@dut 2E 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__initialization 2482 0 CODE 0 cinit dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBDeviceAttach 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBDeviceTasks@i 46 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+USBConfigureEndpoint@direction 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hsmallconst 8C8 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_CCP1CONbits FBD 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_ofi2_SYSTEM_Initialize 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_LED_Enable 2244 0 CODE 0 text5 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+__Hintcode 16 0 CODE 0 intcode dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStatusStageEnabledFlag1 70 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_USBStatusStageEnabledFlag2 71 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+_BUTTON_Enable 24A8 0 CODE 0 text6 dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+i2USBTransferOnePacket@handle 30 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\MPLAB.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_CtrlTrfData 1 428 8
+_SetupPkt 1 420 8
+_ToSendDataBuffer 1 540 40
+_BDT 1 400 20
+_ReceivedDataBuffer 1 500 40
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text31 0 8C8 8C8 1CD4 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 1F 1
+intcode 0 8 8 12 1
+smallconst 0 800 800 C8 1
+bssCOMRAM 1 1 1 55 1
+config 0 300000 300000 E 1
