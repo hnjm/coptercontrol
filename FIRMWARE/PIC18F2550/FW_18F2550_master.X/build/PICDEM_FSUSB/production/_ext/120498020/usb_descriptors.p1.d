@@ -1,0 +1,19 @@
+ build/PICDEM_FSUSB/production/_ext/120498020/usb_descriptors.d  \
+ build/PICDEM_FSUSB/production/_ext/120498020/usb_descriptors.p1:  \
+ ../src/master/usb_descriptors.c  \
+../inc/usb_common.h  \
+../inc/usb_device_hid.h  \
+../system_config/system.h  \
+../inc/usb_hal_pic18.h  \
+../inc/usb_ch9.h  \
+../system_config/io_mapping.h  \
+../bsp/power.h  \
+../inc/usb_device.h  \
+../inc/usb.h  \
+../bsp/adc.h  \
+../bsp/buttons.h  \
+../src/master/system_config.h  \
+../bsp/leds.h  \
+../inc/usb_hal.h  \
+../src/master/usb_config.h  \
+../system_config/fixed_address_memory.h 

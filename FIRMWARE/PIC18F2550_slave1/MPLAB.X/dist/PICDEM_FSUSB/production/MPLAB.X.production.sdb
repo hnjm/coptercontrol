@@ -1,0 +1,1526 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F2550 ]
+[d frameptr 4065 ]
+"127 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+[e E4727 . `uc
+LED_NONE 0
+LED_D1 1
+LED_D2 2
+LED_D3 3
+LED_D4 4
+]
+"152
+[e E4718 . `uc
+BUTTON_NONE 0
+BUTTON_S2 1
+BUTTON_S3 2
+]
+"177
+[e E3934 . `uc
+ADC_CHANNEL_0 0
+]
+"81 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+[e E4547 . `uc
+LED_NONE 0
+LED_D1 1
+LED_D2 2
+LED_D3 3
+LED_D4 4
+]
+"85
+[e E4838 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"37 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+[e E4570 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"65
+[e E4838 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"110
+[e E4779 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"111
+[e E4847 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"76 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+[e E30 . `uc
+ADC_CHANNEL_0 0
+]
+"178
+[e E33 . `uc
+ADC_CONFIGURATION_DEFAULT 0
+]
+"96 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+[e E4538 . `uc
+BUTTON_NONE 0
+BUTTON_S2 1
+BUTTON_S3 2
+]
+"97 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[e E2 . `uc
+LED_NONE 0
+LED_D1 1
+LED_D2 2
+LED_D3 3
+LED_D4 4
+]
+"131 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[e E4838 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"731
+[e E4779 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"2035
+[e E4847 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"87 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+[e E4570 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"90
+[e E4547 . `uc
+LED_NONE 0
+LED_D1 1
+LED_D2 2
+LED_D3 3
+LED_D4 4
+]
+"93
+[e E4538 . `uc
+BUTTON_NONE 0
+BUTTON_S2 1
+BUTTON_S3 2
+]
+"95
+[e E3756 . `uc
+ADC_CONFIGURATION_DEFAULT 0
+]
+"96
+[e E3753 . `uc
+ADC_CHANNEL_0 0
+]
+"115 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+[v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
+"152
+[v _ADC_Enable ADC_Enable `(uc  1 e 1 0 ]
+[v i2_ADC_Enable ADC_Enable `(uc  1 e 1 0 ]
+"177
+[v _ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
+[v i2_ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
+"95 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+[v _BUTTON_IsPressed BUTTON_IsPressed `(uc  1 e 1 0 ]
+"128
+[v _BUTTON_Enable BUTTON_Enable `(v  1 e 1 0 ]
+[v i2_BUTTON_Enable BUTTON_Enable `(v  1 e 1 0 ]
+"96 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[v _LED_On LED_On `(v  1 e 1 0 ]
+"137
+[v _LED_Off LED_Off `(v  1 e 1 0 ]
+"178
+[v _LED_Toggle LED_Toggle `(v  1 e 1 0 ]
+"257
+[v _LED_Enable LED_Enable `(v  1 e 1 0 ]
+[v i2_LED_Enable LED_Enable `(v  1 e 1 0 ]
+"295 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+[v i2_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+"495
+[v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
+"896
+[v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
+"1013
+[v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+[v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+"1370
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+"1434
+[v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
+"1506
+[v _USBCtrlEPAllowDataStage USBCtrlEPAllowDataStage `(v  1 e 1 0 ]
+"1561
+[v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
+"1634
+[v _USBCtrlEPServiceComplete USBCtrlEPServiceComplete `(v  1 s 1 USBCtrlEPServiceComplete ]
+"1789
+[v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
+"1870
+[v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
+"1986
+[v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
+"2061
+[v _USBStdGetDscHandler USBStdGetDscHandler `(v  1 s 1 USBStdGetDscHandler ]
+"2147
+[v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
+"2220
+[v _USBStallHandler USBStallHandler `(v  1 s 1 USBStallHandler ]
+"2263
+[v _USBSuspend USBSuspend `(v  1 s 1 USBSuspend ]
+"2321
+[v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
+"2390
+[v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
+"2483
+[v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 1 USBCtrlTrfSetupHandler ]
+"2555
+[v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
+"2609
+[v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
+"2703
+[v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
+"2771
+[v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
+"3042
+[v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 1 0 ]
+"153 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+[v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 1 0 ]
+"89 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+[v _APP_DeviceCustomHIDInitialize APP_DeviceCustomHIDInitialize `(v  1 e 1 0 ]
+"116
+[v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 1 0 ]
+"75 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+[v _APP_LEDUpdateUSBStatus APP_LEDUpdateUSBStatus `(v  1 e 1 0 ]
+"35 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+[v _main main `(v  1 e 1 0 ]
+"109
+[v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
+"87 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+[v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"170
+[v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+[v i2_memset memset `(*.39v  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"131 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBDeviceState USBDeviceState `VEE4838  1 e 1 0 ]
+"132
+[v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
+"133
+[v _USBAlternateInterface USBAlternateInterface `VE[1]uc  1 e 1 0 ]
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"134
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES826  1 e 2 0 ]
+"135
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES826  1 e 2 0 ]
+"136
+[v _pBDTEntryOut pBDTEntryOut `[2]*.39VES826  1 e 4 0 ]
+"137
+[v _pBDTEntryIn pBDTEntryIn `[2]*.39VES826  1 e 4 0 ]
+"138
+[v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
+"139
+[v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
+[u S831 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2ui 1 wRam 3 0 `*.2Cui 1 wRom 3 0 ]
+"140
+[s S836 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
+`uc 1 reserved 1 0 :5:1 
+`uc 1 includeZero 1 0 :1:6 
+`uc 1 busy 1 0 :1:7 
+]
+[u S841 . 1 `S836 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S844 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[u S847 . 2 `ui 1 Val 2 0 `[2]uc 1 v 2 0 `S844 1 byte 2 0 ]
+[s S851 . 6 `S831 1 pSrc 3 0 `S841 1 info 1 3 `S847 1 wCount 2 4 ]
+[v _inPipes inPipes `VE[1]S851  1 e 6 0 ]
+[u S855 . 3 `*.2uc 1 bRam 3 0 `*.2ui 1 wRam 3 0 ]
+"141
+[s S858 . 1 `uc 1 reserved 1 0 :7:0 
+`uc 1 busy 1 0 :1:7 
+]
+[u S861 . 1 `S858 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S865 . 8 `S855 1 pDst 3 0 `S861 1 info 1 3 `S847 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
+[v _outPipes outPipes `VE[1]S865  1 e 8 0 ]
+"142
+[v _pDst pDst `*.39VEuc  1 e 2 0 ]
+"143
+[v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
+"144
+[v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
+[s S870 . 1 `uc 1 filler1 1 0 :1:0 
+`uc 1 ping_pong 1 0 :1:1 
+`uc 1 direction 1 0 :1:2 
+`uc 1 endpoint_number 1 0 :4:3 
+]
+"145
+[u S875 __USTAT 1 `S870 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES875  1 e 1 0 ]
+"146
+[v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
+"147
+[v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
+[s S878 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+`uc 1 transfer_terminated 1 0 :1:1 
+]
+"148
+[u S881 . 1 `S878 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[2]S881  1 e 2 0 ]
+"149
+[v _ep_data_out ep_data_out `VE[2]S881  1 e 2 0 ]
+"150
+[v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
+"151
+[v _USBDeferStatusStagePacket USBDeferStatusStagePacket `VEuc  1 e 1 0 ]
+"152
+[v _USBStatusStageEnabledFlag1 USBStatusStageEnabledFlag1 `VEuc  1 e 1 0 ]
+"153
+[v _USBStatusStageEnabledFlag2 USBStatusStageEnabledFlag2 `VEuc  1 e 1 0 ]
+"154
+[v _USBDeferINDataStagePackets USBDeferINDataStagePackets `VEuc  1 e 1 0 ]
+"155
+[v _USBDeferOUTDataStagePackets USBDeferOUTDataStagePackets `VEuc  1 e 1 0 ]
+"156
+[v _USB1msTickCount USB1msTickCount `VEul  1 e 4 0 ]
+"157
+[v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
+"164
+[v _BDT BDT `VE[8]S826  1 e 32 @1024 ]
+[s S884 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+"169
+[s S911 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`S847 1 W_Value 2 2 `S847 1 W_Index 2 4 `S847 1 W_Length 2 6 ]
+[s S917 . 8 `uc 1 Recipient 1 0 :5:0 
+`uc 1 RequestType 1 0 :2:5 
+`uc 1 DataDir 1 0 :1:7 
+`uc 1 . 1 1 :8:0 
+`uc 1 bFeature 1 2 `uc 1 . 1 3 :8:0 
+`uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S928 . 1 `uc 1 recipient 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S932 . 1 `uc 1 bmRequestType 1 0 `S928 1 . 1 0 ]
+[s S935 . 1 `S932 1 requestInfo 1 0 ]
+[s S937 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDscIndex 1 2 `uc 1 bDescriptorType 1 3 `ui 1 wLangID 2 4 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S945 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDevADR 1 2 `uc 1 bDevADRH 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S954 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bConfigurationValue 1 2 `uc 1 bCfgRSD 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S963 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bAltID 1 2 `uc 1 bAltID_H 1 3 `uc 1 bIntfID 1 4 `uc 1 bIntfID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S972 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 bEPID 1 4 `uc 1 bEPID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S981 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 EPNum 1 4 :4:0 
+`uc 1 . 1 4 :3:4 
+`uc 1 EPDir 1 4 :1:7 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[u S992 . 8 `S884 1 . 8 0 `S911 1 . 8 0 `S917 1 . 8 0 `S935 1 . 1 0 `S937 1 . 8 0 `S945 1 . 8 0 `S954 1 . 8 0 `S963 1 . 8 0 `S972 1 . 8 0 `S981 1 . 8 0 ]
+[v _SetupPkt SetupPkt `VES992  1 e 8 @1056 ]
+"170
+[v _CtrlTrfData CtrlTrfData `VE[8]uc  1 e 8 @1064 ]
+"79 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+[v _idle_rate idle_rate `uc  1 s 1 idle_rate ]
+"80
+[v _active_protocol active_protocol `uc  1 s 1 active_protocol ]
+"53 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+[v _ReceivedDataBuffer ReceivedDataBuffer `[64]uc  1 e 64 @1280 ]
+"54
+[v _ToSendDataBuffer ToSendDataBuffer `[64]uc  1 e 64 @1344 ]
+"61
+[v _USBOutHandle USBOutHandle `*.39VEv  1 e 2 0 ]
+"62
+[v _USBInHandle USBInHandle `*.39VEv  1 e 2 0 ]
+"73
+[v _c c `ui  1 e 2 0 ]
+[s S271 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"161 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/usb_descriptors.c
+[v _device_dsc device_dsc `CS271  1 e 18 0 ]
+"180
+[v _configDescriptor1 configDescriptor1 `C[41]uc  1 e 41 0 ]
+[s S286 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
+"229
+[v _sd000 sd000 `CS286  1 e 4 0 ]
+[s S290 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]ui 1 string 50 2 ]
+"234
+[v _sd001 sd001 `CS290  1 e 52 0 ]
+[s S294 . 46 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[22]ui 1 string 44 2 ]
+"241
+[v _sd002 sd002 `CS294  1 e 46 0 ]
+[s S298 . 29 `[29]uc 1 report 29 0 ]
+"248
+[v _hid_rpt01 hid_rpt01 `CS298  1 e 29 0 ]
+"268
+[v _USB_CD_Ptr USB_CD_Ptr `C[1]*.25Cuc  1 e 2 0 ]
+"274
+[v _USB_SD_Ptr USB_SD_Ptr `C[3]*.25Cuc  1 e 6 0 ]
+"171 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
+[v _UIR UIR `VEuc  1 e 1 @3944 ]
+[s S1057 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"187
+[u S1065 . 1 `S1057 1 . 1 0 ]
+[v _UIRbits UIRbits `VES1065  1 e 1 @3944 ]
+"226
+[v _UIE UIE `VEuc  1 e 1 @3945 ]
+[s S1076 . 1 `uc 1 URSTIE 1 0 :1:0 
+`uc 1 UERRIE 1 0 :1:1 
+`uc 1 ACTVIE 1 0 :1:2 
+`uc 1 TRNIE 1 0 :1:3 
+`uc 1 IDLEIE 1 0 :1:4 
+`uc 1 STALLIE 1 0 :1:5 
+`uc 1 SOFIE 1 0 :1:6 
+]
+"242
+[u S1084 . 1 `S1076 1 . 1 0 ]
+[v _UIEbits UIEbits `VES1084  1 e 1 @3945 ]
+"281
+[v _UEIR UEIR `VEuc  1 e 1 @3946 ]
+"331
+[v _UEIE UEIE `VEuc  1 e 1 @3947 ]
+"381
+[v _USTAT USTAT `VEuc  1 e 1 @3948 ]
+"440
+[v _UCON UCON `VEuc  1 e 1 @3949 ]
+[s S187 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"456
+[u S195 . 1 `S187 1 . 1 0 ]
+[v _UCONbits UCONbits `VES195  1 e 1 @3949 ]
+"490
+[v _UADDR UADDR `VEuc  1 e 1 @3950 ]
+"553
+[v _UCFG UCFG `VEuc  1 e 1 @3951 ]
+"634
+[v _UEP0 UEP0 `VEuc  1 e 1 @3952 ]
+[s S1390 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"686
+[s S1396 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 EP0CONDIS 1 0 :1:3 
+]
+[s S1399 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 EP0HSHK 1 0 :1:4 
+]
+[s S1402 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 EP0INEN 1 0 :1:1 
+]
+[s S1405 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 EP0OUTEN 1 0 :1:2 
+]
+[s S1408 . 1 `uc 1 EP0STALL 1 0 :1:0 
+]
+[s S1410 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 EPCONDIS0 1 0 :1:3 
+]
+[s S1413 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 EPHSHK0 1 0 :1:4 
+]
+[s S1416 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 EPINEN0 1 0 :1:1 
+]
+[s S1419 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 EPOUTEN0 1 0 :1:2 
+]
+[s S1422 . 1 `uc 1 EPSTALL0 1 0 :1:0 
+]
+[u S1424 . 1 `S1390 1 . 1 0 `S1396 1 . 1 0 `S1399 1 . 1 0 `S1402 1 . 1 0 `S1405 1 . 1 0 `S1408 1 . 1 0 `S1410 1 . 1 0 `S1413 1 . 1 0 `S1416 1 . 1 0 `S1419 1 . 1 0 `S1422 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1424  1 e 1 @3952 ]
+"765
+[v _UEP1 UEP1 `VEuc  1 e 1 @3953 ]
+[s S558 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2546
+[s S567 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S575 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S578 . 1 `S558 1 . 1 0 `S567 1 . 1 0 `S575 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES578  1 e 1 @3969 ]
+[s S669 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2972
+[s S678 . 1 `uc 1 LB0 1 0 :1:0 
+]
+[s S680 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+]
+[s S683 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LB2 1 0 :1:2 
+]
+[s S686 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LB3 1 0 :1:3 
+]
+[s S689 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LB4 1 0 :1:4 
+]
+[s S692 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LB5 1 0 :1:5 
+]
+[s S695 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LB6 1 0 :1:6 
+]
+[s S698 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S701 . 1 `S669 1 . 1 0 `S678 1 . 1 0 `S680 1 . 1 0 `S683 1 . 1 0 `S686 1 . 1 0 `S689 1 . 1 0 `S692 1 . 1 0 `S695 1 . 1 0 `S698 1 . 1 0 ]
+[v _LATBbits LATBbits `VES701  1 e 1 @3978 ]
+[s S2398 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3090
+[s S2405 . 1 `uc 1 LC0 1 0 :1:0 
+]
+[s S2407 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+]
+[s S2410 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LC2 1 0 :1:2 
+]
+[s S2413 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LC6 1 0 :1:6 
+]
+[s S2416 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S2419 . 1 `S2398 1 . 1 0 `S2405 1 . 1 0 `S2407 1 . 1 0 `S2410 1 . 1 0 `S2413 1 . 1 0 `S2416 1 . 1 0 ]
+[v _LATCbits LATCbits `VES2419  1 e 1 @3979 ]
+[s S411 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3174
+[s S419 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S427 . 1 `S411 1 . 1 0 `S419 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES427  1 e 1 @3986 ]
+[s S603 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3373
+[u S621 . 1 `S603 1 . 1 0 `S558 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES621  1 e 1 @3987 ]
+[s S2491 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3590
+[s S2498 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S2505 . 1 `S2491 1 . 1 0 `S2498 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2505  1 e 1 @3988 ]
+[s S1003 . 1 `uc 1 CCP2IE 1 0 :1:0 
+`uc 1 TMR3IE 1 0 :1:1 
+`uc 1 HLVDIE 1 0 :1:2 
+`uc 1 BCLIE 1 0 :1:3 
+`uc 1 EEIE 1 0 :1:4 
+`uc 1 USBIE 1 0 :1:5 
+`uc 1 CMIE 1 0 :1:6 
+`uc 1 OSCFIE 1 0 :1:7 
+]
+"4013
+[s S1012 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIE 1 0 :1:2 
+]
+[u S1015 . 1 `S1003 1 . 1 0 `S1012 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES1015  1 e 1 @4000 ]
+[s S1099 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 USBIF 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"4083
+[s S1108 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+]
+[u S1111 . 1 `S1099 1 . 1 0 `S1108 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES1111  1 e 1 @4001 ]
+[s S1283 . 1 `uc 1 CCP2IP 1 0 :1:0 
+`uc 1 TMR3IP 1 0 :1:1 
+`uc 1 HLVDIP 1 0 :1:2 
+`uc 1 BCLIP 1 0 :1:3 
+`uc 1 EEIP 1 0 :1:4 
+`uc 1 USBIP 1 0 :1:5 
+`uc 1 CMIP 1 0 :1:6 
+`uc 1 OSCFIP 1 0 :1:7 
+]
+"4153
+[s S1292 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIP 1 0 :1:2 
+]
+[u S1295 . 1 `S1283 1 . 1 0 `S1292 1 . 1 0 ]
+[v _IPR2bits IPR2bits `VES1295  1 e 1 @4002 ]
+[s S71 . 1 `uc 1 CCP2M 1 0 :4:0 
+`uc 1 DC2B 1 0 :2:4 
+]
+"5515
+[s S74 . 1 `uc 1 CCP2M0 1 0 :1:0 
+`uc 1 CCP2M1 1 0 :1:1 
+`uc 1 CCP2M2 1 0 :1:2 
+`uc 1 CCP2M3 1 0 :1:3 
+`uc 1 DC2B0 1 0 :1:4 
+`uc 1 DC2B1 1 0 :1:5 
+]
+[u S81 . 1 `S71 1 . 1 0 `S74 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES81  1 e 1 @4026 ]
+"5565
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
+[s S46 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+]
+"5596
+[s S49 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+]
+[u S56 . 1 `S46 1 . 1 0 `S49 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES56  1 e 1 @4029 ]
+"5646
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+"5658
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+[s S496 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"5679
+[s S501 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S508 . 1 `S496 1 . 1 0 `S501 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES508  1 e 1 @4032 ]
+[s S450 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"5759
+[s S453 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S460 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+]
+[s S463 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG01 1 0 :1:4 
+]
+[s S466 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S469 . 1 `S450 1 . 1 0 `S453 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES469  1 e 1 @4033 ]
+"5818
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S341 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"5862
+[s S344 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S348 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S355 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S358 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S361 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S364 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S367 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S370 . 1 `S341 1 . 1 0 `S344 1 . 1 0 `S348 1 . 1 0 `S355 1 . 1 0 `S358 1 . 1 0 `S361 1 . 1 0 `S364 1 . 1 0 `S367 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES370  1 e 1 @4034 ]
+"5942
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"5948
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S2372 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6035
+[s S2378 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S2383 . 1 `S2372 1 . 1 0 `S2378 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES2383  1 e 1 @4038 ]
+"6451
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+[s S1205 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"6737
+[s S1207 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S1210 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S1213 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S1216 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S1219 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S1228 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S1231 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S1239 . 1 `S1205 1 . 1 0 `S1207 1 . 1 0 `S1210 1 . 1 0 `S1213 1 . 1 0 `S1216 1 . 1 0 `S1219 1 . 1 0 `S1228 1 . 1 0 `S1231 1 . 1 0 ]
+[v _RCONbits RCONbits `VES1239  1 e 1 @4048 ]
+[s S1311 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"7734
+[s S1320 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S1329 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S1333 . 1 `S1311 1 . 1 0 `S1320 1 . 1 0 `S1329 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1333  1 e 1 @4082 ]
+"8118
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @32234 ]
+"8120
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @32235 ]
+"8134
+[v _CCP2M2 CCP2M2 `VEb  1 e 0 @32210 ]
+"8136
+[v _CCP2M3 CCP2M3 `VEb  1 e 0 @32211 ]
+"9090
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @32336 ]
+"9092
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @32337 ]
+"9140
+[v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
+"35 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"85
+} 0
+"295 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+"297
+[v USBDeviceInit@i i `uc  1 a 1 8 ]
+"389
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 6 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"1370 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+{
+"1400
+} 0
+"87 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+[v SYSTEM_Initialize@state state `E4570  1 a 1 wreg ]
+"123
+[v SYSTEM_Initialize@dut dut `ui  1 a 2 3 ]
+"87
+[v SYSTEM_Initialize@state state `E4570  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E4570  1 a 1 2 ]
+"165
+} 0
+"257 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[v _LED_Enable LED_Enable `(v  1 e 1 0 ]
+{
+[v LED_Enable@led led `E2  1 a 1 wreg ]
+[v LED_Enable@led led `E2  1 a 1 wreg ]
+[v LED_Enable@led led `E2  1 a 1 0 ]
+"280
+} 0
+"128 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+[v _BUTTON_Enable BUTTON_Enable `(v  1 e 1 0 ]
+{
+[v BUTTON_Enable@button button `E4538  1 a 1 wreg ]
+[v BUTTON_Enable@button button `E4538  1 a 1 wreg ]
+[v BUTTON_Enable@button button `E4538  1 a 1 0 ]
+"143
+} 0
+"177 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+[v _ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
+{
+[v ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
+[v ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
+"179
+[v ADC_SetConfiguration@configuration configuration `E33  1 a 1 0 ]
+"189
+} 0
+"152
+[v _ADC_Enable ADC_Enable `(uc  1 e 1 0 ]
+{
+[v ADC_Enable@channel channel `E30  1 a 1 wreg ]
+[v ADC_Enable@channel channel `E30  1 a 1 wreg ]
+[v ADC_Enable@channel channel `E30  1 a 1 0 ]
+"163
+} 0
+"116 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+[v _APP_DeviceCustomHIDTasks APP_DeviceCustomHIDTasks `(v  1 e 1 0 ]
+{
+"167
+[v APP_DeviceCustomHIDTasks@pot pot `ui  1 a 2 8 ]
+"194
+} 0
+"1013 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+{
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1015
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.39VES826  1 a 2 5 ]
+"1013
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
+[v USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
+[v USBTransferOnePacket@len len `uc  1 p 1 3 ]
+"1018
+[v USBTransferOnePacket@ep ep `uc  1 a 1 4 ]
+"1065
+} 0
+"178 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[v _LED_Toggle LED_Toggle `(v  1 e 1 0 ]
+{
+[v LED_Toggle@led led `E2  1 a 1 wreg ]
+[v LED_Toggle@led led `E2  1 a 1 wreg ]
+[v LED_Toggle@led led `E2  1 a 1 0 ]
+"201
+} 0
+"95 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+[v _BUTTON_IsPressed BUTTON_IsPressed `(uc  1 e 1 0 ]
+{
+[v BUTTON_IsPressed@button button `E4538  1 a 1 wreg ]
+[v BUTTON_IsPressed@button button `E4538  1 a 1 wreg ]
+[v BUTTON_IsPressed@button button `E4538  1 a 1 0 ]
+"110
+} 0
+"115 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+[v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
+{
+[v ADC_Read10bit@channel channel `E30  1 a 1 wreg ]
+"117
+[v ADC_Read10bit@result result `ui  1 a 2 3 ]
+"115
+[v ADC_Read10bit@channel channel `E30  1 a 1 wreg ]
+[v ADC_Read10bit@channel channel `E30  1 a 1 5 ]
+"137
+} 0
+"170 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+[v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 1 0 ]
+{
+"174
+} 0
+"495 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
+{
+"497
+[v USBDeviceTasks@i i `uc  1 a 1 27 ]
+"845
+} 0
+"295
+[v i2_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+[v i2USBDeviceInit@i USBDeviceInit `uc  1 a 1 8 ]
+"389
+} 0
+"2321
+[v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
+{
+"2367
+} 0
+"2263
+[v _USBSuspend USBSuspend `(v  1 s 1 USBSuspend ]
+{
+"2304
+} 0
+"2220
+[v _USBStallHandler USBStallHandler `(v  1 s 1 USBStallHandler ]
+{
+"2245
+} 0
+"3042
+[v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 1 0 ]
+{
+"3060
+} 0
+"2390
+[v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
+{
+"2441
+} 0
+"11 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"20
+[v memcpy@s s `*.39Cuc  1 a 2 8 ]
+"18
+[v memcpy@d d `*.39uc  1 a 2 6 ]
+"11
+[v memcpy@d1 d1 `*.39v  1 p 2 0 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 2 ]
+[v memcpy@n n `ui  1 p 2 4 ]
+"32
+} 0
+"2483 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 1 USBCtrlTrfSetupHandler ]
+{
+"2532
+} 0
+"1634
+[v _USBCtrlEPServiceComplete USBCtrlEPServiceComplete `(v  1 s 1 USBCtrlEPServiceComplete ]
+{
+"1766
+} 0
+"1506
+[v _USBCtrlEPAllowDataStage USBCtrlEPAllowDataStage `(v  1 e 1 0 ]
+{
+"1536
+} 0
+"2703
+[v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
+{
+"2750
+} 0
+"1986
+[v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
+{
+"1988
+[v USBStdSetCfgHandler@i i `uc  1 a 1 20 ]
+"2042
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\memset.c
+[v i2_memset memset `(*.39v  1 e 2 0 ]
+{
+[v i2memset@p memset `*.39uc  1 a 2 6 ]
+[v i2memset@p1 p1 `*.39v  1 p 2 0 ]
+[v i2memset@c c `i  1 p 2 2 ]
+[v i2memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"2147 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
+{
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"2179
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdGetStatusHandler@p p `*.39S826  1 a 2 1 ]
+"2202
+} 0
+"2061
+[v _USBStdGetDscHandler USBStdGetDscHandler `(v  1 s 1 USBStdGetDscHandler ]
+{
+"2130
+} 0
+"2771
+[v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
+{
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"2773
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdFeatureReqHandler@p p `*.39S826  1 a 2 24 ]
+"2778
+[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 21 ]
+[s S878 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+`uc 1 transfer_terminated 1 0 :1:1 
+]
+"2774
+[u S881 . 1 `S878 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S881  1 a 1 23 ]
+"2997
+} 0
+"109 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/main.c
+[v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
+{
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E4779  1 p 2 12 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 14 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@size size `ui  1 p 2 16 ]
+"171
+} 0
+"87 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/system_config/system.c
+[v i2_SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+[v i2SYSTEM_Initialize@state state `E4570  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@dut SYSTEM_Initialize `ui  1 a 2 3 ]
+[v i2SYSTEM_Initialize@state state `E4570  1 a 1 wreg ]
+[v i2SYSTEM_Initialize@state state `E4570  1 a 1 2 ]
+"165
+} 0
+"257 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[v i2_LED_Enable LED_Enable `(v  1 e 1 0 ]
+{
+[v i2LED_Enable@led led `E2  1 a 1 wreg ]
+[v i2LED_Enable@led led `E2  1 a 1 wreg ]
+[v i2LED_Enable@led led `E2  1 a 1 0 ]
+"280
+} 0
+"128 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/buttons.c
+[v i2_BUTTON_Enable BUTTON_Enable `(v  1 e 1 0 ]
+{
+[v i2BUTTON_Enable@button button `E4538  1 a 1 wreg ]
+[v i2BUTTON_Enable@button button `E4538  1 a 1 wreg ]
+[v i2BUTTON_Enable@button button `E4538  1 a 1 0 ]
+"143
+} 0
+"177 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/adc.c
+[v i2_ADC_SetConfiguration ADC_SetConfiguration `(uc  1 e 1 0 ]
+{
+[v i2ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
+[v i2ADC_SetConfiguration@configuration configuration `E33  1 a 1 wreg ]
+"179
+[v i2ADC_SetConfiguration@configuration configuration `E33  1 a 1 0 ]
+"189
+} 0
+"152
+[v i2_ADC_Enable ADC_Enable `(uc  1 e 1 0 ]
+{
+[v i2ADC_Enable@channel channel `E30  1 a 1 wreg ]
+[v i2ADC_Enable@channel channel `E30  1 a 1 wreg ]
+[v i2ADC_Enable@channel channel `E30  1 a 1 0 ]
+"163
+} 0
+"153 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device_hid.c
+[v _USBCheckHIDRequest USBCheckHIDRequest `(v  1 e 1 0 ]
+{
+"241
+} 0
+"75 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_led_usb_status.c
+[v _APP_LEDUpdateUSBStatus APP_LEDUpdateUSBStatus `(v  1 e 1 0 ]
+{
+"77
+[v APP_LEDUpdateUSBStatus@ledCount ledCount `ui  1 s 2 ledCount ]
+"124
+} 0
+"96 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/bsp/leds.c
+[v _LED_On LED_On `(v  1 e 1 0 ]
+{
+[v LED_On@led led `E2  1 a 1 wreg ]
+[v LED_On@led led `E2  1 a 1 wreg ]
+[v LED_On@led led `E2  1 a 1 0 ]
+"119
+} 0
+"137
+[v _LED_Off LED_Off `(v  1 e 1 0 ]
+{
+[v LED_Off@led led `E2  1 a 1 wreg ]
+[v LED_Off@led led `E2  1 a 1 wreg ]
+[v LED_Off@led led `E2  1 a 1 0 ]
+"160
+} 0
+"89 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/app_device_custom_hid.c
+[v _APP_DeviceCustomHIDInitialize APP_DeviceCustomHIDInitialize `(v  1 e 1 0 ]
+{
+"100
+} 0
+"1013 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/inc/src/usb_device.c
+[v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+{
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i2USBTransferOnePacket@handle USBTransferOnePacket `*.39VES826  1 a 2 5 ]
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v i2USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
+[v i2USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
+[v i2USBTransferOnePacket@len len `uc  1 p 1 3 ]
+"1018
+[v i2USBTransferOnePacket@ep ep `uc  1 a 1 4 ]
+"1065
+} 0
+"896
+[v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
+{
+[v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
+"898
+[v USBEnableEndpoint@p p `*.39uc  1 a 2 9 ]
+"896
+[v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
+[v USBEnableEndpoint@options options `uc  1 p 1 8 ]
+"902
+[v USBEnableEndpoint@ep ep `uc  1 a 1 11 ]
+"920
+} 0
+"1561
+[v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
+{
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
+[s S792 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1563
+[s S801 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S808 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S812 _BD_STAT 1 `uc 1 Val 1 0 `S792 1 . 1 0 `S801 1 . 1 0 `S808 1 . 1 0 ]
+[s S817 . 4 `S812 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S822 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S826 __BDT 4 `S817 1 . 4 0 `S822 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBConfigureEndpoint@handle handle `*.39VES826  1 a 2 6 ]
+"1561
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
+[v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
+"1567
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 5 ]
+"1603
+} 0
+"2555
+[v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
+{
+"2584
+} 0
+"1870
+[v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
+{
+"1872
+[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 1 ]
+"1873
+[v USBCtrlTrfRxService@i i `uc  1 a 1 0 ]
+"1965
+} 0
+"1434
+[v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
+{
+"1477
+} 0
+"2609
+[v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
+{
+"2611
+[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 1 ]
+"2684
+} 0
+"1789
+[v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
+{
+"1791
+[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 0 ]
+"1843
+} 0

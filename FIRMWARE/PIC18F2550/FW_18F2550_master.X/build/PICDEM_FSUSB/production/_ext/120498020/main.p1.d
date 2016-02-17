@@ -1,0 +1,21 @@
+ build/PICDEM_FSUSB/production/_ext/120498020/main.d  \
+ build/PICDEM_FSUSB/production/_ext/120498020/main.p1:  \
+ ../src/master/main.c  \
+../inc/usb_common.h  \
+../inc/usb_device_hid.h  \
+../system_config/system.h  \
+../inc/usb_hal_pic18.h  \
+../inc/usb_ch9.h  \
+../system_config/io_mapping.h  \
+../bsp/power.h  \
+../inc/usb_device.h  \
+../inc/usb.h  \
+../bsp/adc.h  \
+../bsp/buttons.h  \
+../src/master/system_config.h  \
+../bsp/leds.h  \
+../inc/usb_hal.h  \
+../src/master/app_device_custom_hid.h  \
+../src/master/app_led_usb_status.h  \
+../src/master/usb_config.h  \
+../system_config/fixed_address_memory.h 
