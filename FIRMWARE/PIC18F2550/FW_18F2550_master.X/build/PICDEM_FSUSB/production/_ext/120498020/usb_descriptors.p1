@@ -4213,13 +4213,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp\power.h: 30: POWER_SOURCE_MAINS
 [; ;bsp\power.h: 31: } POWER_SOURCE;
 [; ;bsp\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system_config\system.h: 40: typedef enum
-[; ;system_config\system.h: 41: {
-[; ;system_config\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;system_config\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;system_config\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;system_config\system.h: 45: } SYSTEM_STATE;
-[; ;system_config\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;system_config\system.h: 40: void SYSTEM_Initialize();
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -5112,13 +5106,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 262: 0x91, 0x00,
 [; ;usb_descriptors.c: 263: 0xC0}
 [; ;usb_descriptors.c: 264: };
-[v F5210 `*Cuc ~T0 @X0 1 t ]
+[v F5204 `*Cuc ~T0 @X0 1 t ]
 "268
 [v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_CD_Ptr
 :U ..
 "271
-[v F5211 `*Cuc ~T0 @X0 1 t ]
+[v F5205 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _configDescriptor1 `C*Cuc `*Cuc
 ..
 ]
@@ -5126,19 +5120,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 269: {
 [; ;usb_descriptors.c: 270: (const uint8_t *const)&configDescriptor1
 [; ;usb_descriptors.c: 271: };
-[v F5215 `*Cuc ~T0 @X0 1 t ]
+[v F5209 `*Cuc ~T0 @X0 1 t ]
 "274
 [v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_SD_Ptr
 :U ..
 "276
-[v F5216 `*Cuc ~T0 @X0 1 t ]
+[v F5210 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd000 `C*Cuc `*Cuc
 "277
-[v F5218 `*Cuc ~T0 @X0 1 t ]
+[v F5212 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd001 `C*Cuc `*Cuc
 "279
-[v F5220 `*Cuc ~T0 @X0 1 t ]
+[v F5214 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd002 `C*Cuc `*Cuc
 ..
 ]

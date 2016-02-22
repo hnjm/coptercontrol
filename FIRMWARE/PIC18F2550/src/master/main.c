@@ -1,46 +1,21 @@
-/********************************************************************
- Software License Agreement:
-
- The software supplied herewith by Microchip Technology Incorporated
- (the "Company") for its PIC(R) Microcontroller is intended and
- supplied to you, the Company's customer, for use solely and
- exclusively on Microchip PIC Microcontroller products. The
- software is owned by the Company and/or its supplier, and is
- protected under applicable copyright laws. All rights are reserved.
- Any use in violation of the foregoing restrictions may subject the
- user to criminal sanctions under applicable laws, as well as to
- civil liability for the breach of the terms and conditions of this
- license.
-
- THIS SOFTWARE IS PROVIDED IN AN "AS IS" CONDITION. NO WARRANTIES,
- WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED
- TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT,
- IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL OR
- CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
- *******************************************************************/
-
-/** INCLUDES *******************************************************/
 #include "system.h"
-#include <system_config.h>
 
+#include <system_config.h>
 #include "usb.h"
 #include "usb_device_hid.h"
 
-#include "app_device_custom_hid.h"
+#include "app_master.h"
 #include "app_led_usb_status.h"
 
 
 
-MAIN_RETURN main(void)
-{
+MAIN_RETURN main(void) {
     SYSTEM_Initialize(SYSTEM_STATE_USB_START);
 
     USBDeviceInit();
     USBDeviceAttach();
 
-    while(1)
-    {
+    while(1) {
         SYSTEM_Tasks();
 
         #if defined(USB_POLLING)
@@ -62,24 +37,23 @@ MAIN_RETURN main(void)
         /* If the USB device isn't configured yet, we can't really do anything
          * else since we don't have a host to talk to.  So jump back to the
          * top of the while loop. */
-        if( USBGetDeviceState() < CONFIGURED_STATE )
-        {
-            /* Jump back to the top of the while loop. */
-            continue;
+        if( USBGetDeviceState() < CONFIGURED_STATE ) {
+            APP_iddle();
+
+            continue; // Jump back to the top of the while loop
         }
 
         /* If we are currently suspended, then we need to see if we need to
          * issue a remote wakeup.  In either case, we shouldn't process any
          * keyboard commands since we aren't currently communicating to the host
          * thus just continue back to the start of the while loop. */
-        if( USBIsDeviceSuspended() == true )
-        {
-            /* Jump back to the top of the while loop. */
-            continue;
+        if( USBIsDeviceSuspended() == true ) {
+
+            continue; // Jump back to the top of the while loop
         }
 
         //Application specific tasks
-        APP_DeviceCustomHIDTasks();
+        APP_tick();
 
     }//end while
 }//end main

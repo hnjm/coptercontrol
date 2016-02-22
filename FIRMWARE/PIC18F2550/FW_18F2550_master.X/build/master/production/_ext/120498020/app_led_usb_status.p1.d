@@ -1,0 +1,19 @@
+ build/master/production/_ext/120498020/app_led_usb_status.d  \
+ build/master/production/_ext/120498020/app_led_usb_status.p1:  \
+ ../src/master/app_led_usb_status.c  \
+../src/master/inc/usb_common.h  \
+../src/master/inc/usb_hal.h  \
+../src/master/leds.h  \
+../src/master/buttons.h  \
+../src/master/system.h  \
+../src/master/inc/usb_hal_pic18.h  \
+../src/master/system.h  \
+../src/master/inc/usb_device.h  \
+../src/master/system_config.h  \
+../src/master/inc/usb_ch9.h  \
+../src/master/adc.h  \
+../src/master/io_mapping.h  \
+../src/master/power.h  \
+../src/master/usb_config.h  \
+../src/master/adc.h  \
+../src/master/fixed_address_memory.h 

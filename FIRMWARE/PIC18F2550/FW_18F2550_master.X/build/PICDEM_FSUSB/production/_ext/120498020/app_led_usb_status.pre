@@ -5624,15 +5624,7 @@ POWER_SOURCE_MAINS
 POWER_SOURCE POWER_SourceGet(void);
 
 # 40 "../system_config\system.h"
-typedef enum
-{
-SYSTEM_STATE_USB_START,
-SYSTEM_STATE_USB_SUSPEND,
-SYSTEM_STATE_USB_RESUME
-} SYSTEM_STATE;
-
-# 59
-void SYSTEM_Initialize( SYSTEM_STATE state );
+void SYSTEM_Initialize();
 
 # 69 "../inc\usb_ch9.h"
 typedef struct  _USB_DEVICE_DESCRIPTOR

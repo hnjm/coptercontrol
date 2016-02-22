@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=FW_18F2550_master.X
 
 # Active Configuration
-DEFAULTCONF=PICDEM_FSUSB
+DEFAULTCONF=master
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=PICDEM_FSUSB 
+ALLCONFS=master 
 
 
 # build
@@ -45,13 +45,13 @@ ALLCONFS=PICDEM_FSUSB
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=PICDEM_FSUSB clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=master clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=PICDEM_FSUSB build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=master build
 
 
 

@@ -1,19 +1,10 @@
  build/default/production/_ext/1950284477/system.d  \
  build/default/production/_ext/1950284477/system.p1:  \
  ../system_config/system.c  \
-../inc/usb_common.h  \
-../system_config/system.h  \
-../inc/usb_hal_pic18.h  \
-../inc/usb_ch9.h  \
 ../bsp/power.h  \
-../inc/usb_device.h  \
-../inc/usb.h  \
 ../system_config/system.h  \
-../src/slave1/usb_config.h  \
 ../bsp/adc.h  \
-../src/slave1/system_config.h  \
 ../bsp/buttons.h  \
 ../system_config/io_mapping.h  \
 ../bsp/leds.h  \
-../inc/usb_hal.h  \
 ../system_config/fixed_address_memory.h 

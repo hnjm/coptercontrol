@@ -9,10 +9,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58
 [v _LED_On `(v ~T0 @X0 0 ef1`E4547 ]
 "85 ../src/master/app_led_usb_status.c
-[c E4838 0 1 2 4 8 16 32 .. ]
-[n E4838 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+[c E4832 0 1 2 4 8 16 32 .. ]
+[n E4832 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "2053 ../inc\usb_device.h
-[v _USBDeviceState `VE4838 ~T0 @X0 0 e ]
+[v _USBDeviceState `VE4832 ~T0 @X0 0 e ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -4212,13 +4212,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp\power.h: 30: POWER_SOURCE_MAINS
 [; ;bsp\power.h: 31: } POWER_SOURCE;
 [; ;bsp\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system_config\system.h: 40: typedef enum
-[; ;system_config\system.h: 41: {
-[; ;system_config\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;system_config\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;system_config\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;system_config\system.h: 45: } SYSTEM_STATE;
-[; ;system_config\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;system_config\system.h: 40: void SYSTEM_Initialize();
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -4752,8 +4746,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _APP_LEDUpdateUSBStatus ]
 [f ]
 "77
-[v F5175 `ui ~T0 @X0 1 s ledCount ]
-[i F5175
+[v F5169 `ui ~T0 @X0 1 s ledCount ]
+[i F5169
 -> -> 0 `i `ui
 ]
 [; ;app_led_usb_status.c: 77: static uint16_t ledCount = 0;
@@ -4784,7 +4778,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 558 ]
 [; ;app_led_usb_status.c: 90: if(ledCount == 1)
 "90
-[e $ ! == F5175 -> -> 1 `i `ui 559  ]
+[e $ ! == F5169 -> -> 1 `i `ui 559  ]
 [; ;app_led_usb_status.c: 91: {
 "91
 {
@@ -4798,7 +4792,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "94
 [e :U 559 ]
 [; ;app_led_usb_status.c: 94: else if(ledCount == 75)
-[e $ ! == F5175 -> -> 75 `i `ui 561  ]
+[e $ ! == F5169 -> -> 75 `i `ui 561  ]
 [; ;app_led_usb_status.c: 95: {
 "95
 {
@@ -4812,13 +4806,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "98
 [e :U 561 ]
 [; ;app_led_usb_status.c: 98: else if(ledCount > 150)
-[e $ ! > F5175 -> -> 150 `i `ui 563  ]
+[e $ ! > F5169 -> -> 150 `i `ui 563  ]
 [; ;app_led_usb_status.c: 99: {
 "99
 {
 [; ;app_led_usb_status.c: 100: ledCount = 0;
 "100
-[e = F5175 -> -> 0 `i `ui ]
+[e = F5169 -> -> 0 `i `ui ]
 "101
 }
 [e :U 563 ]
@@ -4833,7 +4827,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 564 ]
 [; ;app_led_usb_status.c: 107: if(ledCount == 1)
 "107
-[e $ ! == F5175 -> -> 1 `i `ui 565  ]
+[e $ ! == F5169 -> -> 1 `i `ui 565  ]
 [; ;app_led_usb_status.c: 108: {
 "108
 {
@@ -4847,7 +4841,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "111
 [e :U 565 ]
 [; ;app_led_usb_status.c: 111: else if(ledCount == 50)
-[e $ ! == F5175 -> -> 50 `i `ui 567  ]
+[e $ ! == F5169 -> -> 50 `i `ui 567  ]
 [; ;app_led_usb_status.c: 112: {
 "112
 {
@@ -4861,13 +4855,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "115
 [e :U 567 ]
 [; ;app_led_usb_status.c: 115: else if(ledCount > 950)
-[e $ ! > F5175 -> -> 950 `i `ui 569  ]
+[e $ ! > F5169 -> -> 950 `i `ui 569  ]
 [; ;app_led_usb_status.c: 116: {
 "116
 {
 [; ;app_led_usb_status.c: 117: ledCount = 0;
 "117
-[e = F5175 -> -> 0 `i `ui ]
+[e = F5169 -> -> 0 `i `ui ]
 "118
 }
 [e :U 569 ]
@@ -4883,13 +4877,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 556  ]
 "85
 [e :U 557 ]
-[e [\ _USBDeviceState , $ . `E4838 6 558
+[e [\ _USBDeviceState , $ . `E4832 6 558
  564 ]
 "120
 [e :U 556 ]
 [; ;app_led_usb_status.c: 123: ledCount++;
 "123
-[e ++ F5175 -> -> 1 `i `ui ]
+[e ++ F5169 -> -> 1 `i `ui ]
 [; ;app_led_usb_status.c: 124: }
 "124
 [e :UE 554 ]

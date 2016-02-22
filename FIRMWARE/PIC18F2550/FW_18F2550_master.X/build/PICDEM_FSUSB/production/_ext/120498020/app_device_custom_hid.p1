@@ -3,7 +3,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _USBEnableEndpoint `(v ~T0 @X0 0 ef2`uc`uc ]
 "443
 [v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
-"127 ../src/master/app_device_custom_hid.c
+"68 ../src/master/app_device_custom_hid.c
 [c E4727 0 1 2 3 4 .. ]
 [n E4727 . LED_NONE LED_D1 LED_D2 LED_D3 LED_D4  ]
 "94 ../bsp\leds.h
@@ -34,12 +34,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _CCP2CONbits `VS354 ~T0 @X0 0 e@4026 ]
 "5565
 [v _CCPR2L `Vuc ~T0 @X0 0 e@4027 ]
-"152 ../src/master/app_device_custom_hid.c
+"92 ../src/master/app_device_custom_hid.c
 [c E4718 0 1 2 .. ]
 [n E4718 . BUTTON_NONE BUTTON_S2 BUTTON_S3  ]
 "54 ../bsp\buttons.h
 [v _BUTTON_IsPressed `(uc ~T0 @X0 0 ef1`E4718 ]
-"177 ../src/master/app_device_custom_hid.c
+"115 ../src/master/app_device_custom_hid.c
 [c E3934 0 .. ]
 [n E3934 . ADC_CHANNEL_0  ]
 "81 ../bsp\adc.h
@@ -4322,13 +4322,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;bsp\power.h: 30: POWER_SOURCE_MAINS
 [; ;bsp\power.h: 31: } POWER_SOURCE;
 [; ;bsp\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system_config\system.h: 40: typedef enum
-[; ;system_config\system.h: 41: {
-[; ;system_config\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;system_config\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;system_config\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;system_config\system.h: 45: } SYSTEM_STATE;
-[; ;system_config\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;system_config\system.h: 40: void SYSTEM_Initialize();
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -4870,221 +4864,202 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\usb_device_hid.h: 303: extern volatile CTRL_TRF_SETUP SetupPkt;
 [; ;inc\usb_device_hid.h: 304: extern const uint8_t configDescriptor1[];
 [; ;inc\usb_device_hid.h: 305: extern volatile uint8_t CtrlTrfData[8];
-"53 ../src/master/app_device_custom_hid.c
+"30 ../src/master/app_device_custom_hid.c
 [v _ReceivedDataBuffer `uc ~T0 @X0 -> 64 `i e@1280 ]
-[; ;app_device_custom_hid.c: 53: unsigned char ReceivedDataBuffer[64] @ 0x500;
-"54
+[; ;app_device_custom_hid.c: 30: unsigned char ReceivedDataBuffer[64] @ 0x500;
+"31
 [v _ToSendDataBuffer `uc ~T0 @X0 -> 64 `i e@1344 ]
-[; ;app_device_custom_hid.c: 54: unsigned char ToSendDataBuffer[64] @ 0x540;
-"61
+[; ;app_device_custom_hid.c: 31: unsigned char ToSendDataBuffer[64] @ 0x540;
+"38
 [v _USBOutHandle `*Vv ~T0 @X0 1 e ]
-[; ;app_device_custom_hid.c: 61: volatile void* USBOutHandle;
-"62
+[; ;app_device_custom_hid.c: 38: volatile void* USBOutHandle;
+"39
 [v _USBInHandle `*Vv ~T0 @X0 1 e ]
-[; ;app_device_custom_hid.c: 62: volatile void* USBInHandle;
-[; ;app_device_custom_hid.c: 65: typedef enum
-[; ;app_device_custom_hid.c: 66: {
-[; ;app_device_custom_hid.c: 67: COMMAND_TOGGLE_LED = 0x80,
-[; ;app_device_custom_hid.c: 68: COMMAND_PWM = 0x54,
-[; ;app_device_custom_hid.c: 69: COMMAND_GET_BUTTON_STATUS = 0x81,
-[; ;app_device_custom_hid.c: 70: COMMAND_READ_POTENTIOMETER = 0x37
-[; ;app_device_custom_hid.c: 71: } CUSTOM_HID_DEMO_COMMANDS;
-"73
+[; ;app_device_custom_hid.c: 39: volatile void* USBInHandle;
+[; ;app_device_custom_hid.c: 42: typedef enum {
+[; ;app_device_custom_hid.c: 43: COMMAND_TOGGLE_LED = 0x80,
+[; ;app_device_custom_hid.c: 44: COMMAND_PWM = 0x54,
+[; ;app_device_custom_hid.c: 45: COMMAND_GET_BUTTON_STATUS = 0x81,
+[; ;app_device_custom_hid.c: 46: COMMAND_READ_POTENTIOMETER = 0x37
+[; ;app_device_custom_hid.c: 47: } CUSTOM_HID_DEMO_COMMANDS;
+"49
 [v _c `ui ~T0 @X0 1 e ]
-[; ;app_device_custom_hid.c: 73: unsigned int c;
-"89
+[; ;app_device_custom_hid.c: 49: unsigned int c;
+"52
 [v _APP_DeviceCustomHIDInitialize `(v ~T0 @X0 1 ef ]
-"90
 {
-[; ;app_device_custom_hid.c: 89: void APP_DeviceCustomHIDInitialize()
-[; ;app_device_custom_hid.c: 90: {
+[; ;app_device_custom_hid.c: 52: void APP_DeviceCustomHIDInitialize() {
 [e :U _APP_DeviceCustomHIDInitialize ]
 [f ]
-[; ;app_device_custom_hid.c: 93: USBInHandle = 0;
-"93
+[; ;app_device_custom_hid.c: 54: USBInHandle = 0;
+"54
 [e = _USBInHandle -> -> 0 `i `*Vv ]
-[; ;app_device_custom_hid.c: 96: USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
-"96
+[; ;app_device_custom_hid.c: 57: USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
+"57
 [e ( _USBEnableEndpoint (2 , -> -> 1 `i `uc -> | | | -> 2 `i -> 4 `i -> 16 `i -> 8 `i `uc ]
-[; ;app_device_custom_hid.c: 99: USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
-"99
+[; ;app_device_custom_hid.c: 60: USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
+"60
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
-[; ;app_device_custom_hid.c: 100: }
-"100
+[; ;app_device_custom_hid.c: 61: }
+"61
 [e :UE 561 ]
 }
-"116
+"64
 [v _APP_DeviceCustomHIDTasks `(v ~T0 @X0 1 ef ]
-"117
 {
-[; ;app_device_custom_hid.c: 116: void APP_DeviceCustomHIDTasks()
-[; ;app_device_custom_hid.c: 117: {
+[; ;app_device_custom_hid.c: 64: void APP_DeviceCustomHIDTasks() {
 [e :U _APP_DeviceCustomHIDTasks ]
 [f ]
-[; ;app_device_custom_hid.c: 119: if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
-"119
+[; ;app_device_custom_hid.c: 65: if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0) {
+"65
 [e $ ! == -> && != _USBOutHandle -> -> 0 `i `*Vv != & -> *U -> _USBOutHandle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 563  ]
-[; ;app_device_custom_hid.c: 120: {
-"120
 {
-[; ;app_device_custom_hid.c: 124: switch(ReceivedDataBuffer[0])
-"124
+[; ;app_device_custom_hid.c: 66: switch(ReceivedDataBuffer[0]) {
+"66
 [e $U 565  ]
-[; ;app_device_custom_hid.c: 125: {
-"125
 {
-[; ;app_device_custom_hid.c: 126: case 0x80:
-"126
+[; ;app_device_custom_hid.c: 67: case 0x80:
+"67
 [e :U 566 ]
-[; ;app_device_custom_hid.c: 127: LED_Toggle(LED_D2);
-"127
+[; ;app_device_custom_hid.c: 68: LED_Toggle(LED_D2);
+"68
 [e ( _LED_Toggle (1 . `E4727 2 ]
-[; ;app_device_custom_hid.c: 128: break;
-"128
+[; ;app_device_custom_hid.c: 69: break;
+"69
 [e $U 564  ]
-[; ;app_device_custom_hid.c: 130: case 0x54:
-"130
+[; ;app_device_custom_hid.c: 71: case 0x54:
+"71
 [e :U 567 ]
-[; ;app_device_custom_hid.c: 131: c = (ReceivedDataBuffer[1]);
-"131
+[; ;app_device_custom_hid.c: 72: c = (ReceivedDataBuffer[1]);
+"72
 [e = _c -> *U + &U _ReceivedDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
-[; ;app_device_custom_hid.c: 134: CCP1CONbits.DC1B0 =(c& 0x01); c>>=1;
-"134
+[; ;app_device_custom_hid.c: 75: CCP1CONbits.DC1B0 =(c& 0x01); c>>=1;
+"75
 [e = . . _CCP1CONbits 1 4 -> & _c -> -> 1 `i `ui `uc ]
 [e =>> _c -> 1 `i ]
-[; ;app_device_custom_hid.c: 135: CCP1CONbits.DC1B1 =(c& 0x01); c>>=1;
-"135
+[; ;app_device_custom_hid.c: 76: CCP1CONbits.DC1B1 =(c& 0x01); c>>=1;
+"76
 [e = . . _CCP1CONbits 1 5 -> & _c -> -> 1 `i `ui `uc ]
 [e =>> _c -> 1 `i ]
-[; ;app_device_custom_hid.c: 136: CCPR1L = c;
-"136
+[; ;app_device_custom_hid.c: 77: CCPR1L = c;
+"77
 [e = _CCPR1L -> _c `uc ]
-[; ;app_device_custom_hid.c: 138: c = (ReceivedDataBuffer[2]);
-"138
+[; ;app_device_custom_hid.c: 79: c = (ReceivedDataBuffer[2]);
+"79
 [e = _c -> *U + &U _ReceivedDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
-[; ;app_device_custom_hid.c: 140: CCP2CONbits.DC2B0 =(c& 0x01); c>>=1;
-"140
+[; ;app_device_custom_hid.c: 81: CCP2CONbits.DC2B0 =(c& 0x01); c>>=1;
+"81
 [e = . . _CCP2CONbits 1 4 -> & _c -> -> 1 `i `ui `uc ]
 [e =>> _c -> 1 `i ]
-[; ;app_device_custom_hid.c: 141: CCP2CONbits.DC2B1 =(c& 0x01); c>>=1;
-"141
+[; ;app_device_custom_hid.c: 82: CCP2CONbits.DC2B1 =(c& 0x01); c>>=1;
+"82
 [e = . . _CCP2CONbits 1 5 -> & _c -> -> 1 `i `ui `uc ]
 [e =>> _c -> 1 `i ]
-[; ;app_device_custom_hid.c: 142: CCPR2L = c;
-"142
+[; ;app_device_custom_hid.c: 83: CCPR2L = c;
+"83
 [e = _CCPR2L -> _c `uc ]
-[; ;app_device_custom_hid.c: 145: break;
-"145
+[; ;app_device_custom_hid.c: 86: break;
+"86
 [e $U 564  ]
-[; ;app_device_custom_hid.c: 147: case 0x81:
-"147
+[; ;app_device_custom_hid.c: 88: case 0x81:
+"88
 [e :U 568 ]
-[; ;app_device_custom_hid.c: 149: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-"149
+[; ;app_device_custom_hid.c: 90: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
+"90
 [e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 569  ]
-[; ;app_device_custom_hid.c: 150: {
-"150
 {
-[; ;app_device_custom_hid.c: 151: ToSendDataBuffer[0] = 0x81;
-"151
+[; ;app_device_custom_hid.c: 91: ToSendDataBuffer[0] = 0x81;
+"91
 [e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 129 `i `uc ]
-[; ;app_device_custom_hid.c: 152: if(BUTTON_IsPressed(BUTTON_S2) == 0)
-"152
+[; ;app_device_custom_hid.c: 92: if(BUTTON_IsPressed(BUTTON_S2) == 0) {
+"92
 [e $ ! == -> ( _BUTTON_IsPressed (1 . `E4718 1 `i -> 0 `i 570  ]
-[; ;app_device_custom_hid.c: 153: {
-"153
 {
-[; ;app_device_custom_hid.c: 154: ToSendDataBuffer[1] = 0x01;
-"154
+[; ;app_device_custom_hid.c: 94: ToSendDataBuffer[1] = 0x01;
+"94
 [e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 1 `i `uc ]
-"155
+"95
 }
-[; ;app_device_custom_hid.c: 155: }
+[; ;app_device_custom_hid.c: 95: } else {
 [e $U 571  ]
-"156
 [e :U 570 ]
-[; ;app_device_custom_hid.c: 156: else
-[; ;app_device_custom_hid.c: 157: {
-"157
 {
-[; ;app_device_custom_hid.c: 158: ToSendDataBuffer[1] = 0x00;
-"158
+[; ;app_device_custom_hid.c: 97: ToSendDataBuffer[1] = 0x00;
+"97
 [e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 0 `i `uc ]
-"159
+"98
 }
 [e :U 571 ]
-[; ;app_device_custom_hid.c: 159: }
-[; ;app_device_custom_hid.c: 161: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"161
+[; ;app_device_custom_hid.c: 98: }
+[; ;app_device_custom_hid.c: 100: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+"100
 [e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"162
+"101
 }
 [e :U 569 ]
-[; ;app_device_custom_hid.c: 162: }
-[; ;app_device_custom_hid.c: 163: break;
-"163
+[; ;app_device_custom_hid.c: 101: }
+[; ;app_device_custom_hid.c: 102: break;
+"102
 [e $U 564  ]
-[; ;app_device_custom_hid.c: 165: case 0x37:
-"165
+[; ;app_device_custom_hid.c: 104: case 0x37:
+"104
 [e :U 572 ]
-[; ;app_device_custom_hid.c: 166: {
-"166
+[; ;app_device_custom_hid.c: 105: {
+"105
 {
-"167
+"106
 [v _pot `ui ~T0 @X0 1 a ]
-[; ;app_device_custom_hid.c: 167: uint16_t pot;
-[; ;app_device_custom_hid.c: 170: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-"170
+[; ;app_device_custom_hid.c: 106: uint16_t pot;
+[; ;app_device_custom_hid.c: 109: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
+"109
 [e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 573  ]
-[; ;app_device_custom_hid.c: 171: {
-"171
 {
-[; ;app_device_custom_hid.c: 177: pot = ADC_Read10bit(ADC_CHANNEL_0);
-"177
+[; ;app_device_custom_hid.c: 115: pot = ADC_Read10bit(ADC_CHANNEL_0);
+"115
 [e = _pot ( _ADC_Read10bit (1 . `E3934 0 ]
-[; ;app_device_custom_hid.c: 179: ToSendDataBuffer[0] = 0x37;
-"179
+[; ;app_device_custom_hid.c: 117: ToSendDataBuffer[0] = 0x37;
+"117
 [e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 55 `i `uc ]
-[; ;app_device_custom_hid.c: 180: ToSendDataBuffer[1] = (uint8_t)pot;
-"180
+[; ;app_device_custom_hid.c: 118: ToSendDataBuffer[1] = (uint8_t)pot;
+"118
 [e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
-[; ;app_device_custom_hid.c: 181: ToSendDataBuffer[2] = pot >> 8;
-"181
+[; ;app_device_custom_hid.c: 119: ToSendDataBuffer[2] = pot >> 8;
+"119
 [e = *U + &U _ToSendDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
-[; ;app_device_custom_hid.c: 185: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"185
+[; ;app_device_custom_hid.c: 122: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
+"122
 [e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"186
+"123
 }
 [e :U 573 ]
-"187
-}
-[; ;app_device_custom_hid.c: 186: }
-[; ;app_device_custom_hid.c: 187: }
-[; ;app_device_custom_hid.c: 188: break;
-"188
-[e $U 564  ]
-"189
-}
-[; ;app_device_custom_hid.c: 189: }
-[e $U 564  ]
 "124
+}
+[; ;app_device_custom_hid.c: 123: }
+[; ;app_device_custom_hid.c: 124: }
+[; ;app_device_custom_hid.c: 125: break;
+"125
+[e $U 564  ]
+"126
+}
+[; ;app_device_custom_hid.c: 126: }
+[e $U 564  ]
+"66
 [e :U 565 ]
 [e [\ *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux , $ -> -> 128 `i `uc 566
  , $ -> -> 84 `i `uc 567
  , $ -> -> 129 `i `uc 568
  , $ -> -> 55 `i `uc 572
  564 ]
-"189
+"126
 [e :U 564 ]
-[; ;app_device_custom_hid.c: 192: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
-"192
+[; ;app_device_custom_hid.c: 129: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
+"129
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
-"193
+"130
 }
 [e :U 563 ]
-[; ;app_device_custom_hid.c: 193: }
-[; ;app_device_custom_hid.c: 194: }
-"194
+[; ;app_device_custom_hid.c: 130: }
+[; ;app_device_custom_hid.c: 131: }
+"131
 [e :UE 562 ]
 }

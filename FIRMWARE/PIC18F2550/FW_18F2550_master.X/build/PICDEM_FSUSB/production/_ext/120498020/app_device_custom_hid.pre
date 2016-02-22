@@ -5753,15 +5753,7 @@ POWER_SOURCE_MAINS
 POWER_SOURCE POWER_SourceGet(void);
 
 # 40 "../system_config\system.h"
-typedef enum
-{
-SYSTEM_STATE_USB_START,
-SYSTEM_STATE_USB_SUSPEND,
-SYSTEM_STATE_USB_RESUME
-} SYSTEM_STATE;
-
-# 59
-void SYSTEM_Initialize( SYSTEM_STATE state );
+void SYSTEM_Initialize();
 
 # 69 "../inc\usb_ch9.h"
 typedef struct  _USB_DEVICE_DESCRIPTOR
@@ -6612,17 +6604,16 @@ extern volatile CTRL_TRF_SETUP SetupPkt;
 extern const uint8_t configDescriptor1[];
 extern volatile uint8_t CtrlTrfData[8];
 
-# 53 "../src/master/app_device_custom_hid.c"
+# 30 "../src/master/app_device_custom_hid.c"
 unsigned char ReceivedDataBuffer[64] @ 0x500;
 unsigned char ToSendDataBuffer[64] @ 0x540;
 
-# 61
+# 38
 volatile void* USBOutHandle;
 volatile void* USBInHandle;
 
 
-typedef enum
-{
+typedef enum {
 COMMAND_TOGGLE_LED = 0x80,
 COMMAND_PWM = 0x54,
 COMMAND_GET_BUTTON_STATUS = 0x81,
@@ -6631,10 +6622,8 @@ COMMAND_READ_POTENTIOMETER = 0x37
 
 unsigned int c;
 
-# 89
-void APP_DeviceCustomHIDInitialize()
-{
 
+void APP_DeviceCustomHIDInitialize() {
 
 USBInHandle = 0;
 
@@ -6645,17 +6634,10 @@ USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
 USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
 }
 
-# 116
-void APP_DeviceCustomHIDTasks()
-{
 
-if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0)
-{
-
-
-
-switch(ReceivedDataBuffer[0])
-{
+void APP_DeviceCustomHIDTasks() {
+if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0) {
+switch(ReceivedDataBuffer[0]) {
 case 0x80:
 LED_Toggle(LED_D2);
 break;
@@ -6679,15 +6661,13 @@ break;
 
 case 0x81:
 
-if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-{
+if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
 ToSendDataBuffer[0] = 0x81;
-if(BUTTON_IsPressed(BUTTON_S2) == 0)
-{
+if(BUTTON_IsPressed(BUTTON_S2) == 0) {
+
 ToSendDataBuffer[1] = 0x01;
-}
-else
-{
+} else {
+
 ToSendDataBuffer[1] = 0x00;
 }
 
@@ -6700,16 +6680,14 @@ case 0x37:
 uint16_t pot;
 
 
-if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00)))
-{
+if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
 
-# 177
+# 115
 pot = ADC_Read10bit(ADC_CHANNEL_0);
 
 ToSendDataBuffer[0] = 0x37;
 ToSendDataBuffer[1] = (uint8_t)pot;
 ToSendDataBuffer[2] = pot >> 8;
-
 
 
 USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
