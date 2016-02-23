@@ -5621,12 +5621,25 @@ while( !SSPSTATbits.BF );
 }
 
 int SPI_R_DataRdySPI() {
-return (SSPSTATbits.BF);
+if ( SSPSTATbits.BF )
+return ( +1 );
+else
+return ( 0 );
+}
+
+unsigned char SPI_R_getcSPI() {
+unsigned char TempVar;
+TempVar = SSPBUF;
+PIR1bits.SSPIF = 0;
+
+
+
+return ( TempVar );
 }
 
 void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length ) {
 while( length ) {
-*rdptr++ = ReadSPI();
+*rdptr++ = SPI_R_getcSPI();
 length--;
 }
 }

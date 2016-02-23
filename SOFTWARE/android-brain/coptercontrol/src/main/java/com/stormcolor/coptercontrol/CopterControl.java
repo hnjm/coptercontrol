@@ -366,10 +366,10 @@ public class CopterControl extends GLSurfaceView implements GLSurfaceView.Render
 					right = right*255.0;
 
 					Long now = System.currentTimeMillis();
-					if((now-time) > 100L) {
+					//if((now-time) > 20L) {
 						time = now;
 						sendRotation(front, back, left, right);
-					}
+					//}
         		}
         	}
         	if(event.sensor.getType() == Sensor.TYPE_GRAVITY) {

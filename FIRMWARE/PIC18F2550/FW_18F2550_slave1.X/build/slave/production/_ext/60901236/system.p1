@@ -4283,9 +4283,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;system.c: 60: LED_Enable(LED_D2);
 "60
 [e ( _LED_Enable (1 . `E4547 2 ]
-[; ;system.c: 72: SPI_R_OpenSPI(0b00000100, 0b00000010, 0b00000000);
+[; ;system.c: 72: SPI_R_OpenSPI(0b00000101, 0b00000010, 0b00000000);
 "72
-[e ( _SPI_R_OpenSPI (3 , , -> -> 4 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
+[e ( _SPI_R_OpenSPI (3 , , -> -> 5 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
 [; ;system.c: 78: PWM_R_OpenPWM();
 "78
 [e ( _PWM_R_OpenPWM ..  ]

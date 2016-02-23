@@ -55,17 +55,25 @@ void APP_DeviceCustomHIDInitialize() {
 
     //Re-arm the OUT endpoint for the next packet
     USBOutHandle = (volatile USB_HANDLE)HIDRxPacket(CUSTOM_DEVICE_HID_EP,(uint8_t*)&ReceivedDataBuffer,64);
+
+    // reset in slave
+    __delay_ms(100);
+    LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+    __delay_ms(100);
+    LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
 }
 
-unsigned int currIddlePwm1 = 0;
-unsigned int currIddlePwm2 = 0;
-unsigned int currIddlePwm3 = 0;
-unsigned int currIddlePwm4 = 0;
-unsigned int p1;
-unsigned int p2;
-unsigned char LeftRight[2];
-unsigned char Left;
-unsigned char Right;
+uint16_t currIddlePwm1 = 0;
+uint16_t currIddlePwm2 = 0;
+uint16_t currIddlePwm3 = 0;
+uint16_t currIddlePwm4 = 0;
+uint16_t p1;
+uint16_t p2;
+
+uint8_t LeftRight[2];
+uint8_t Left;
+uint8_t Right;
+
 void APP_iddle() {
     currIddlePwm1++;
     currIddlePwm2++;
@@ -97,7 +105,7 @@ void APP_tick() {
     if(HIDRxHandleBusy(USBOutHandle) == false) {
         switch(ReceivedDataBuffer[0]) {
             case 0x80:  //Toggle LEDs command
-                LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+                //LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
                 break;
 
             case 0x54:
@@ -110,9 +118,11 @@ void APP_tick() {
                 // Send Left & right to slave 18F2550 by SPI
                 Left = ReceivedDataBuffer[3];
                 Right = ReceivedDataBuffer[4];
+
                 LeftRight[0] = Left;
                 LeftRight[1] = Right;
                 SPI_R_putsSPI(LeftRight);
+
                 break;
                 
             case 0x81:  //Get push button state

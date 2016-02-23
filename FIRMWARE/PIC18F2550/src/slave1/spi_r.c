@@ -49,12 +49,25 @@ void SPI_R_putsSPI( unsigned char *wrptr ) {
 }
 
 int SPI_R_DataRdySPI() {
-    return DataRdySPI();
+    if ( SSPSTATbits.BF )
+        return ( +1 );                // data in SSP1BUF register
+    else
+        return ( 0 );                 // no data in SSP1BUF register
+}
+
+unsigned char SPI_R_getcSPI() {
+    unsigned char TempVar;
+    TempVar = SSPBUF;        // Clear BF
+    PIR1bits.SSPIF = 0;      // Clear interrupt flag
+    //SSPBUF = 0x00;           // initiate bus cycle
+    //while ( !SSPSTATbits.BF );                  // wait until cycle complete
+    //while(!PIR1bits.SSPIF);  // wait until cycle complete
+    return ( TempVar );       // return with byte read
 }
 
 void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length ) {
   while( length ) {
-    *rdptr++ = getcSPI();         // read a single byte
+    *rdptr++ = SPI_R_getcSPI();         // read a single byte
     length--;                     // reduce string length count by 1
   }
 }

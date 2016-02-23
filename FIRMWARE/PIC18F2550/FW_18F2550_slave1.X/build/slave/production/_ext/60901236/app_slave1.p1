@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "6 ../src/slave1/spi_r.h
 [v _SPI_R_DataRdySPI `(i ~T0 @X0 0 ef ]
-"7
-[v _SPI_R_getsSPI `(v ~T0 @X0 0 ef2`*uc`uc ]
+"18 ../src/slave1/app_slave1.c
+[v _SPI_R_getcSPI `(i ~T0 @X0 0 ef ]
 "4 ../src/slave1/pwm_r.h
 [v _PWM_R_setPWM1 `(v ~T0 @X0 0 ef1`ui ]
 "5
@@ -4320,42 +4320,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
 [; ;pwm_r.h: 6: void PWM_R_OpenPWM();
 "12 ../src/slave1/app_slave1.c
+[v _cArr `uc ~T0 @X0 -> 2 `i e ]
+[; ;app_slave1.c: 12: unsigned char cArr[2];
+"14
 [v _APP_tick `(v ~T0 @X0 1 ef ]
 {
-[; ;app_slave1.c: 12: void APP_tick() {
+[; ;app_slave1.c: 14: void APP_tick() {
 [e :U _APP_tick ]
 [f ]
-[; ;app_slave1.c: 13: while(!SPI_R_DataRdySPI())
-"13
+[; ;app_slave1.c: 17: while(!SPI_R_DataRdySPI()) ;
+"17
 [e $U 507  ]
 [e :U 508 ]
-[; ;app_slave1.c: 14: ;
-"14
 [e :U 507 ]
-"13
 [e $ ! != ( _SPI_R_DataRdySPI ..  -> 0 `i 508  ]
 [e :U 509 ]
-"16
-[v _cArr `uc ~T0 @X0 -> 2 `i a ]
-[; ;app_slave1.c: 16: unsigned char cArr[2];
-[; ;app_slave1.c: 17: SPI_R_getsSPI(cArr, 2);
-"17
-[e ( _SPI_R_getsSPI (2 , &U _cArr -> -> 2 `i `uc ]
+[; ;app_slave1.c: 18: cArr[0] = SPI_R_getcSPI();
+"18
+[e = *U + &U _cArr * -> -> -> 0 `i `ui `ux -> -> # *U &U _cArr `ui `ux -> ( _SPI_R_getcSPI ..  `uc ]
+[; ;app_slave1.c: 19: while(!SPI_R_DataRdySPI()) ;
 "19
-[v _p1 `ui ~T0 @X0 1 a ]
-[; ;app_slave1.c: 19: unsigned int p1 = cArr[0];
-[e = _p1 -> *U + &U _cArr * -> -> -> 0 `i `ui `ux -> -> # *U &U _cArr `ui `ux `ui ]
+[e $U 510  ]
+[e :U 511 ]
+[e :U 510 ]
+[e $ ! != ( _SPI_R_DataRdySPI ..  -> 0 `i 511  ]
+[e :U 512 ]
+[; ;app_slave1.c: 20: cArr[1] = SPI_R_getcSPI();
 "20
-[v _p2 `ui ~T0 @X0 1 a ]
-[; ;app_slave1.c: 20: unsigned int p2 = cArr[1];
-[e = _p2 -> *U + &U _cArr * -> -> -> 1 `i `ui `ux -> -> # *U &U _cArr `ui `ux `ui ]
-[; ;app_slave1.c: 22: PWM_R_setPWM1(p1);
-"22
-[e ( _PWM_R_setPWM1 (1 _p1 ]
-[; ;app_slave1.c: 23: PWM_R_setPWM2(p2);
-"23
-[e ( _PWM_R_setPWM2 (1 _p2 ]
-[; ;app_slave1.c: 25: }
+[e = *U + &U _cArr * -> -> -> 1 `i `ui `ux -> -> # *U &U _cArr `ui `ux -> ( _SPI_R_getcSPI ..  `uc ]
+"24
+[v _p1 `ui ~T0 @X0 1 a ]
+[; ;app_slave1.c: 24: uint16_t p1 = cArr[0];
+[e = _p1 -> *U + &U _cArr * -> -> -> 0 `i `ui `ux -> -> # *U &U _cArr `ui `ux `ui ]
 "25
+[v _p2 `ui ~T0 @X0 1 a ]
+[; ;app_slave1.c: 25: uint16_t p2 = cArr[1];
+[e = _p2 -> *U + &U _cArr * -> -> -> 1 `i `ui `ux -> -> # *U &U _cArr `ui `ux `ui ]
+[; ;app_slave1.c: 27: PWM_R_setPWM1(p1);
+"27
+[e ( _PWM_R_setPWM1 (1 _p1 ]
+[; ;app_slave1.c: 28: PWM_R_setPWM2(p2);
+"28
+[e ( _PWM_R_setPWM2 (1 _p2 ]
+[; ;app_slave1.c: 29: }
+"29
 [e :UE 506 ]
 }

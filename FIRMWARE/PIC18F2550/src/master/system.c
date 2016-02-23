@@ -58,13 +58,13 @@
 void SYSTEM_Initialize( SYSTEM_STATE state ) {
     switch(state) {
         case SYSTEM_STATE_USB_START:
-            LED_Enable(LED_USB_DEVICE_STATE);
+            //LED_Enable(LED_USB_DEVICE_STATE);
             LED_Enable(LED_USB_DEVICE_HID_CUSTOM);
             
-            BUTTON_Enable(BUTTON_USB_DEVICE_HID_CUSTOM);
+            //BUTTON_Enable(BUTTON_USB_DEVICE_HID_CUSTOM);
             
-            ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
-            ADC_Enable(ADC_CHANNEL_POTENTIOMETER);
+            //ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
+            //ADC_Enable(ADC_CHANNEL_POTENTIOMETER);
 
 
             ///////////////////////////////////////////////////
@@ -78,6 +78,13 @@ void SYSTEM_Initialize( SYSTEM_STATE state ) {
             //                       PWM
             ///////////////////////////////////////////////////
             PWM_R_OpenPWM();
+
+            // reset in slave
+            __delay_ms(100);
+            LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+            __delay_ms(100);
+            LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+
             break;
             
         case SYSTEM_STATE_USB_SUSPEND:

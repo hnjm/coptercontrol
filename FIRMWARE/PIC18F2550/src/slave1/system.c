@@ -69,7 +69,7 @@ void SYSTEM_Initialize() {
     //                       SPI
     ///////////////////////////////////////////////////
     // SLAVE MODE
-    SPI_R_OpenSPI(SLV_SSON, MODE_10, SMPMID);
+    SPI_R_OpenSPI(SLV_SSOFF, MODE_10, SMPMID);
     
     
     ///////////////////////////////////////////////////

@@ -6511,19 +6511,21 @@ void PWM_R_OpenPWM();
 void SYSTEM_Initialize( SYSTEM_STATE state ) {
 switch(state) {
 case SYSTEM_STATE_USB_START:
-LED_Enable(LED_D1);
+
 LED_Enable(LED_D2);
-
-BUTTON_Enable(BUTTON_S2);
-
-ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
-ADC_Enable(ADC_CHANNEL_0);
 
 # 74
 SPI_R_OpenSPI(0b00000001, 0b00000010, 0b00000000 );
 
 # 80
 PWM_R_OpenPWM();
+
+
+_delay((unsigned long)((100)*(4000000/4000.0)));
+LED_Toggle(LED_D2);
+_delay((unsigned long)((100)*(4000000/4000.0)));
+LED_Toggle(LED_D2);
+
 break;
 
 case SYSTEM_STATE_USB_SUSPEND:

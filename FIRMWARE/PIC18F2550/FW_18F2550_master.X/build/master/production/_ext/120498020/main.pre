@@ -6530,21 +6530,16 @@ break;
 
 case EVENT_SOF:
 
-# 93
-APP_LEDUpdateUSBStatus();
+# 94
 break;
 
 case EVENT_SUSPEND:
-
-APP_LEDUpdateUSBStatus();
 
 # 106
 SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
 break;
 
 case EVENT_RESUME:
-
-APP_LEDUpdateUSBStatus();
 
 # 117
 SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);

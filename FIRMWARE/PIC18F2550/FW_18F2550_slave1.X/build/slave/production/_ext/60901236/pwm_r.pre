@@ -5572,13 +5572,13 @@ extern __nonreentrant void _delaywdt(unsigned long);
 extern __nonreentrant void _delay3(unsigned char);
 
 # 5 "../src/slave1/pwm_r.c"
-void PWM_R_setPWM1(unsigned int val) {
+void PWM_R_setPWM1(uint16_t val) {
 CCP1CONbits.DC1B0 = (val & 0x01); val >>= 1;
 CCP1CONbits.DC1B1 = (val & 0x01); val >>= 1;
 CCPR1L = val;
 }
 
-void PWM_R_setPWM2(unsigned int val) {
+void PWM_R_setPWM2(uint16_t val) {
 CCP2CONbits.DC2B0 = (val & 0x01); val >>= 1;
 CCP2CONbits.DC2B1 = (val & 0x01); val >>= 1;
 CCPR2L = val;
@@ -5588,8 +5588,8 @@ void PWM_R_OpenPWM() {
 
 PR2 = 0xFF;
 
-PWM_R_setPWM1(0xFF);
-PWM_R_setPWM2(0xFF);
+PWM_R_setPWM1(0x00);
+PWM_R_setPWM2(0x00);
 
 
 TRISCbits.RC1 = 0;

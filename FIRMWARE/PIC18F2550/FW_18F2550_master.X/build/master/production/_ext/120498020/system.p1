@@ -2,30 +2,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58 ../src/master/system.c
 [c E4570 0 1 2 .. ]
 [n E4570 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
-"61
+"62
 [c E4547 0 1 2 3 4 .. ]
 [n E4547 . LED_NONE LED_D1 LED_D2 LED_D3 LED_D4  ]
 "129 ../src/master/leds.h
 [v _LED_Enable `(v ~T0 @X0 0 ef1`E4547 ]
-"64 ../src/master/system.c
-[c E4538 0 1 2 .. ]
-[n E4538 . BUTTON_NONE BUTTON_S2 BUTTON_S3  ]
-"72 ../src/master/buttons.h
-[v _BUTTON_Enable `(v ~T0 @X0 0 ef1`E4538 ]
-"66 ../src/master/system.c
-[c E3756 0 .. ]
-[n E3756 . ADC_CONFIGURATION_DEFAULT  ]
-"109 ../src/master\adc.h
-[v _ADC_SetConfiguration `(uc ~T0 @X0 0 ef1`E3756 ]
-"67 ../src/master/system.c
-[c E3753 0 .. ]
-[n E3753 . ADC_CHANNEL_0  ]
-"95 ../src/master\adc.h
-[v _ADC_Enable `(uc ~T0 @X0 0 ef1`E3753 ]
 "4 ../src/master/spi_r.h
 [v _SPI_R_OpenSPI `(v ~T0 @X0 0 ef3`uc`uc`uc ]
 "6 ../src/master/pwm_r.h
 [v _PWM_R_OpenPWM `(v ~T0 @X0 0 ef ]
+[v F4531 `(v ~T0 @X0 1 tf1`ul ]
+"156 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18.h
+[v __delay `JF4531 ~T0 @X0 0 e ]
+[p i __delay ]
+"94 ../src/master/leds.h
+[v _LED_Toggle `(v ~T0 @X0 0 ef1`E4547 ]
 "298 ../src/master/inc\usb_device.h
 [v _USBDeviceTasks `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -4835,45 +4826,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;system.c: 60: case SYSTEM_STATE_USB_START:
 "60
 [e :U 557 ]
-[; ;system.c: 61: LED_Enable(LED_D1);
-"61
-[e ( _LED_Enable (1 . `E4547 1 ]
 [; ;system.c: 62: LED_Enable(LED_D2);
 "62
 [e ( _LED_Enable (1 . `E4547 2 ]
-[; ;system.c: 64: BUTTON_Enable(BUTTON_S2);
-"64
-[e ( _BUTTON_Enable (1 . `E4538 1 ]
-[; ;system.c: 66: ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
-"66
-[e ( _ADC_SetConfiguration (1 . `E3756 0 ]
-[; ;system.c: 67: ADC_Enable(ADC_CHANNEL_0);
-"67
-[e ( _ADC_Enable (1 . `E3753 0 ]
 [; ;system.c: 74: SPI_R_OpenSPI(0b00000001, 0b00000010, 0b00000000 );
 "74
 [e ( _SPI_R_OpenSPI (3 , , -> -> 1 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
 [; ;system.c: 80: PWM_R_OpenPWM();
 "80
 [e ( _PWM_R_OpenPWM ..  ]
-[; ;system.c: 81: break;
-"81
-[e $U 555  ]
-[; ;system.c: 83: case SYSTEM_STATE_USB_SUSPEND:
+[; ;system.c: 83: _delay((unsigned long)((100)*(4000000/4000.0)));
 "83
-[e :U 558 ]
-[; ;system.c: 84: break;
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;system.c: 84: LED_Toggle(LED_D2);
 "84
-[e $U 555  ]
-[; ;system.c: 86: case SYSTEM_STATE_USB_RESUME:
+[e ( _LED_Toggle (1 . `E4547 2 ]
+[; ;system.c: 85: _delay((unsigned long)((100)*(4000000/4000.0)));
+"85
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;system.c: 86: LED_Toggle(LED_D2);
 "86
-[e :U 559 ]
-[; ;system.c: 87: break;
-"87
-[e $U 555  ]
+[e ( _LED_Toggle (1 . `E4547 2 ]
+[; ;system.c: 88: break;
 "88
+[e $U 555  ]
+[; ;system.c: 90: case SYSTEM_STATE_USB_SUSPEND:
+"90
+[e :U 558 ]
+[; ;system.c: 91: break;
+"91
+[e $U 555  ]
+[; ;system.c: 93: case SYSTEM_STATE_USB_RESUME:
+"93
+[e :U 559 ]
+[; ;system.c: 94: break;
+"94
+[e $U 555  ]
+"95
 }
-[; ;system.c: 88: }
+[; ;system.c: 95: }
 [e $U 555  ]
 "59
 [e :U 556 ]
@@ -4881,23 +4872,23 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ . `E4570 1 558
  , $ . `E4570 2 559
  555 ]
-"88
+"95
 [e :U 555 ]
-[; ;system.c: 89: }
-"89
+[; ;system.c: 96: }
+"96
 [e :UE 554 ]
 }
-[v F5191 `(v ~T0 @X0 1 tf ]
-"94
-[v _SYS_InterruptHigh `IF5191 ~T0 @X0 1 e ]
+[v F5193 `(v ~T0 @X0 1 tf ]
+"101
+[v _SYS_InterruptHigh `IF5193 ~T0 @X0 1 e ]
 {
-[; ;system.c: 94: void interrupt SYS_InterruptHigh(void) {
+[; ;system.c: 101: void interrupt SYS_InterruptHigh(void) {
 [e :U _SYS_InterruptHigh ]
 [f ]
-[; ;system.c: 96: USBDeviceTasks();
-"96
+[; ;system.c: 103: USBDeviceTasks();
+"103
 [e ( _USBDeviceTasks ..  ]
-[; ;system.c: 98: }
-"98
+[; ;system.c: 105: }
+"105
 [e :UE 560 ]
 }

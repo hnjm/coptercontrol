@@ -6648,17 +6648,25 @@ USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
 
 
 USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
+
+
+_delay((unsigned long)((100)*(4000000/4000.0)));
+LED_Toggle(LED_D2);
+_delay((unsigned long)((100)*(4000000/4000.0)));
+LED_Toggle(LED_D2);
 }
 
-unsigned int currIddlePwm1 = 0;
-unsigned int currIddlePwm2 = 0;
-unsigned int currIddlePwm3 = 0;
-unsigned int currIddlePwm4 = 0;
-unsigned int p1;
-unsigned int p2;
-unsigned char LeftRight[2];
-unsigned char Left;
-unsigned char Right;
+uint16_t currIddlePwm1 = 0;
+uint16_t currIddlePwm2 = 0;
+uint16_t currIddlePwm3 = 0;
+uint16_t currIddlePwm4 = 0;
+uint16_t p1;
+uint16_t p2;
+
+uint8_t LeftRight[2];
+uint8_t Left;
+uint8_t Right;
+
 void APP_iddle() {
 currIddlePwm1++;
 currIddlePwm2++;
@@ -6690,7 +6698,7 @@ void APP_tick() {
 if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0) {
 switch(ReceivedDataBuffer[0]) {
 case 0x80:
-LED_Toggle(LED_D2);
+
 break;
 
 case 0x54:
@@ -6703,9 +6711,11 @@ PWM_R_setPWM2(p2);
 
 Left = ReceivedDataBuffer[3];
 Right = ReceivedDataBuffer[4];
+
 LeftRight[0] = Left;
 LeftRight[1] = Right;
 SPI_R_putsSPI(LeftRight);
+
 break;
 
 case 0x81:
@@ -6731,7 +6741,7 @@ uint16_t pot;
 
 if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
 
-# 145
+# 155
 pot = ADC_Read10bit(ADC_CHANNEL_0);
 
 ToSendDataBuffer[0] = 0x37;

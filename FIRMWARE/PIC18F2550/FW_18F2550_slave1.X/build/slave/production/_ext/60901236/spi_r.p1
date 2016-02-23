@@ -105,8 +105,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISCbits `VS240 ~T0 @X0 0 e@3988 ]
 "6348
 [v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
-"594 C:\Program Files (x86)\Microchip\xc8\v1.36\include\plib\spi.h
-[v _ReadSPI `(uc ~T0 @X0 0 ef ]
+"3852
+[s S254 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S254 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"3861
+[s S255 :5 `uc 1 :1 `uc 1 ]
+[n S255 . . RC1IF ]
+"3865
+[s S256 :4 `uc 1 :1 `uc 1 ]
+[n S256 . . TX1IF ]
+"3851
+[u S253 `S254 1 `S255 1 `S256 1 ]
+[n S253 . . . . ]
+"3870
+[v _PIR1bits `VS253 ~T0 @X0 0 e@3998 ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -4449,41 +4461,76 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi_r.c: 51: int SPI_R_DataRdySPI() {
 [e :U _SPI_R_DataRdySPI ]
 [f ]
-[; ;spi_r.c: 52: return (SSPSTATbits.BF);
+[; ;spi_r.c: 52: if ( SSPSTATbits.BF )
 "52
-[e ) -> . . _SSPSTATbits 2 0 `i ]
-[e $UE 520  ]
-[; ;spi_r.c: 53: }
+[e $ ! != -> . . _SSPSTATbits 2 0 `i -> -> -> 0 `i `Vuc `i 521  ]
+[; ;spi_r.c: 53: return ( +1 );
 "53
+[e ) -> 1 `i ]
+[e $UE 520  ]
+[e $U 522  ]
+"54
+[e :U 521 ]
+[; ;spi_r.c: 54: else
+[; ;spi_r.c: 55: return ( 0 );
+"55
+[e ) -> 0 `i ]
+[e $UE 520  ]
+[e :U 522 ]
+[; ;spi_r.c: 56: }
+"56
 [e :UE 520 ]
 }
-"55
+"58
+[v _SPI_R_getcSPI `(uc ~T0 @X0 1 ef ]
+{
+[; ;spi_r.c: 58: unsigned char SPI_R_getcSPI() {
+[e :U _SPI_R_getcSPI ]
+[f ]
+"59
+[v _TempVar `uc ~T0 @X0 1 a ]
+[; ;spi_r.c: 59: unsigned char TempVar;
+[; ;spi_r.c: 60: TempVar = SSPBUF;
+"60
+[e = _TempVar _SSPBUF ]
+[; ;spi_r.c: 61: PIR1bits.SSPIF = 0;
+"61
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;spi_r.c: 65: return ( TempVar );
+"65
+[e ) _TempVar ]
+[e $UE 523  ]
+[; ;spi_r.c: 66: }
+"66
+[e :UE 523 ]
+}
+"68
 [v _SPI_R_getsSPI `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
-[; ;spi_r.c: 55: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length ) {
+[; ;spi_r.c: 68: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length ) {
 [e :U _SPI_R_getsSPI ]
 [v _rdptr `*uc ~T0 @X0 1 r1 ]
 [v _length `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;spi_r.c: 56: while( length ) {
-"56
-[e $U 522  ]
-[e :U 523 ]
+[; ;spi_r.c: 69: while( length ) {
+"69
+[e $U 525  ]
+[e :U 526 ]
 {
-[; ;spi_r.c: 57: *rdptr++ = ReadSPI();
-"57
-[e = *U ++ _rdptr * -> -> 1 `i `x -> -> # *U _rdptr `i `x ( _ReadSPI ..  ]
-[; ;spi_r.c: 58: length--;
-"58
+[; ;spi_r.c: 70: *rdptr++ = SPI_R_getcSPI();
+"70
+[e = *U ++ _rdptr * -> -> 1 `i `x -> -> # *U _rdptr `i `x ( _SPI_R_getcSPI ..  ]
+[; ;spi_r.c: 71: length--;
+"71
 [e -- _length -> -> 1 `i `uc ]
-"59
+"72
 }
-[e :U 522 ]
-"56
-[e $ != -> _length `i -> -> -> 0 `i `uc `i 523  ]
-[e :U 524 ]
-[; ;spi_r.c: 59: }
-[; ;spi_r.c: 60: }
-"60
-[e :UE 521 ]
+[e :U 525 ]
+"69
+[e $ != -> _length `i -> -> -> 0 `i `uc `i 526  ]
+[e :U 527 ]
+[; ;spi_r.c: 72: }
+[; ;spi_r.c: 73: }
+"73
+[e :UE 524 ]
 }

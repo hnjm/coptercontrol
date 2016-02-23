@@ -4227,7 +4227,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "5 ../src/slave1/pwm_r.c
 [v _PWM_R_setPWM1 `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;pwm_r.c: 5: void PWM_R_setPWM1(unsigned int val) {
+[; ;pwm_r.c: 5: void PWM_R_setPWM1(uint16_t val) {
 [e :U _PWM_R_setPWM1 ]
 [v _val `ui ~T0 @X0 1 r1 ]
 [f ]
@@ -4249,7 +4249,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "11
 [v _PWM_R_setPWM2 `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;pwm_r.c: 11: void PWM_R_setPWM2(unsigned int val) {
+[; ;pwm_r.c: 11: void PWM_R_setPWM2(uint16_t val) {
 [e :U _PWM_R_setPWM2 ]
 [v _val `ui ~T0 @X0 1 r1 ]
 [f ]
@@ -4277,12 +4277,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pwm_r.c: 19: PR2 = 0xFF;
 "19
 [e = _PR2 -> -> 255 `i `uc ]
-[; ;pwm_r.c: 21: PWM_R_setPWM1(0xFF);
+[; ;pwm_r.c: 21: PWM_R_setPWM1(0x00);
 "21
-[e ( _PWM_R_setPWM1 (1 -> -> 255 `i `ui ]
-[; ;pwm_r.c: 22: PWM_R_setPWM2(0xFF);
+[e ( _PWM_R_setPWM1 (1 -> -> 0 `i `ui ]
+[; ;pwm_r.c: 22: PWM_R_setPWM2(0x00);
 "22
-[e ( _PWM_R_setPWM2 (1 -> -> 255 `i `ui ]
+[e ( _PWM_R_setPWM2 (1 -> -> 0 `i `ui ]
 [; ;pwm_r.c: 25: TRISCbits.RC1 = 0;
 "25
 [e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
