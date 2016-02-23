@@ -1,9 +1,6 @@
 coptercontrol (BETA)
 ============
 
-A dron with Android brain <br />
-<br />
-
 A drone with Android brain.<br />
 Consist in a little external USB module plugged into a Android. This module also have PWM outputs (0v-3v) that allow connect any self-powered engines. Velocity of engines are controlled by the PWM.<br />
 Android device, the USB module and the desired engines designates the drone, at same time other Android application in the client allowing the control of the first through the AppWarp API for communication.<br />
@@ -11,7 +8,7 @@ Android device, the USB module and the desired engines designates the drone, at 
 
 Materials: <br />
 - Device with Android <br />
-- PIC 18F2550 (USB) <br />
+- 2 PIC 18F2550 SMD (Master SPI+USB+2PWM, SLAVE SPI+2PWM) <br />
 <br />
 
 Includes: <br />
@@ -23,12 +20,14 @@ Includes: <br />
 <br />
 
 Changelog: <br />
-- Connection and communication between Android app and PIC18F2550 <br />
+- Connection and communication between Android app and Master PIC <br />
+- Activate 2 PWM in Master according to Android gyroscope X (Front/Back) sensor data <br />
+- Connection and communication between Master and Slave throught SPI <br />
+- Activate 2 PWM in Slave according to Android gyroscope Z (Left/Right) sensor data <br />
 <br />
  
 Todo´s: <br />
-- PWM in PIC according to gyroscope sensor data (4 outputs) <br />
+- Proteus schematic & PCB <br />
 - Testing with real engines <br />
-- Proteus schematic <br />
 - Android client application for the control of the Android server (the dron brain) using AppWarp <br />
 - Handle 3 or more detected outputs <br />
