@@ -3,31 +3,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _USBEnableEndpoint `(v ~T0 @X0 0 ef2`uc`uc ]
 "443
 [v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
+"4 ../../../../_ELECTRONIC/inc\pwm_r.h
+[v _PWM_R_setPWM1 `(v ~T0 @X0 0 ef1`ui ]
+"5
+[v _PWM_R_setPWM2 `(v ~T0 @X0 0 ef1`ui ]
+"5 ../../../../_ELECTRONIC/inc\spi_r.h
+[v _SPI_R_putsSPI `(v ~T0 @X0 0 ef1`*uc ]
 [v F4711 `(v ~T0 @X0 1 tf1`ul ]
 "156 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18.h
 [v __delay `JF4711 ~T0 @X0 0 e ]
 [p i __delay ]
-"61 ../src/master/app_master.c
-[c E4727 0 1 2 3 4 .. ]
-[n E4727 . LED_NONE LED_D1 LED_D2 LED_D3 LED_D4  ]
-"94 ../src/master\leds.h
-[v _LED_Toggle `(v ~T0 @X0 0 ef1`E4727 ]
-"4 ../src/master/pwm_r.h
-[v _PWM_R_setPWM1 `(v ~T0 @X0 0 ef1`ui ]
-"5
-[v _PWM_R_setPWM2 `(v ~T0 @X0 0 ef1`ui ]
-"5 ../src/master/spi_r.h
-[v _SPI_R_putsSPI `(v ~T0 @X0 0 ef1`*uc ]
-"132 ../src/master/app_master.c
-[c E4718 0 1 2 .. ]
-[n E4718 . BUTTON_NONE BUTTON_S2 BUTTON_S3  ]
-"54 ../src/master\buttons.h
-[v _BUTTON_IsPressed `(uc ~T0 @X0 0 ef1`E4718 ]
-"155 ../src/master/app_master.c
-[c E3934 0 .. ]
-[n E3934 . ADC_CHANNEL_0  ]
-"81 ../src/master\adc.h
-[v _ADC_Read10bit `(ui ~T0 @X0 0 ef1`E3934 ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -4279,40 +4264,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;master\buttons.h: 29: typedef enum
-[; ;master\buttons.h: 30: {
-[; ;master\buttons.h: 31: BUTTON_NONE,
-[; ;master\buttons.h: 32: BUTTON_S2,
-[; ;master\buttons.h: 33: BUTTON_S3
-[; ;master\buttons.h: 35: } BUTTON;
-[; ;master\buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;master\buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;master\leds.h: 29: typedef enum
-[; ;master\leds.h: 30: {
-[; ;master\leds.h: 31: LED_NONE,
-[; ;master\leds.h: 32: LED_D1,
-[; ;master\leds.h: 33: LED_D2,
-[; ;master\leds.h: 34: LED_D3,
-[; ;master\leds.h: 35: LED_D4
-[; ;master\leds.h: 38: } LED;
-[; ;master\leds.h: 58: void LED_On(LED led);
-[; ;master\leds.h: 76: void LED_Off(LED led);
-[; ;master\leds.h: 94: void LED_Toggle(LED led);
-[; ;master\leds.h: 112: bool LED_Get(LED led);
-[; ;master\leds.h: 129: void LED_Enable(LED led);
 [; ;master\power.h: 27: typedef enum
 [; ;master\power.h: 28: {
 [; ;master\power.h: 29: POWER_SOURCE_USB,
 [; ;master\power.h: 30: POWER_SOURCE_MAINS
 [; ;master\power.h: 31: } POWER_SOURCE;
 [; ;master\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;master\system.h: 40: typedef enum
-[; ;master\system.h: 41: {
-[; ;master\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;master\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;master\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;master\system.h: 45: } SYSTEM_STATE;
-[; ;master\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;master\system.h: 37: typedef enum
+[; ;master\system.h: 38: {
+[; ;master\system.h: 39: SYSTEM_STATE_USB_START,
+[; ;master\system.h: 40: SYSTEM_STATE_USB_SUSPEND,
+[; ;master\system.h: 41: SYSTEM_STATE_USB_RESUME
+[; ;master\system.h: 42: } SYSTEM_STATE;
+[; ;master\system.h: 56: void SYSTEM_Initialize( SYSTEM_STATE state );
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -4854,13 +4818,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\usb_device_hid.h: 303: extern volatile CTRL_TRF_SETUP SetupPkt;
 [; ;inc\usb_device_hid.h: 304: extern const uint8_t configDescriptor1[];
 [; ;inc\usb_device_hid.h: 305: extern volatile uint8_t CtrlTrfData[8];
-[; ;spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
-[; ;spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
-[; ;spi_r.h: 6: int SPI_R_DataRdySPI();
-[; ;spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
-[; ;pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
-[; ;pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
-[; ;pwm_r.h: 6: void PWM_R_OpenPWM();
+[; ;inc\spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
+[; ;inc\spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
+[; ;inc\spi_r.h: 6: int SPI_R_DataRdySPI();
+[; ;inc\spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
+[; ;inc\pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
+[; ;inc\pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
+[; ;inc\pwm_r.h: 6: void PWM_R_OpenPWM();
 "30 ../src/master/app_master.c
 [v _ReceivedDataBuffer `uc ~T0 @X0 -> 64 `i e@1280 ]
 [; ;app_master.c: 30: unsigned char ReceivedDataBuffer[64] @ 0x500;
@@ -4894,293 +4858,201 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;app_master.c: 57: USBOutHandle = (volatile void*)USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
 "57
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
-[; ;app_master.c: 60: _delay((unsigned long)((100)*(4000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;app_master.c: 61: LED_Toggle(LED_D2);
-"61
-[e ( _LED_Toggle (1 . `E4727 2 ]
-[; ;app_master.c: 62: _delay((unsigned long)((100)*(4000000/4000.0)));
-"62
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;app_master.c: 63: LED_Toggle(LED_D2);
-"63
-[e ( _LED_Toggle (1 . `E4727 2 ]
-[; ;app_master.c: 64: }
-"64
+[; ;app_master.c: 58: }
+"58
 [e :UE 561 ]
 }
-"66
+"60
 [v _currIddlePwm1 `ui ~T0 @X0 1 e ]
 [i _currIddlePwm1
 -> -> 0 `i `ui
 ]
-[; ;app_master.c: 66: uint16_t currIddlePwm1 = 0;
-"67
+[; ;app_master.c: 60: uint16_t currIddlePwm1 = 0;
+"61
 [v _currIddlePwm2 `ui ~T0 @X0 1 e ]
 [i _currIddlePwm2
 -> -> 0 `i `ui
 ]
-[; ;app_master.c: 67: uint16_t currIddlePwm2 = 0;
-"68
+[; ;app_master.c: 61: uint16_t currIddlePwm2 = 0;
+"62
 [v _currIddlePwm3 `ui ~T0 @X0 1 e ]
 [i _currIddlePwm3
 -> -> 0 `i `ui
 ]
-[; ;app_master.c: 68: uint16_t currIddlePwm3 = 0;
-"69
+[; ;app_master.c: 62: uint16_t currIddlePwm3 = 0;
+"63
 [v _currIddlePwm4 `ui ~T0 @X0 1 e ]
 [i _currIddlePwm4
 -> -> 0 `i `ui
 ]
-[; ;app_master.c: 69: uint16_t currIddlePwm4 = 0;
-"70
+[; ;app_master.c: 63: uint16_t currIddlePwm4 = 0;
+"64
 [v _p1 `ui ~T0 @X0 1 e ]
-[; ;app_master.c: 70: uint16_t p1;
-"71
+[; ;app_master.c: 64: uint16_t p1;
+"65
 [v _p2 `ui ~T0 @X0 1 e ]
-[; ;app_master.c: 71: uint16_t p2;
-"73
+[; ;app_master.c: 65: uint16_t p2;
+"67
 [v _LeftRight `uc ~T0 @X0 -> 2 `i e ]
-[; ;app_master.c: 73: uint8_t LeftRight[2];
-"74
+[; ;app_master.c: 67: uint8_t LeftRight[2];
+"68
 [v _Left `uc ~T0 @X0 1 e ]
-[; ;app_master.c: 74: uint8_t Left;
-"75
+[; ;app_master.c: 68: uint8_t Left;
+"69
 [v _Right `uc ~T0 @X0 1 e ]
-[; ;app_master.c: 75: uint8_t Right;
-"77
+[; ;app_master.c: 69: uint8_t Right;
+"71
 [v _APP_iddle `(v ~T0 @X0 1 ef ]
 {
-[; ;app_master.c: 77: void APP_iddle() {
+[; ;app_master.c: 71: void APP_iddle() {
 [e :U _APP_iddle ]
 [f ]
-[; ;app_master.c: 78: currIddlePwm1++;
-"78
+[; ;app_master.c: 72: currIddlePwm1++;
+"72
 [e ++ _currIddlePwm1 -> -> 1 `i `ui ]
-[; ;app_master.c: 79: currIddlePwm2++;
-"79
+[; ;app_master.c: 73: currIddlePwm2++;
+"73
 [e ++ _currIddlePwm2 -> -> 1 `i `ui ]
-[; ;app_master.c: 80: currIddlePwm3++;
-"80
+[; ;app_master.c: 74: currIddlePwm3++;
+"74
 [e ++ _currIddlePwm3 -> -> 1 `i `ui ]
-[; ;app_master.c: 81: currIddlePwm4++;
-"81
+[; ;app_master.c: 75: currIddlePwm4++;
+"75
 [e ++ _currIddlePwm4 -> -> 1 `i `ui ]
-[; ;app_master.c: 83: if(currIddlePwm1 > 254) currIddlePwm1 = 0;
-"83
+[; ;app_master.c: 77: if(currIddlePwm1 > 254) currIddlePwm1 = 0;
+"77
 [e $ ! > _currIddlePwm1 -> -> 254 `i `ui 563  ]
 [e = _currIddlePwm1 -> -> 0 `i `ui ]
 [e :U 563 ]
-[; ;app_master.c: 84: if(currIddlePwm2 > 254) currIddlePwm2 = 0;
-"84
+[; ;app_master.c: 78: if(currIddlePwm2 > 254) currIddlePwm2 = 0;
+"78
 [e $ ! > _currIddlePwm2 -> -> 254 `i `ui 564  ]
 [e = _currIddlePwm2 -> -> 0 `i `ui ]
 [e :U 564 ]
-[; ;app_master.c: 85: if(currIddlePwm3 > 254) currIddlePwm3 = 0;
-"85
+[; ;app_master.c: 79: if(currIddlePwm3 > 254) currIddlePwm3 = 0;
+"79
 [e $ ! > _currIddlePwm3 -> -> 254 `i `ui 565  ]
 [e = _currIddlePwm3 -> -> 0 `i `ui ]
 [e :U 565 ]
-[; ;app_master.c: 86: if(currIddlePwm4 > 254) currIddlePwm4 = 0;
-"86
+[; ;app_master.c: 80: if(currIddlePwm4 > 254) currIddlePwm4 = 0;
+"80
 [e $ ! > _currIddlePwm4 -> -> 254 `i `ui 566  ]
 [e = _currIddlePwm4 -> -> 0 `i `ui ]
 [e :U 566 ]
-[; ;app_master.c: 88: PWM_R_setPWM1(currIddlePwm1);
-"88
+[; ;app_master.c: 82: PWM_R_setPWM1(currIddlePwm1);
+"82
 [e ( _PWM_R_setPWM1 (1 _currIddlePwm1 ]
-[; ;app_master.c: 89: PWM_R_setPWM2(currIddlePwm2);
-"89
+[; ;app_master.c: 83: PWM_R_setPWM2(currIddlePwm2);
+"83
 [e ( _PWM_R_setPWM2 (1 _currIddlePwm2 ]
-[; ;app_master.c: 92: Left = currIddlePwm3;
-"92
+[; ;app_master.c: 86: Left = currIddlePwm3;
+"86
 [e = _Left -> _currIddlePwm3 `uc ]
-[; ;app_master.c: 93: Right = currIddlePwm4;
-"93
+[; ;app_master.c: 87: Right = currIddlePwm4;
+"87
 [e = _Right -> _currIddlePwm4 `uc ]
-[; ;app_master.c: 94: LeftRight[0] = Left;
-"94
+[; ;app_master.c: 88: LeftRight[0] = Left;
+"88
 [e = *U + &U _LeftRight * -> -> -> 0 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Left ]
-[; ;app_master.c: 95: LeftRight[1] = Right;
-"95
+[; ;app_master.c: 89: LeftRight[1] = Right;
+"89
 [e = *U + &U _LeftRight * -> -> -> 1 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Right ]
-[; ;app_master.c: 96: SPI_R_putsSPI(LeftRight);
-"96
+[; ;app_master.c: 90: SPI_R_putsSPI(LeftRight);
+"90
 [e ( _SPI_R_putsSPI (1 &U _LeftRight ]
-[; ;app_master.c: 98: for(unsigned char n=0; n < 1; n++)
-"98
+[; ;app_master.c: 92: for(unsigned char n=0; n < 1; n++)
+"92
 {
 [v _n `uc ~T0 @X0 1 a ]
 [e = _n -> -> 0 `i `uc ]
 [e $ < -> _n `i -> 1 `i 567  ]
 [e $U 568  ]
-"99
+"93
 [e :U 567 ]
-[; ;app_master.c: 99: _delay((unsigned long)((50)*(4000000/4000.0)));
+[; ;app_master.c: 93: _delay((unsigned long)((50)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"98
+"92
 [e ++ _n -> -> 1 `i `uc ]
 [e $ < -> _n `i -> 1 `i 567  ]
 [e :U 568 ]
-"99
+"93
 }
-[; ;app_master.c: 100: }
-"100
+[; ;app_master.c: 94: }
+"94
 [e :UE 562 ]
 }
-"104
+"98
 [v _APP_tick `(v ~T0 @X0 1 ef ]
 {
-[; ;app_master.c: 104: void APP_tick() {
+[; ;app_master.c: 98: void APP_tick() {
 [e :U _APP_tick ]
 [f ]
-[; ;app_master.c: 105: if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0) {
-"105
+[; ;app_master.c: 99: if(((USBOutHandle != 0x0000) && ((*(volatile uint8_t*)USBOutHandle & 0x80) != 0x00)) == 0) {
+"99
 [e $ ! == -> && != _USBOutHandle -> -> 0 `i `*Vv != & -> *U -> _USBOutHandle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 571  ]
 {
-[; ;app_master.c: 106: switch(ReceivedDataBuffer[0]) {
-"106
+[; ;app_master.c: 100: switch(ReceivedDataBuffer[0]) {
+"100
 [e $U 573  ]
 {
-[; ;app_master.c: 107: case 0x80:
-"107
+[; ;app_master.c: 101: case 0x80:
+"101
 [e :U 574 ]
-[; ;app_master.c: 109: break;
-"109
+[; ;app_master.c: 103: break;
+"103
 [e $U 572  ]
-[; ;app_master.c: 111: case 0x54:
-"111
+[; ;app_master.c: 105: case 0x54:
+"105
 [e :U 575 ]
-[; ;app_master.c: 112: p1 = ReceivedDataBuffer[1];
-"112
-[e = _p1 -> *U + &U _ReceivedDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
-[; ;app_master.c: 113: p2 = ReceivedDataBuffer[2];
-"113
-[e = _p2 -> *U + &U _ReceivedDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
-[; ;app_master.c: 115: PWM_R_setPWM1(p1);
-"115
-[e ( _PWM_R_setPWM1 (1 _p1 ]
-[; ;app_master.c: 116: PWM_R_setPWM2(p2);
-"116
-[e ( _PWM_R_setPWM2 (1 _p2 ]
-[; ;app_master.c: 119: Left = ReceivedDataBuffer[3];
-"119
-[e = _Left *U + &U _ReceivedDataBuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux ]
-[; ;app_master.c: 120: Right = ReceivedDataBuffer[4];
-"120
-[e = _Right *U + &U _ReceivedDataBuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux ]
-[; ;app_master.c: 122: LeftRight[0] = Left;
-"122
-[e = *U + &U _LeftRight * -> -> -> 0 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Left ]
-[; ;app_master.c: 123: LeftRight[1] = Right;
-"123
-[e = *U + &U _LeftRight * -> -> -> 1 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Right ]
-[; ;app_master.c: 124: SPI_R_putsSPI(LeftRight);
-"124
-[e ( _SPI_R_putsSPI (1 &U _LeftRight ]
-[; ;app_master.c: 126: break;
-"126
-[e $U 572  ]
-[; ;app_master.c: 128: case 0x81:
-"128
-[e :U 576 ]
-[; ;app_master.c: 130: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
-"130
-[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 577  ]
-{
-[; ;app_master.c: 131: ToSendDataBuffer[0] = 0x81;
-"131
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 129 `i `uc ]
-[; ;app_master.c: 132: if(BUTTON_IsPressed(BUTTON_S2) == 0) {
-"132
-[e $ ! == -> ( _BUTTON_IsPressed (1 . `E4718 1 `i -> 0 `i 578  ]
-{
-[; ;app_master.c: 134: ToSendDataBuffer[1] = 0x01;
-"134
-[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 1 `i `uc ]
-"135
-}
-[; ;app_master.c: 135: } else {
-[e $U 579  ]
-[e :U 578 ]
-{
-[; ;app_master.c: 137: ToSendDataBuffer[1] = 0x00;
-"137
-[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 0 `i `uc ]
-"138
-}
-[e :U 579 ]
-[; ;app_master.c: 138: }
-[; ;app_master.c: 140: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"140
-[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"141
-}
-[e :U 577 ]
-[; ;app_master.c: 141: }
-[; ;app_master.c: 142: break;
-"142
-[e $U 572  ]
-[; ;app_master.c: 144: case 0x37:
-"144
-[e :U 580 ]
-[; ;app_master.c: 145: {
-"145
-{
-"146
-[v _pot `ui ~T0 @X0 1 a ]
-[; ;app_master.c: 146: uint16_t pot;
-[; ;app_master.c: 149: if(!((USBInHandle != 0x0000) && ((*(volatile uint8_t*)USBInHandle & 0x80) != 0x00))) {
-"149
-[e $ ! ! && != _USBInHandle -> -> 0 `i `*Vv != & -> *U -> _USBInHandle `*Vuc `i -> 128 `i -> 0 `i 581  ]
-{
-[; ;app_master.c: 155: pot = ADC_Read10bit(ADC_CHANNEL_0);
-"155
-[e = _pot ( _ADC_Read10bit (1 . `E3934 0 ]
-[; ;app_master.c: 157: ToSendDataBuffer[0] = 0x37;
-"157
-[e = *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 55 `i `uc ]
-[; ;app_master.c: 158: ToSendDataBuffer[1] = (uint8_t)pot;
-"158
-[e = *U + &U _ToSendDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> _pot `uc ]
-[; ;app_master.c: 159: ToSendDataBuffer[2] = pot >> 8;
-"159
-[e = *U + &U _ToSendDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> >> _pot -> 8 `i `uc ]
-[; ;app_master.c: 162: USBInHandle = USBTransferOnePacket(1,1,(uint8_t*)&ToSendDataBuffer[0],64);
-"162
-[e = _USBInHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc &U *U + &U _ToSendDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ToSendDataBuffer `ui `ux -> -> 64 `i `uc `*Vv ]
-"163
-}
-[e :U 581 ]
-"164
-}
-[; ;app_master.c: 163: }
-[; ;app_master.c: 164: }
-[; ;app_master.c: 165: break;
-"165
-[e $U 572  ]
-"166
-}
-[; ;app_master.c: 166: }
-[e $U 572  ]
+[; ;app_master.c: 106: p1 = ReceivedDataBuffer[1];
 "106
+[e = _p1 -> *U + &U _ReceivedDataBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
+[; ;app_master.c: 107: p2 = ReceivedDataBuffer[2];
+"107
+[e = _p2 -> *U + &U _ReceivedDataBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux `ui ]
+[; ;app_master.c: 109: PWM_R_setPWM1(p1);
+"109
+[e ( _PWM_R_setPWM1 (1 _p1 ]
+[; ;app_master.c: 110: PWM_R_setPWM2(p2);
+"110
+[e ( _PWM_R_setPWM2 (1 _p2 ]
+[; ;app_master.c: 113: Left = ReceivedDataBuffer[3];
+"113
+[e = _Left *U + &U _ReceivedDataBuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux ]
+[; ;app_master.c: 114: Right = ReceivedDataBuffer[4];
+"114
+[e = _Right *U + &U _ReceivedDataBuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux ]
+[; ;app_master.c: 116: LeftRight[0] = Left;
+"116
+[e = *U + &U _LeftRight * -> -> -> 0 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Left ]
+[; ;app_master.c: 117: LeftRight[1] = Right;
+"117
+[e = *U + &U _LeftRight * -> -> -> 1 `i `ui `ux -> -> # *U &U _LeftRight `ui `ux _Right ]
+[; ;app_master.c: 118: SPI_R_putsSPI(LeftRight);
+"118
+[e ( _SPI_R_putsSPI (1 &U _LeftRight ]
+[; ;app_master.c: 120: break;
+"120
+[e $U 572  ]
+"160
+}
+[; ;app_master.c: 160: }
+[e $U 572  ]
+"100
 [e :U 573 ]
 [e [\ *U + &U _ReceivedDataBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ReceivedDataBuffer `ui `ux , $ -> -> 128 `i `uc 574
  , $ -> -> 84 `i `uc 575
- , $ -> -> 129 `i `uc 576
- , $ -> -> 55 `i `uc 580
  572 ]
-"166
+"160
 [e :U 572 ]
-[; ;app_master.c: 169: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
-"169
+[; ;app_master.c: 163: USBOutHandle = USBTransferOnePacket(1,0,(uint8_t*)&ReceivedDataBuffer,64);
+"163
 [e = _USBOutHandle -> ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _ReceivedDataBuffer -> -> 64 `i `uc `*Vv ]
-"170
+"164
 }
 [e :U 571 ]
-[; ;app_master.c: 170: }
-[; ;app_master.c: 171: }
-"171
+[; ;app_master.c: 164: }
+[; ;app_master.c: 165: }
+"165
 [e :UE 570 ]
 }

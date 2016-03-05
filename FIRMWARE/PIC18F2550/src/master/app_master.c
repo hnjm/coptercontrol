@@ -55,12 +55,6 @@ void APP_DeviceCustomHIDInitialize() {
 
     //Re-arm the OUT endpoint for the next packet
     USBOutHandle = (volatile USB_HANDLE)HIDRxPacket(CUSTOM_DEVICE_HID_EP,(uint8_t*)&ReceivedDataBuffer,64);
-
-    // reset in slave
-    __delay_ms(100);
-    LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
-    __delay_ms(100);
-    LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
 }
 
 uint16_t currIddlePwm1 = 0;
@@ -125,7 +119,7 @@ void APP_tick() {
 
                 break;
                 
-            case 0x81:  //Get push button state
+            /*case 0x81:  //Get push button state
                 //Check to make sure the endpoint/buffer is free before we modify the contents
                 if(!HIDTxHandleBusy(USBInHandle)) {
                     ToSendDataBuffer[0] = 0x81;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
@@ -162,7 +156,7 @@ void APP_tick() {
                         USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
                     }
                 }
-                break;
+                break;*/
         }
         //Re-arm the OUT endpoint, so we can receive the next OUT data packet 
         //that the host may try to send us.

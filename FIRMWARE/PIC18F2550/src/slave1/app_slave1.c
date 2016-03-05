@@ -12,8 +12,6 @@
 unsigned char cArr[2];
 
 void APP_tick() {
-
-
     while(!SPI_R_DataRdySPI()) ;
     cArr[0] = SPI_R_getcSPI(); // read a single byte
      while(!SPI_R_DataRdySPI()) ;

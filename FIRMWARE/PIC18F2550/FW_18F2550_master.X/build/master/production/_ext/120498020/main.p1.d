@@ -4,8 +4,6 @@
 ../src/master/inc/usb_common.h  \
 ../src/master/inc/usb_device_hid.h  \
 ../src/master/inc/usb_hal.h  \
-../src/master/leds.h  \
-../src/master/buttons.h  \
 ../src/master/system.h  \
 ../src/master/inc/usb_hal_pic18.h  \
 ../src/master/system.h  \
@@ -14,9 +12,7 @@
 ../src/master/system_config.h  \
 ../src/master/inc/usb_ch9.h  \
 ../src/master/adc.h  \
-../src/master/io_mapping.h  \
 ../src/master/power.h  \
-../src/master/app_led_usb_status.h  \
 ../src/master/usb_config.h  \
 ../src/master/app_master.h  \
 ../src/master/adc.h  \

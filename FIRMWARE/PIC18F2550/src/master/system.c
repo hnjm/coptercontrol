@@ -1,12 +1,11 @@
 #define _XTAL_FREQ 4000000
-//#define USE_AND_MASKS
+#define USE_AND_MASKS
 
 #include <xc.h>
 #include "system.h"
 #include "system_config.h"
 #include "usb.h"
-#include "leds.h"
-#include "buttons.h"
+
 #include "adc.h"
 
 #include "plib.h"
@@ -58,14 +57,15 @@
 void SYSTEM_Initialize( SYSTEM_STATE state ) {
     switch(state) {
         case SYSTEM_STATE_USB_START:
-            //LED_Enable(LED_USB_DEVICE_STATE);
-            LED_Enable(LED_USB_DEVICE_HID_CUSTOM);
+            TRISA = 0xFF; // all input
+            LATA = 0x00;
             
-            //BUTTON_Enable(BUTTON_USB_DEVICE_HID_CUSTOM);
+            TRISB = 0xFF; // all input
+            LATB = 0x00;
+            TRISBbits.TRISB2 = 0; // output (for reseting slave SPI)
             
             //ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
             //ADC_Enable(ADC_CHANNEL_POTENTIOMETER);
-
 
             ///////////////////////////////////////////////////
             //                       SPI
@@ -79,11 +79,14 @@ void SYSTEM_Initialize( SYSTEM_STATE state ) {
             ///////////////////////////////////////////////////
             PWM_R_OpenPWM();
 
-            // reset in slave
+            
+            // reset in slave for SPI
+            for(unsigned char n = 0; n < 10; n++) 
+                __delay_ms(100);
+            
+            LATBbits.LATB2 = 1;
             __delay_ms(100);
-            LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
-            __delay_ms(100);
-            LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+            LATBbits.LATB2 = 0;
 
             break;
             

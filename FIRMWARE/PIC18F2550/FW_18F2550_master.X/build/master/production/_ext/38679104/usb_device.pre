@@ -5571,48 +5571,6 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 29 "../src/master\buttons.h"
-typedef enum
-{
-BUTTON_NONE,
-BUTTON_S2,
-BUTTON_S3
-
-} BUTTON;
-
-# 54
-bool BUTTON_IsPressed(BUTTON button);
-
-# 72
-void BUTTON_Enable(BUTTON button);
-
-# 29 "../src/master\leds.h"
-typedef enum
-{
-LED_NONE,
-LED_D1,
-LED_D2,
-LED_D3,
-LED_D4
-
-
-} LED;
-
-# 58
-void LED_On(LED led);
-
-# 76
-void LED_Off(LED led);
-
-# 94
-void LED_Toggle(LED led);
-
-# 112
-bool LED_Get(LED led);
-
-# 129
-void LED_Enable(LED led);
-
 # 27 "../src/master\power.h"
 typedef enum
 {
@@ -5623,7 +5581,7 @@ POWER_SOURCE_MAINS
 # 46
 POWER_SOURCE POWER_SourceGet(void);
 
-# 40 "../src/master\system.h"
+# 37 "../src/master\system.h"
 typedef enum
 {
 SYSTEM_STATE_USB_START,
@@ -5631,7 +5589,7 @@ SYSTEM_STATE_USB_SUSPEND,
 SYSTEM_STATE_USB_RESUME
 } SYSTEM_STATE;
 
-# 59
+# 56
 void SYSTEM_Initialize( SYSTEM_STATE state );
 
 # 69 "../src/master/inc\usb_ch9.h"
@@ -7437,7 +7395,7 @@ case (0x00):
 inPipes[0].info.bits.busy = 1;
 
 # 2160
-if(1 == 1)
+if(0 == 1)
 {
 CtrlTrfData[0]|=0x01;
 }

@@ -1,12 +1,11 @@
 #define _XTAL_FREQ 4000000
-//#define USE_AND_MASKS
+#define USE_AND_MASKS
 #define TMR2PRESCALE 16
 
 #include <xc.h>
 #include "system.h"
 
-#include "leds.h"
-#include "buttons.h"
+
 #include "adc.h"
 
 #include "plib.h"
@@ -56,15 +55,12 @@
 
 
 void SYSTEM_Initialize() {
-    LED_Enable(LED_USB_DEVICE_STATE);
-    LED_Enable(LED_USB_DEVICE_HID_CUSTOM);
+    TRISA = 0xFF; // all input
+    LATA = 0x00;
 
-    //BUTTON_Enable(BUTTON_USB_DEVICE_HID_CUSTOM);
-
-    //ADC_SetConfiguration(ADC_CONFIGURATION_DEFAULT);
-    //ADC_Enable(ADC_CHANNEL_POTENTIOMETER);
-
-
+    TRISB = 0xFF; // all input
+    LATB = 0x00;
+            
     ///////////////////////////////////////////////////
     //                       SPI
     ///////////////////////////////////////////////////

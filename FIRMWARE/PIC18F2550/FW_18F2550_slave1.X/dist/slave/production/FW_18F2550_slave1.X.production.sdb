@@ -11,51 +11,27 @@ ADC_CHANNEL_0 0
 [e E33 . `uc
 ADC_CONFIGURATION_DEFAULT 0
 ]
-"96 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/buttons.c
-[e E4538 . `uc
-BUTTON_NONE 0
-BUTTON_S2 1
-BUTTON_S3 2
-]
-"97 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/leds.c
-[e E2 . `uc
-LED_NONE 0
-LED_D1 1
-LED_D2 2
-LED_D3 3
-LED_D4 4
-]
-"59 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
-[e E4547 . `uc
-LED_NONE 0
-LED_D1 1
-LED_D2 2
-LED_D3 3
-LED_D4 4
-]
-"115 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/adc.c
-[v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
-"14 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/app_slave1.c
-[v _APP_tick APP_tick `(v  1 e 1 0 ]
-"257 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/leds.c
-[v _LED_Enable LED_Enable `(v  1 e 1 0 ]
-"5 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/main.c
-[v _main main `(v  1 e 1 0 ]
-"5 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/pwm_r.c
+"5 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/pwm_r.c
 [v _PWM_R_setPWM1 PWM_R_setPWM1 `(v  1 e 1 0 ]
 "11
 [v _PWM_R_setPWM2 PWM_R_setPWM2 `(v  1 e 1 0 ]
 "17
 [v _PWM_R_OpenPWM PWM_R_OpenPWM `(v  1 e 1 0 ]
-"3 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/spi_r.c
+"3 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/spi_r.c
 [v _SPI_R_OpenSPI SPI_R_OpenSPI `(v  1 e 1 0 ]
 "51
 [v _SPI_R_DataRdySPI SPI_R_DataRdySPI `(i  1 e 2 0 ]
 "58
-[v _SPI_R_getcSPI SPI_R_getcSPI `(uc  1 e 1 0 ]
-"58 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
+[v _SPI_R_getcSPI SPI_R_getcSPI `(i  1 e 2 0 ]
+"115 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/adc.c
+[v _ADC_Read10bit ADC_Read10bit `(ui  1 e 2 0 ]
+"14 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/app_slave1.c
+[v _APP_tick APP_tick `(v  1 e 1 0 ]
+"5 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/main.c
+[v _main main `(v  1 e 1 0 ]
+"57 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"84
+"80
 [v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 1 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
@@ -81,64 +57,12 @@ LED_D4 4
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "12 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/app_slave1.c
 [v _cArr cArr `[2]uc  1 e 2 0 ]
-[s S254 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"2546 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
-[s S263 . 1 `uc 1 INT0 1 0 :1:0 
-`uc 1 INT1 1 0 :1:1 
-`uc 1 INT2 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 PGM 1 0 :1:5 
-`uc 1 PGC 1 0 :1:6 
-`uc 1 PGD 1 0 :1:7 
-]
-[s S271 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CCP2_PA2 1 0 :1:3 
-]
-[u S274 . 1 `S254 1 . 1 0 `S263 1 . 1 0 `S271 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES274  1 e 1 @3969 ]
-[s S365 . 1 `uc 1 LATB0 1 0 :1:0 
-`uc 1 LATB1 1 0 :1:1 
-`uc 1 LATB2 1 0 :1:2 
-`uc 1 LATB3 1 0 :1:3 
-`uc 1 LATB4 1 0 :1:4 
-`uc 1 LATB5 1 0 :1:5 
-`uc 1 LATB6 1 0 :1:6 
-`uc 1 LATB7 1 0 :1:7 
-]
-"2972
-[s S374 . 1 `uc 1 LB0 1 0 :1:0 
-]
-[s S376 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 LB1 1 0 :1:1 
-]
-[s S379 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 LB2 1 0 :1:2 
-]
-[s S382 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 LB3 1 0 :1:3 
-]
-[s S385 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 LB4 1 0 :1:4 
-]
-[s S388 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 LB5 1 0 :1:5 
-]
-[s S391 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 LB6 1 0 :1:6 
-]
-[s S394 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 LB7 1 0 :1:7 
-]
-[u S397 . 1 `S365 1 . 1 0 `S374 1 . 1 0 `S376 1 . 1 0 `S379 1 . 1 0 `S382 1 . 1 0 `S385 1 . 1 0 `S388 1 . 1 0 `S391 1 . 1 0 `S394 1 . 1 0 ]
-[v _LATBbits LATBbits `VES397  1 e 1 @3978 ]
+"2807 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"2924
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"3144
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 [s S107 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -158,7 +82,9 @@ LED_D4 4
 ]
 [u S123 . 1 `S107 1 . 1 0 `S115 1 . 1 0 ]
 [v _TRISAbits TRISAbits `VES123  1 e 1 @3986 ]
-[s S299 . 1 `uc 1 TRISB0 1 0 :1:0 
+"3341
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S610 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -168,9 +94,18 @@ LED_D4 4
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "3373
-[u S317 . 1 `S299 1 . 1 0 `S254 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES317  1 e 1 @3987 ]
-[s S731 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S619 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S628 . 1 `S610 1 . 1 0 `S619 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES628  1 e 1 @3987 ]
+[s S341 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -178,16 +113,16 @@ LED_D4 4
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3590
-[s S738 . 1 `uc 1 RC0 1 0 :1:0 
+[s S348 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S745 . 1 `S731 1 . 1 0 `S738 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES745  1 e 1 @3988 ]
-[s S764 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S355 . 1 `S341 1 . 1 0 `S348 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES355  1 e 1 @3988 ]
+[s S669 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -196,42 +131,42 @@ LED_D4 4
 `uc 1 ADIF 1 0 :1:6 
 ]
 "3870
-[s S772 . 1 `uc 1 . 1 0 :5:0 
+[s S677 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[s S775 . 1 `uc 1 . 1 0 :4:0 
+[s S680 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 ]
-[u S778 . 1 `S764 1 . 1 0 `S772 1 . 1 0 `S775 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES778  1 e 1 @3998 ]
-[s S878 . 1 `uc 1 CCP2M 1 0 :4:0 
+[u S683 . 1 `S669 1 . 1 0 `S677 1 . 1 0 `S680 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES683  1 e 1 @3998 ]
+[s S315 . 1 `uc 1 CCP2M 1 0 :4:0 
 `uc 1 DC2B 1 0 :2:4 
 ]
 "5515
-[s S881 . 1 `uc 1 CCP2M0 1 0 :1:0 
+[s S318 . 1 `uc 1 CCP2M0 1 0 :1:0 
 `uc 1 CCP2M1 1 0 :1:1 
 `uc 1 CCP2M2 1 0 :1:2 
 `uc 1 CCP2M3 1 0 :1:3 
 `uc 1 DC2B0 1 0 :1:4 
 `uc 1 DC2B1 1 0 :1:5 
 ]
-[u S888 . 1 `S878 1 . 1 0 `S881 1 . 1 0 ]
-[v _CCP2CONbits CCP2CONbits `VES888  1 e 1 @4026 ]
+[u S325 . 1 `S315 1 . 1 0 `S318 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES325  1 e 1 @4026 ]
 "5565
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
-[s S853 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S290 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 ]
 "5596
-[s S856 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S293 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
 `uc 1 DC1B0 1 0 :1:4 
 `uc 1 DC1B1 1 0 :1:5 
 ]
-[u S863 . 1 `S853 1 . 1 0 `S856 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES863  1 e 1 @4029 ]
+[u S300 . 1 `S290 1 . 1 0 `S293 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES300  1 e 1 @4029 ]
 "5646
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "5658
@@ -313,30 +248,30 @@ LED_D4 4
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
 "6015
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
-[s S663 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S564 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6035
-[s S669 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S570 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S674 . 1 `S663 1 . 1 0 `S669 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES674  1 e 1 @4038 ]
+[u S575 . 1 `S564 1 . 1 0 `S570 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES575  1 e 1 @4038 ]
 "6084
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S504 . 1 `uc 1 . 1 0 :2:0 
+[s S405 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "6178
-[s S507 . 1 `uc 1 . 1 0 :5:0 
+[s S408 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S510 . 1 `uc 1 BF 1 0 :1:0 
+[s S411 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -345,63 +280,63 @@ LED_D4 4
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S519 . 1 `uc 1 . 1 0 :2:0 
+[s S420 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S524 . 1 `uc 1 . 1 0 :2:0 
+[s S425 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S530 . 1 `uc 1 . 1 0 :2:0 
+[s S431 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S535 . 1 `uc 1 . 1 0 :2:0 
+[s S436 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S538 . 1 `uc 1 . 1 0 :5:0 
+[s S439 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S541 . 1 `uc 1 . 1 0 :2:0 
+[s S442 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S546 . 1 `uc 1 . 1 0 :2:0 
+[s S447 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S551 . 1 `uc 1 . 1 0 :2:0 
+[s S452 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S556 . 1 `uc 1 . 1 0 :5:0 
+[s S457 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S559 . 1 `uc 1 . 1 0 :2:0 
+[s S460 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 ]
-[s S562 . 1 `uc 1 . 1 0 :3:0 
+[s S463 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 START 1 0 :1:3 
 ]
-[s S565 . 1 `uc 1 . 1 0 :4:0 
+[s S466 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 STOP 1 0 :1:4 
 ]
-[s S568 . 1 `uc 1 . 1 0 :2:0 
+[s S469 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 ]
-[s S571 . 1 `uc 1 . 1 0 :5:0 
+[s S472 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S574 . 1 `S504 1 . 1 0 `S507 1 . 1 0 `S510 1 . 1 0 `S519 1 . 1 0 `S524 1 . 1 0 `S530 1 . 1 0 `S535 1 . 1 0 `S538 1 . 1 0 `S541 1 . 1 0 `S546 1 . 1 0 `S551 1 . 1 0 `S556 1 . 1 0 `S559 1 . 1 0 `S562 1 . 1 0 `S565 1 . 1 0 `S568 1 . 1 0 `S571 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES574  1 e 1 @4039 ]
+[u S475 . 1 `S405 1 . 1 0 `S408 1 . 1 0 `S411 1 . 1 0 `S420 1 . 1 0 `S425 1 . 1 0 `S431 1 . 1 0 `S436 1 . 1 0 `S439 1 . 1 0 `S442 1 . 1 0 `S447 1 . 1 0 `S452 1 . 1 0 `S457 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 `S469 1 . 1 0 `S472 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES475  1 e 1 @4039 ]
 "6348
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
 "6451
@@ -425,12 +360,12 @@ LED_D4 4
 {
 "13
 } 0
-"58 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
+"57 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"79
+"75
 } 0
-"3 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/spi_r.c
+"3 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/spi_r.c
 [v _SPI_R_OpenSPI SPI_R_OpenSPI `(v  1 e 1 0 ]
 {
 [v SPI_R_OpenSPI@sync_mode sync_mode `uc  1 a 1 wreg ]
@@ -440,33 +375,25 @@ LED_D4 4
 [v SPI_R_OpenSPI@sync_mode sync_mode `uc  1 a 1 16 ]
 "42
 } 0
-"17 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/pwm_r.c
+"17 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/pwm_r.c
 [v _PWM_R_OpenPWM PWM_R_OpenPWM `(v  1 e 1 0 ]
 {
 "47
 } 0
-"257 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/leds.c
-[v _LED_Enable LED_Enable `(v  1 e 1 0 ]
-{
-[v LED_Enable@led led `E2  1 a 1 wreg ]
-[v LED_Enable@led led `E2  1 a 1 wreg ]
-[v LED_Enable@led led `E2  1 a 1 14 ]
-"280
-} 0
 "14 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/app_slave1.c
 [v _APP_tick APP_tick `(v  1 e 1 0 ]
 {
-"25
+"23
 [v APP_tick@p2 p2 `ui  1 a 2 19 ]
-"24
+"22
 [v APP_tick@p1 p1 `ui  1 a 2 17 ]
-"29
+"27
 } 0
-"58 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/spi_r.c
-[v _SPI_R_getcSPI SPI_R_getcSPI `(uc  1 e 1 0 ]
+"58 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/spi_r.c
+[v _SPI_R_getcSPI SPI_R_getcSPI `(i  1 e 2 0 ]
 {
 "59
-[v SPI_R_getcSPI@TempVar TempVar `uc  1 a 1 14 ]
+[v SPI_R_getcSPI@TempVar TempVar `uc  1 a 1 16 ]
 "66
 } 0
 "51
@@ -474,7 +401,7 @@ LED_D4 4
 {
 "56
 } 0
-"11 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/pwm_r.c
+"11 R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/pwm_r.c
 [v _PWM_R_setPWM2 PWM_R_setPWM2 `(v  1 e 1 0 ]
 {
 [v PWM_R_setPWM2@val val `ui  1 p 2 14 ]
@@ -486,8 +413,8 @@ LED_D4 4
 [v PWM_R_setPWM1@val val `ui  1 p 2 14 ]
 "9
 } 0
-"84 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
+"80 R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/system.c
 [v _SYS_InterruptHigh SYS_InterruptHigh `II(v  1 e 1 0 ]
 {
-"86
+"82
 } 0

@@ -4484,40 +4484,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;master\buttons.h: 29: typedef enum
-[; ;master\buttons.h: 30: {
-[; ;master\buttons.h: 31: BUTTON_NONE,
-[; ;master\buttons.h: 32: BUTTON_S2,
-[; ;master\buttons.h: 33: BUTTON_S3
-[; ;master\buttons.h: 35: } BUTTON;
-[; ;master\buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;master\buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;master\leds.h: 29: typedef enum
-[; ;master\leds.h: 30: {
-[; ;master\leds.h: 31: LED_NONE,
-[; ;master\leds.h: 32: LED_D1,
-[; ;master\leds.h: 33: LED_D2,
-[; ;master\leds.h: 34: LED_D3,
-[; ;master\leds.h: 35: LED_D4
-[; ;master\leds.h: 38: } LED;
-[; ;master\leds.h: 58: void LED_On(LED led);
-[; ;master\leds.h: 76: void LED_Off(LED led);
-[; ;master\leds.h: 94: void LED_Toggle(LED led);
-[; ;master\leds.h: 112: bool LED_Get(LED led);
-[; ;master\leds.h: 129: void LED_Enable(LED led);
 [; ;master\power.h: 27: typedef enum
 [; ;master\power.h: 28: {
 [; ;master\power.h: 29: POWER_SOURCE_USB,
 [; ;master\power.h: 30: POWER_SOURCE_MAINS
 [; ;master\power.h: 31: } POWER_SOURCE;
 [; ;master\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;master\system.h: 40: typedef enum
-[; ;master\system.h: 41: {
-[; ;master\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;master\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;master\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;master\system.h: 45: } SYSTEM_STATE;
-[; ;master\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;master\system.h: 37: typedef enum
+[; ;master\system.h: 38: {
+[; ;master\system.h: 39: SYSTEM_STATE_USB_START,
+[; ;master\system.h: 40: SYSTEM_STATE_USB_SUSPEND,
+[; ;master\system.h: 41: SYSTEM_STATE_USB_RESUME
+[; ;master\system.h: 42: } SYSTEM_STATE;
+[; ;master\system.h: 56: void SYSTEM_Initialize( SYSTEM_STATE state );
 [; ;inc\usb_common.h: 135: typedef union
 [; ;inc\usb_common.h: 136: {
 [; ;inc\usb_common.h: 137: uint8_t bitmap;
@@ -4904,7 +4883,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 170: { inPipes[0].pSrc.bRom = (const uint8_t*)&configDescriptor1 + 18; inPipes[0].wCount.Val = sizeof(USB_HID_DSC)+3; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "170
 {
-[v F5206 `*Cuc ~T0 @X0 1 t ]
+[v F5180 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> + &U _configDescriptor1 * -> -> 18 `i `x -> -> # *U &U _configDescriptor1 `i `x `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 + -> # `S555 `ui -> -> 3 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -4925,7 +4904,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 179: { inPipes[0].pSrc.bRom = (const uint8_t*)&hid_rpt01; inPipes[0].wCount.Val = 29; inPipes[0].info.Val = 0x40 | 0x80 | 0x00; };
 "179
 {
-[v F5209 `*Cuc ~T0 @X0 1 t ]
+[v F5183 `*Cuc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 1 -> -> &U _hid_rpt01 `*Cuc `V*Cuc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 29 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 0 `i `uc ]
@@ -4995,7 +4974,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 219: { inPipes[0].pSrc.bRam = (uint8_t*)&idle_rate; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x40 | 0x80 | 0x01; };
 "219
 {
-[v F5211 `*uc ~T0 @X0 1 t ]
+[v F5185 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _idle_rate `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 1 `i `uc ]
@@ -5022,7 +5001,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_hid.c: 230: { inPipes[0].pSrc.bRam = (uint8_t*)&active_protocol; inPipes[0].wCount.Val = 1; inPipes[0].info.Val = 0x00 | 0x80 | 0x01; };
 "230
 {
-[v F5214 `*uc ~T0 @X0 1 t ]
+[v F5188 `*uc ~T0 @X0 1 t ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _active_protocol `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 1 `i `ui ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 0 `i -> 128 `i -> 1 `i `uc ]

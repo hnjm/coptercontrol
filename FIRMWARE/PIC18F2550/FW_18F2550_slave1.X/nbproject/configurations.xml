@@ -5,15 +5,12 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>../src/slave1/adc.h</itemPath>
-      <itemPath>../src/slave1/buttons.h</itemPath>
       <itemPath>../src/slave1/fixed_address_memory.h</itemPath>
-      <itemPath>../src/slave1/io_mapping.h</itemPath>
-      <itemPath>../src/slave1/leds.h</itemPath>
       <itemPath>../src/slave1/power.h</itemPath>
       <itemPath>../src/slave1/system.h</itemPath>
-      <itemPath>../src/slave1/spi_r.h</itemPath>
       <itemPath>../src/slave1/app_slave1.h</itemPath>
-      <itemPath>../src/slave1/pwm_r.h</itemPath>
+      <itemPath>../../../../_ELECTRONIC/inc/pwm_r.h</itemPath>
+      <itemPath>../../../../_ELECTRONIC/inc/spi_r.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -24,12 +21,10 @@
                    projectFiles="true">
       <itemPath>../src/slave1/main.c</itemPath>
       <itemPath>../src/slave1/adc.c</itemPath>
-      <itemPath>../src/slave1/buttons.c</itemPath>
-      <itemPath>../src/slave1/leds.c</itemPath>
       <itemPath>../src/slave1/system.c</itemPath>
-      <itemPath>../src/slave1/spi_r.c</itemPath>
       <itemPath>../src/slave1/app_slave1.c</itemPath>
-      <itemPath>../src/slave1/pwm_r.c</itemPath>
+      <itemPath>../../../../_ELECTRONIC/inc/pwm_r.c</itemPath>
+      <itemPath>../../../../_ELECTRONIC/inc/spi_r.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -39,6 +34,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../src/slave1</Elem>
+    <Elem>../../../../_ELECTRONIC/inc</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -78,7 +74,8 @@
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value="__18F2550"/>
-        <property key="extra-include-directories" value="..\src\slave1"/>
+        <property key="extra-include-directories"
+                  value="..\src\slave1;..\..\..\..\_ELECTRONIC\inc"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -146,7 +143,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

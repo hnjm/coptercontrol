@@ -1,12 +1,15 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"59 ../src/slave1/system.c
-[c E4547 0 1 2 3 4 .. ]
-[n E4547 . LED_NONE LED_D1 LED_D2 LED_D3 LED_D4  ]
-"129 ../src/slave1/leds.h
-[v _LED_Enable `(v ~T0 @X0 0 ef1`E4547 ]
-"4 ../src/slave1/spi_r.h
+"3144 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"2807
+[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
+"3341
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"2924
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"4 ../../../../_ELECTRONIC/inc\spi_r.h
 [v _SPI_R_OpenSPI `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"6 ../src/slave1/pwm_r.h
+"6 ../../../../_ELECTRONIC/inc\pwm_r.h
 [v _PWM_R_OpenPWM `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -4180,127 +4183,112 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;buttons.h: 29: typedef enum
-[; ;buttons.h: 30: {
-[; ;buttons.h: 31: BUTTON_NONE,
-[; ;buttons.h: 32: BUTTON_S2,
-[; ;buttons.h: 33: BUTTON_S3
-[; ;buttons.h: 35: } BUTTON;
-[; ;buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;leds.h: 29: typedef enum
-[; ;leds.h: 30: {
-[; ;leds.h: 31: LED_NONE,
-[; ;leds.h: 32: LED_D1,
-[; ;leds.h: 33: LED_D2,
-[; ;leds.h: 34: LED_D3,
-[; ;leds.h: 35: LED_D4
-[; ;leds.h: 38: } LED;
-[; ;leds.h: 58: void LED_On(LED led);
-[; ;leds.h: 76: void LED_Off(LED led);
-[; ;leds.h: 94: void LED_Toggle(LED led);
-[; ;leds.h: 112: bool LED_Get(LED led);
-[; ;leds.h: 129: void LED_Enable(LED led);
 [; ;power.h: 27: typedef enum
 [; ;power.h: 28: {
 [; ;power.h: 29: POWER_SOURCE_USB,
 [; ;power.h: 30: POWER_SOURCE_MAINS
 [; ;power.h: 31: } POWER_SOURCE;
 [; ;power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system.h: 39: void SYSTEM_Initialize();
-[; ;spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
-[; ;spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
-[; ;spi_r.h: 6: int SPI_R_DataRdySPI();
-[; ;spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
-[; ;pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
-[; ;pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
-[; ;pwm_r.h: 6: void PWM_R_OpenPWM();
-"18 ../src/slave1/system.c
+[; ;system.h: 36: void SYSTEM_Initialize();
+[; ;inc\spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
+[; ;inc\spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
+[; ;inc\spi_r.h: 6: int SPI_R_DataRdySPI();
+[; ;inc\spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
+[; ;inc\pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
+[; ;inc\pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
+[; ;inc\pwm_r.h: 6: void PWM_R_OpenPWM();
+"17 ../src/slave1/system.c
 [p x PLLDIV=1 ]
-"19
+"18
 [p x CPUDIV=OSC1_PLL2 ]
-"20
+"19
 [p x USBDIV=2 ]
-"21
+"20
 [p x FOSC=XTPLL_XT ]
-"22
+"21
 [p x FCMEN=OFF ]
-"23
+"22
 [p x IESO=OFF ]
-"24
+"23
 [p x PWRT=OFF ]
-"25
+"24
 [p x BOR=ON ]
-"26
+"25
 [p x BORV=3 ]
-"27
+"26
 [p x VREGEN=ON ]
-"28
+"27
 [p x WDT=OFF ]
-"29
+"28
 [p x WDTPS=32768 ]
-"30
+"29
 [p x MCLRE=ON ]
-"31
+"30
 [p x LPT1OSC=OFF ]
-"32
+"31
 [p x PBADEN=OFF ]
-"34
+"33
 [p x STVREN=ON ]
-"35
+"34
 [p x LVP=OFF ]
-"37
+"36
 [p x XINST=OFF ]
-"38
+"37
 [p x CP0=OFF ]
-"39
+"38
 [p x CP1=OFF ]
-"42
+"41
 [p x CPB=OFF ]
-"44
+"43
 [p x WRT0=OFF ]
-"45
+"44
 [p x WRT1=OFF ]
-"48
+"47
 [p x WRTB=OFF ]
-"49
+"48
 [p x WRTC=OFF ]
-"51
+"50
 [p x EBTR0=OFF ]
-"52
+"51
 [p x EBTR1=OFF ]
-"55
+"54
 [p x EBTRB=OFF ]
-"58
+"57
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;system.c: 58: void SYSTEM_Initialize() {
+[; ;system.c: 57: void SYSTEM_Initialize() {
 [e :U _SYSTEM_Initialize ]
 [f ]
-[; ;system.c: 59: LED_Enable(LED_D1);
+[; ;system.c: 58: TRISA = 0xFF;
+"58
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;system.c: 59: LATA = 0x00;
 "59
-[e ( _LED_Enable (1 . `E4547 1 ]
-[; ;system.c: 60: LED_Enable(LED_D2);
-"60
-[e ( _LED_Enable (1 . `E4547 2 ]
-[; ;system.c: 72: SPI_R_OpenSPI(0b00000101, 0b00000010, 0b00000000);
-"72
+[e = _LATA -> -> 0 `i `uc ]
+[; ;system.c: 61: TRISB = 0xFF;
+"61
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;system.c: 62: LATB = 0x00;
+"62
+[e = _LATB -> -> 0 `i `uc ]
+[; ;system.c: 68: SPI_R_OpenSPI(0b00000101, 0b00000010, 0b00000000);
+"68
 [e ( _SPI_R_OpenSPI (3 , , -> -> 5 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;system.c: 78: PWM_R_OpenPWM();
-"78
+[; ;system.c: 74: PWM_R_OpenPWM();
+"74
 [e ( _PWM_R_OpenPWM ..  ]
-[; ;system.c: 79: }
-"79
+[; ;system.c: 75: }
+"75
 [e :UE 501 ]
 }
-[v F4588 `(v ~T0 @X0 1 tf ]
-"84
-[v _SYS_InterruptHigh `IF4588 ~T0 @X0 1 e ]
+[v F4562 `(v ~T0 @X0 1 tf ]
+"80
+[v _SYS_InterruptHigh `IF4562 ~T0 @X0 1 e ]
 {
-[; ;system.c: 84: void interrupt SYS_InterruptHigh(void) {
+[; ;system.c: 80: void interrupt SYS_InterruptHigh(void) {
 [e :U _SYS_InterruptHigh ]
 [f ]
-[; ;system.c: 86: }
-"86
+[; ;system.c: 82: }
+"82
 [e :UE 502 ]
 }

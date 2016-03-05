@@ -4186,40 +4186,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;master\buttons.h: 29: typedef enum
-[; ;master\buttons.h: 30: {
-[; ;master\buttons.h: 31: BUTTON_NONE,
-[; ;master\buttons.h: 32: BUTTON_S2,
-[; ;master\buttons.h: 33: BUTTON_S3
-[; ;master\buttons.h: 35: } BUTTON;
-[; ;master\buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;master\buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;master\leds.h: 29: typedef enum
-[; ;master\leds.h: 30: {
-[; ;master\leds.h: 31: LED_NONE,
-[; ;master\leds.h: 32: LED_D1,
-[; ;master\leds.h: 33: LED_D2,
-[; ;master\leds.h: 34: LED_D3,
-[; ;master\leds.h: 35: LED_D4
-[; ;master\leds.h: 38: } LED;
-[; ;master\leds.h: 58: void LED_On(LED led);
-[; ;master\leds.h: 76: void LED_Off(LED led);
-[; ;master\leds.h: 94: void LED_Toggle(LED led);
-[; ;master\leds.h: 112: bool LED_Get(LED led);
-[; ;master\leds.h: 129: void LED_Enable(LED led);
 [; ;master\power.h: 27: typedef enum
 [; ;master\power.h: 28: {
 [; ;master\power.h: 29: POWER_SOURCE_USB,
 [; ;master\power.h: 30: POWER_SOURCE_MAINS
 [; ;master\power.h: 31: } POWER_SOURCE;
 [; ;master\power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;master\system.h: 40: typedef enum
-[; ;master\system.h: 41: {
-[; ;master\system.h: 42: SYSTEM_STATE_USB_START,
-[; ;master\system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;master\system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;master\system.h: 45: } SYSTEM_STATE;
-[; ;master\system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;master\system.h: 37: typedef enum
+[; ;master\system.h: 38: {
+[; ;master\system.h: 39: SYSTEM_STATE_USB_START,
+[; ;master\system.h: 40: SYSTEM_STATE_USB_SUSPEND,
+[; ;master\system.h: 41: SYSTEM_STATE_USB_RESUME
+[; ;master\system.h: 42: } SYSTEM_STATE;
+[; ;master\system.h: 56: void SYSTEM_Initialize( SYSTEM_STATE state );
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -5112,13 +5091,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 262: 0x91, 0x00,
 [; ;usb_descriptors.c: 263: 0xC0}
 [; ;usb_descriptors.c: 264: };
-[v F5210 `*Cuc ~T0 @X0 1 t ]
+[v F5184 `*Cuc ~T0 @X0 1 t ]
 "268
 [v _USB_CD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_CD_Ptr
 :U ..
 "271
-[v F5211 `*Cuc ~T0 @X0 1 t ]
+[v F5185 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _configDescriptor1 `C*Cuc `*Cuc
 ..
 ]
@@ -5126,19 +5105,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_descriptors.c: 269: {
 [; ;usb_descriptors.c: 270: (const uint8_t *const)&configDescriptor1
 [; ;usb_descriptors.c: 271: };
-[v F5215 `*Cuc ~T0 @X0 1 t ]
+[v F5189 `*Cuc ~T0 @X0 1 t ]
 "274
 [v _USB_SD_Ptr `C*Cuc ~T0 @X0 -> 0 `x e ]
 [i _USB_SD_Ptr
 :U ..
 "276
-[v F5216 `*Cuc ~T0 @X0 1 t ]
+[v F5190 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd000 `C*Cuc `*Cuc
 "277
-[v F5218 `*Cuc ~T0 @X0 1 t ]
+[v F5192 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd001 `C*Cuc `*Cuc
 "279
-[v F5220 `*Cuc ~T0 @X0 1 t ]
+[v F5194 `*Cuc ~T0 @X0 1 t ]
 -> -> &U _sd002 `C*Cuc `*Cuc
 ..
 ]

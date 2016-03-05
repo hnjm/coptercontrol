@@ -5,9 +5,6 @@
 #include "usb_device_hid.h"
 
 #include "app_master.h"
-#include "app_led_usb_status.h"
-
-
 
 MAIN_RETURN main(void) {
     SYSTEM_Initialize(SYSTEM_STATE_USB_START);

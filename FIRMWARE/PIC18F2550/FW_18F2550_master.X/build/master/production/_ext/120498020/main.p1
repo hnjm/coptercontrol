@@ -1,20 +1,20 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"13 ../src/master/main.c
-[c E4570 0 1 2 .. ]
-[n E4570 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
-"59 ../src/master/system.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E4570 ]
+"12 ../src/master/main.c
+[c E4544 0 1 2 .. ]
+[n E4544 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
+"56 ../src/master/system.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E4544 ]
 "194 ../src/master/inc\usb_device.h
 [v _USBDeviceInit `(v ~T0 @X0 0 ef ]
 "634
 [v _USBDeviceAttach `(v ~T0 @X0 0 ef ]
-"40 ../src/master/main.c
-[c E4838 0 1 2 4 8 16 32 .. ]
-[n E4838 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+"39 ../src/master/main.c
+[c E4812 0 1 2 4 8 16 32 .. ]
+[n E4812 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "2053 ../src/master/inc\usb_device.h
-[v _USBDeviceState `VE4838 ~T0 @X0 0 e ]
-"41 ../src/master/main.c
+[v _USBDeviceState `VE4812 ~T0 @X0 0 e ]
+"40 ../src/master/main.c
 [v _APP_iddle `(i ~T0 @X0 0 ef ]
 "446 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
 [s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -26,16 +26,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _UCONbits `VS19 ~T0 @X0 0 e@3949 ]
 "3 ../src/master/app_master.h
 [v _APP_tick `(v ~T0 @X0 0 ef ]
-"84 ../src/master/main.c
-[c E4779 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
-[n E4779 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
+"83 ../src/master/main.c
+[c E4753 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
+[n E4753 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
 "1 ../src/master/app_master.h
 [v _APP_DeviceCustomHIDInitialize `(v ~T0 @X0 0 ef ]
 "98 ../src/master/inc\usb_device_hid.h
 [v _USBCheckHIDRequest `(v ~T0 @X0 0 ef ]
-"85 ../src/master/main.c
-[c E4847 1 2 3 4 5 .. ]
-[n E4847 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
+"84 ../src/master/main.c
+[c E4821 1 2 3 4 5 .. ]
+[n E4821 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -4208,40 +4208,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;buttons.h: 29: typedef enum
-[; ;buttons.h: 30: {
-[; ;buttons.h: 31: BUTTON_NONE,
-[; ;buttons.h: 32: BUTTON_S2,
-[; ;buttons.h: 33: BUTTON_S3
-[; ;buttons.h: 35: } BUTTON;
-[; ;buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;leds.h: 29: typedef enum
-[; ;leds.h: 30: {
-[; ;leds.h: 31: LED_NONE,
-[; ;leds.h: 32: LED_D1,
-[; ;leds.h: 33: LED_D2,
-[; ;leds.h: 34: LED_D3,
-[; ;leds.h: 35: LED_D4
-[; ;leds.h: 38: } LED;
-[; ;leds.h: 58: void LED_On(LED led);
-[; ;leds.h: 76: void LED_Off(LED led);
-[; ;leds.h: 94: void LED_Toggle(LED led);
-[; ;leds.h: 112: bool LED_Get(LED led);
-[; ;leds.h: 129: void LED_Enable(LED led);
 [; ;power.h: 27: typedef enum
 [; ;power.h: 28: {
 [; ;power.h: 29: POWER_SOURCE_USB,
 [; ;power.h: 30: POWER_SOURCE_MAINS
 [; ;power.h: 31: } POWER_SOURCE;
 [; ;power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system.h: 40: typedef enum
-[; ;system.h: 41: {
-[; ;system.h: 42: SYSTEM_STATE_USB_START,
-[; ;system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;system.h: 45: } SYSTEM_STATE;
-[; ;system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;system.h: 37: typedef enum
+[; ;system.h: 38: {
+[; ;system.h: 39: SYSTEM_STATE_USB_START,
+[; ;system.h: 40: SYSTEM_STATE_USB_SUSPEND,
+[; ;system.h: 41: SYSTEM_STATE_USB_RESUME
+[; ;system.h: 42: } SYSTEM_STATE;
+[; ;system.h: 56: void SYSTEM_Initialize( SYSTEM_STATE state );
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -4786,180 +4765,179 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;app_master.h: 1: void APP_DeviceCustomHIDInitialize();
 [; ;app_master.h: 2: void APP_DeviceCustomHIDStart();
 [; ;app_master.h: 3: void APP_tick();
-[; ;app_led_usb_status.h: 40: void APP_LEDUpdateUSBStatus(void);
-"12 ../src/master/main.c
+"11 ../src/master/main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 12: void main(void) {
+[; ;main.c: 11: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 13: SYSTEM_Initialize(SYSTEM_STATE_USB_START);
-"13
-[e ( _SYSTEM_Initialize (1 . `E4570 0 ]
-[; ;main.c: 15: USBDeviceInit();
-"15
+[; ;main.c: 12: SYSTEM_Initialize(SYSTEM_STATE_USB_START);
+"12
+[e ( _SYSTEM_Initialize (1 . `E4544 0 ]
+[; ;main.c: 14: USBDeviceInit();
+"14
 [e ( _USBDeviceInit ..  ]
-[; ;main.c: 16: USBDeviceAttach();
-"16
+[; ;main.c: 15: USBDeviceAttach();
+"15
 [e ( _USBDeviceAttach ..  ]
-[; ;main.c: 18: while(1) {
-"18
+[; ;main.c: 17: while(1) {
+"17
 [e :U 558 ]
 {
-[; ;main.c: 19: ;
-[; ;main.c: 40: if( USBDeviceState < CONFIGURED_STATE ) {
-"40
-[e $ ! < -> _USBDeviceState `i -> . `E4838 6 `i 560  ]
+[; ;main.c: 18: ;
+[; ;main.c: 39: if( USBDeviceState < CONFIGURED_STATE ) {
+"39
+[e $ ! < -> _USBDeviceState `i -> . `E4812 6 `i 560  ]
 {
-[; ;main.c: 41: APP_iddle();
-"41
+[; ;main.c: 40: APP_iddle();
+"40
 [e ( _APP_iddle ..  ]
-[; ;main.c: 43: continue;
-"43
+[; ;main.c: 42: continue;
+"42
 [e $U 557  ]
-"44
+"43
 }
 [e :U 560 ]
-[; ;main.c: 44: }
-[; ;main.c: 50: if( UCONbits.SUSPND == 1 ) {
-"50
+[; ;main.c: 43: }
+[; ;main.c: 49: if( UCONbits.SUSPND == 1 ) {
+"49
 [e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 561  ]
 {
-[; ;main.c: 52: continue;
-"52
+[; ;main.c: 51: continue;
+"51
 [e $U 557  ]
-"53
+"52
 }
 [e :U 561 ]
-[; ;main.c: 53: }
-[; ;main.c: 56: APP_tick();
-"56
+[; ;main.c: 52: }
+[; ;main.c: 55: APP_tick();
+"55
 [e ( _APP_tick ..  ]
-"58
+"57
 }
 [e :U 557 ]
-"18
+"17
 [e $U 558  ]
 [e :U 559 ]
+[; ;main.c: 57: }
 [; ;main.c: 58: }
-[; ;main.c: 59: }
-"59
+"58
 [e :UE 556 ]
 }
+"82
+[v _USER_USB_CALLBACK_EVENT_HANDLER `(uc ~T0 @X0 1 ef3`E4753`*v`ui ]
 "83
-[v _USER_USB_CALLBACK_EVENT_HANDLER `(uc ~T0 @X0 1 ef3`E4779`*v`ui ]
-"84
 {
-[; ;main.c: 83: bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
-[; ;main.c: 84: {
+[; ;main.c: 82: bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
+[; ;main.c: 83: {
 [e :U _USER_USB_CALLBACK_EVENT_HANDLER ]
-"83
-[v _event `E4779 ~T0 @X0 1 r1 ]
+"82
+[v _event `E4753 ~T0 @X0 1 r1 ]
 [v _pdata `*v ~T0 @X0 1 r2 ]
 [v _size `ui ~T0 @X0 1 r3 ]
-"84
+"83
 [f ]
-[; ;main.c: 85: switch((int)event)
-"85
+[; ;main.c: 84: switch((int)event)
+"84
 [e $U 564  ]
-[; ;main.c: 86: {
-"86
-{
-[; ;main.c: 87: case EVENT_TRANSFER:
-"87
-[e :U 565 ]
-[; ;main.c: 88: break;
-"88
-[e $U 563  ]
-[; ;main.c: 90: case EVENT_SOF:
-"90
-[e :U 566 ]
-[; ;main.c: 94: break;
-"94
-[e $U 563  ]
-[; ;main.c: 96: case EVENT_SUSPEND:
-"96
-[e :U 567 ]
-[; ;main.c: 106: SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
-"106
-[e ( _SYSTEM_Initialize (1 . `E4570 1 ]
-[; ;main.c: 107: break;
-"107
-[e $U 563  ]
-[; ;main.c: 109: case EVENT_RESUME:
-"109
-[e :U 568 ]
-[; ;main.c: 117: SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);
-"117
-[e ( _SYSTEM_Initialize (1 . `E4570 2 ]
-[; ;main.c: 118: break;
-"118
-[e $U 563  ]
-[; ;main.c: 120: case EVENT_CONFIGURED:
-"120
-[e :U 569 ]
-[; ;main.c: 123: APP_DeviceCustomHIDInitialize();
-"123
-[e ( _APP_DeviceCustomHIDInitialize ..  ]
-[; ;main.c: 124: break;
-"124
-[e $U 563  ]
-[; ;main.c: 126: case EVENT_SET_DESCRIPTOR:
-"126
-[e :U 570 ]
-[; ;main.c: 127: break;
-"127
-[e $U 563  ]
-[; ;main.c: 129: case EVENT_EP0_REQUEST:
-"129
-[e :U 571 ]
-[; ;main.c: 132: USBCheckHIDRequest();
-"132
-[e ( _USBCheckHIDRequest ..  ]
-[; ;main.c: 133: break;
-"133
-[e $U 563  ]
-[; ;main.c: 135: case EVENT_BUS_ERROR:
-"135
-[e :U 572 ]
-[; ;main.c: 136: break;
-"136
-[e $U 563  ]
-[; ;main.c: 138: case EVENT_TRANSFER_TERMINATED:
-"138
-[e :U 573 ]
-[; ;main.c: 139: break;
-"139
-[e $U 563  ]
-[; ;main.c: 141: default:
-"141
-[e :U 574 ]
-[; ;main.c: 142: break;
-"142
-[e $U 563  ]
-"143
-}
-[; ;main.c: 143: }
-[e $U 563  ]
+[; ;main.c: 85: {
 "85
+{
+[; ;main.c: 86: case EVENT_TRANSFER:
+"86
+[e :U 565 ]
+[; ;main.c: 87: break;
+"87
+[e $U 563  ]
+[; ;main.c: 89: case EVENT_SOF:
+"89
+[e :U 566 ]
+[; ;main.c: 93: break;
+"93
+[e $U 563  ]
+[; ;main.c: 95: case EVENT_SUSPEND:
+"95
+[e :U 567 ]
+[; ;main.c: 105: SYSTEM_Initialize(SYSTEM_STATE_USB_SUSPEND);
+"105
+[e ( _SYSTEM_Initialize (1 . `E4544 1 ]
+[; ;main.c: 106: break;
+"106
+[e $U 563  ]
+[; ;main.c: 108: case EVENT_RESUME:
+"108
+[e :U 568 ]
+[; ;main.c: 116: SYSTEM_Initialize(SYSTEM_STATE_USB_RESUME);
+"116
+[e ( _SYSTEM_Initialize (1 . `E4544 2 ]
+[; ;main.c: 117: break;
+"117
+[e $U 563  ]
+[; ;main.c: 119: case EVENT_CONFIGURED:
+"119
+[e :U 569 ]
+[; ;main.c: 122: APP_DeviceCustomHIDInitialize();
+"122
+[e ( _APP_DeviceCustomHIDInitialize ..  ]
+[; ;main.c: 123: break;
+"123
+[e $U 563  ]
+[; ;main.c: 125: case EVENT_SET_DESCRIPTOR:
+"125
+[e :U 570 ]
+[; ;main.c: 126: break;
+"126
+[e $U 563  ]
+[; ;main.c: 128: case EVENT_EP0_REQUEST:
+"128
+[e :U 571 ]
+[; ;main.c: 131: USBCheckHIDRequest();
+"131
+[e ( _USBCheckHIDRequest ..  ]
+[; ;main.c: 132: break;
+"132
+[e $U 563  ]
+[; ;main.c: 134: case EVENT_BUS_ERROR:
+"134
+[e :U 572 ]
+[; ;main.c: 135: break;
+"135
+[e $U 563  ]
+[; ;main.c: 137: case EVENT_TRANSFER_TERMINATED:
+"137
+[e :U 573 ]
+[; ;main.c: 138: break;
+"138
+[e $U 563  ]
+[; ;main.c: 140: default:
+"140
+[e :U 574 ]
+[; ;main.c: 141: break;
+"141
+[e $U 563  ]
+"142
+}
+[; ;main.c: 142: }
+[e $U 563  ]
+"84
 [e :U 564 ]
-[e [\ -> _event `i , $ -> . `E4779 16 `i 565
- , $ -> . `E4779 17 `i 566
- , $ -> . `E4779 19 `i 567
- , $ -> . `E4779 18 `i 568
- , $ -> . `E4847 0 `i 569
- , $ -> . `E4847 1 `i 570
- , $ -> . `E4847 2 `i 571
- , $ -> . `E4779 35 `i 572
- , $ -> . `E4847 4 `i 573
+[e [\ -> _event `i , $ -> . `E4753 16 `i 565
+ , $ -> . `E4753 17 `i 566
+ , $ -> . `E4753 19 `i 567
+ , $ -> . `E4753 18 `i 568
+ , $ -> . `E4821 0 `i 569
+ , $ -> . `E4821 1 `i 570
+ , $ -> . `E4821 2 `i 571
+ , $ -> . `E4753 35 `i 572
+ , $ -> . `E4821 4 `i 573
  574 ]
-"143
+"142
 [e :U 563 ]
-[; ;main.c: 144: return 1;
-"144
+[; ;main.c: 143: return 1;
+"143
 [e ) -> -> 1 `i `uc ]
 [e $UE 562  ]
-[; ;main.c: 145: }
-"145
+[; ;main.c: 144: }
+"144
 [e :UE 562 ]
 }

@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.36\dat\en_msgs.txt -cs \
   -h+dist/slave/production\FW_18F2550_slave1.X.production.sym \
   --cmf=dist/slave/production\FW_18F2550_slave1.X.production.cmf -z \
-  -Q18F2550 -oC:\Users\roberto\AppData\Local\Temp\s5h4.2 \
+  -Q18F2550 -oC:\Users\roberto\AppData\Local\Temp\s3hc.2 \
   -Mdist/slave/production/FW_18F2550_slave1.X.production.map -E1 -ver=XC8 \
   -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\roberto\AppData\Local\Temp\s5h4.obj \
+  C:\Users\roberto\AppData\Local\Temp\s3hc.obj \
   dist/slave/production\FW_18F2550_slave1.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\roberto\AppData\Local\Temp\s5h4.obj
+C:\Users\roberto\AppData\Local\Temp\s3hc.obj
                 end_init                             16       16        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -44,19 +44,18 @@ dist/slave/production\FW_18F2550_slave1.X.production.obj
                 intcode                               8        8        E        4       0
                 temp                                 18       18        1        1       1
                 intcode_body                         1A       1A       6E        4       0
-                text9                               164      164       3C        4       0
-                text8                               128      128       3C        4       0
-                text7                               224      224       18        4       0
-                text6                               258      258        A        4       0
-                text5                                DE       DE       4A        4       0
-                text4                               1A0      1A0       36        4       0
-                text3                               1D6      1D6       2E        4       0
+                text8                               168      168       3C        4       0
+                text7                               12C      12C       3C        4       0
+                text6                               1F2      1F2       18        4       0
+                text5                               21C      21C        E        4       0
+                text4                                DE       DE       4E        4       0
+                text3                               1A4      1A4       2E        4       0
                 text2                                88       88       56        4       0
-                text1                               204      204       20        4       0
-                text0                               24E      24E        A        4       0
+                text1                               1D2      1D2       20        4       0
+                text0                               22A      22A        A        4       0
                 cstackCOMRAM                          1        1       15        1       1
                 bssCOMRAM                            16       16        2        1       1
-                cinit                               23C      23C       12        4       0
+                cinit                               20A      20A       12        4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -66,17 +65,16 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        E         0
                 reset_vec                             0        0        4         0
                 intcode_body                         1A       1A       6E         0
-                text9                               164      164       3C         0
-                text8                               128      128       3C         0
-                text7                               224      224       18         0
-                text6                               258      258        A         0
-                text5                                DE       DE       4A         0
-                text4                               1A0      1A0       36         0
-                text3                               1D6      1D6       2E         0
+                text8                               168      168       3C         0
+                text7                               12C      12C       3C         0
+                text6                               1F2      1F2       18         0
+                text5                               21C      21C        E         0
+                text4                                DE       DE       4E         0
+                text3                               1A4      1A4       2E         0
                 text2                                88       88       56         0
-                text1                               204      204       20         0
-                text0                               24E      24E        A         0
-                cinit                               23C      23C       12         0
+                text1                               1D2      1D2       20         0
+                text0                               22A      22A        A         0
+                cinit                               20A      20A       12         0
 
         CLASS   CONST          
 
@@ -129,7 +127,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000018  000019         1       1  COMRAM  
-                intcode                        000008  00025A  000262         4       0  CODE    
+                intcode                        000008  00022C  000234         4       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -147,10 +145,10 @@ UNUSED ADDRESS RANGES
         BANK7            000700-0007FF              100
         BIGRAM           000019-0007FF              7E7
         CODE             000004-000007                4
-                         000262-007FFF             7D9E
+                         000234-007FFF             7DCC
         COMRAM           000019-00005F               47
         CONST            000004-000007                4
-                         000262-007FFF             7D9E
+                         000234-007FFF             7DCC
         EEDATA           F00000-F000FF              100
         MEDIUMCONST      000800-007FFF             7800
         RAM              000060-0007FF              100
@@ -161,15 +159,15 @@ UNUSED ADDRESS RANGES
                                   Symbol Table
 
 ?_SPI_R_DataRdySPI          cstackCOMRAM 00000F
+?_SPI_R_getcSPI             cstackCOMRAM 00000F
 APP_tick@p1                 cstackCOMRAM 000012
 APP_tick@p2                 cstackCOMRAM 000014
-LED_Enable@led              cstackCOMRAM 00000F
 PWM_R_setPWM1@val           cstackCOMRAM 00000F
 PWM_R_setPWM2@val           cstackCOMRAM 00000F
 SPI_R_OpenSPI@bus_mode      cstackCOMRAM 00000F
 SPI_R_OpenSPI@smp_phase     cstackCOMRAM 000010
 SPI_R_OpenSPI@sync_mode     cstackCOMRAM 000011
-SPI_R_getcSPI@TempVar       cstackCOMRAM 00000F
+SPI_R_getcSPI@TempVar       cstackCOMRAM 000011
 _ADCON0                     (abs)        000FC2
 _ADCON0bits                 (abs)        000FC2
 _ADCON1bits                 (abs)        000FC1
@@ -177,7 +175,7 @@ _ADCON2                     (abs)        000FC0
 _ADCON2bits                 (abs)        000FC0
 _ADRESH                     (abs)        000FC4
 _ADRESL                     (abs)        000FC3
-_APP_tick                   text5        0000DE
+_APP_tick                   text4        0000DE
 _CCP1CONbits                (abs)        000FBD
 _CCP1M2                     (abs)        007DEA
 _CCP1M3                     (abs)        007DEB
@@ -186,28 +184,29 @@ _CCP2M2                     (abs)        007DD2
 _CCP2M3                     (abs)        007DD3
 _CCPR1L                     (abs)        000FBE
 _CCPR2L                     (abs)        000FBB
-_LATBbits                   (abs)        000F8A
-_LED_Enable                 text4        0001A0
+_LATA                       (abs)        000F89
+_LATB                       (abs)        000F8A
 _PIR1bits                   (abs)        000F9E
-_PORTBbits                  (abs)        000F81
 _PR2                        (abs)        000FCB
-_PWM_R_OpenPWM              text3        0001D6
-_PWM_R_setPWM1              text9        000164
-_PWM_R_setPWM2              text8        000128
-_SPI_R_DataRdySPI           text7        000224
+_PWM_R_OpenPWM              text3        0001A4
+_PWM_R_setPWM1              text8        000168
+_PWM_R_setPWM2              text7        00012C
+_SPI_R_DataRdySPI           text6        0001F2
 _SPI_R_OpenSPI              text2        000088
-_SPI_R_getcSPI              text6        000258
+_SPI_R_getcSPI              text5        00021C
 _SSPBUF                     (abs)        000FC9
 _SSPCON1                    (abs)        000FC6
 _SSPCON1bits                (abs)        000FC6
 _SSPSTAT                    (abs)        000FC7
 _SSPSTATbits                (abs)        000FC7
-_SYSTEM_Initialize          text1        000204
+_SYSTEM_Initialize          text1        0001D2
 _SYS_InterruptHigh          intcode      000008
 _T2CKPS0                    (abs)        007E50
 _T2CKPS1                    (abs)        007E51
 _TMR2ON                     (abs)        007E52
+_TRISA                      (abs)        000F92
 _TRISAbits                  (abs)        000F92
+_TRISB                      (abs)        000F93
 _TRISBbits                  (abs)        000F93
 _TRISCbits                  (abs)        000F94
 __CFG_BOR$ON                (abs)        000000
@@ -307,7 +306,6 @@ __Htext5                    text5        000000
 __Htext6                    text6        000000
 __Htext7                    text7        000000
 __Htext8                    text8        000000
-__Htext9                    text9        000000
 __LRAM                      (abs)        000001
 __Labs1                     abs1         000000
 __Lbank0                    bank0        000000
@@ -377,7 +375,6 @@ __Ltext5                    text5        000000
 __Ltext6                    text6        000000
 __Ltext7                    text7        000000
 __Ltext8                    text8        000000
-__Ltext9                    text9        000000
 __S0                        (abs)        30000E
 __S1                        (abs)        000019
 __S2                        (abs)        000000
@@ -388,38 +385,35 @@ ___rparam_used              (abs)        000001
 ___sp                       stack        000000
 __accesstop                 (abs)        000060
 __activetblptr              (abs)        000002
-__end_of_APP_tick           text5        000128
-__end_of_LED_Enable         text4        0001D6
-__end_of_PWM_R_OpenPWM      text3        000204
-__end_of_PWM_R_setPWM1      text9        0001A0
-__end_of_PWM_R_setPWM2      text8        000164
-__end_of_SPI_R_DataRdySPI   text7        00023C
+__end_of_APP_tick           text4        00012C
+__end_of_PWM_R_OpenPWM      text3        0001D2
+__end_of_PWM_R_setPWM1      text8        0001A4
+__end_of_PWM_R_setPWM2      text7        000168
+__end_of_SPI_R_DataRdySPI   text6        00020A
 __end_of_SPI_R_OpenSPI      text2        0000DE
-__end_of_SPI_R_getcSPI      text6        000262
-__end_of_SYSTEM_Initialize  text1        000224
+__end_of_SPI_R_getcSPI      text5        00022A
+__end_of_SYSTEM_Initialize  text1        0001F2
 __end_of_SYS_InterruptHigh  intcode_body 000088
-__end_of__initialization    cinit        000240
-__end_of_main               text0        000258
-__initialization            cinit        00023C
+__end_of__initialization    cinit        00020E
+__end_of_main               text0        000234
+__initialization            cinit        00020A
 __mediumconst               mediumconst  000000
 __pbssCOMRAM                bssCOMRAM    000016
-__pcinit                    cinit        00023C
+__pcinit                    cinit        00020A
 __pcstackCOMRAM             cstackCOMRAM 000001
 __pintcode                  intcode      000008
 __pintcode_body             intcode_body 00001A
-__ptext0                    text0        00024E
-__ptext1                    text1        000204
+__ptext0                    text0        00022A
+__ptext1                    text1        0001D2
 __ptext2                    text2        000088
-__ptext3                    text3        0001D6
-__ptext4                    text4        0001A0
-__ptext5                    text5        0000DE
-__ptext6                    text6        000258
-__ptext7                    text7        000224
-__ptext8                    text8        000128
-__ptext9                    text9        000164
+__ptext3                    text3        0001A4
+__ptext4                    text4        0000DE
+__ptext5                    text5        00021C
+__ptext6                    text6        0001F2
+__ptext7                    text7        00012C
+__ptext8                    text8        000168
 __ramtop                    ramtop       000800
 __size_of_APP_tick          (abs)        000000
-__size_of_LED_Enable        (abs)        000000
 __size_of_PWM_R_OpenPWM     (abs)        000000
 __size_of_PWM_R_setPWM1     (abs)        000000
 __size_of_PWM_R_setPWM2     (abs)        000000
@@ -431,9 +425,9 @@ __size_of_SYS_InterruptHigh (abs)        000000
 __size_of_main              (abs)        000000
 __smallconst                smallconst   000000
 _cArr                       bssCOMRAM    000016
-_main                       text0        00024E
+_main                       text0        00022A
 btemp                       temp         000018
-end_of_initialization       cinit        000240
+end_of_initialization       cinit        00020E
 int$flags                   temp         000018
 int_func                    intcode_body 00001A
 intlevel0                   text         000000
@@ -443,7 +437,7 @@ intlevel3                   text         000000
 stackhi                     (abs)        0007FF
 stacklo                     (abs)        000060
 start                       init         000016
-start_initialization        cinit        00023C
+start_initialization        cinit        00020A
 
 
 FUNCTION INFORMATION:
@@ -480,7 +474,7 @@ Total ram usage:        0 bytes
 
  *************** function _SYSTEM_Initialize *****************
  Defined at:
-		line 58 in file "../src/slave1/system.c"
+		line 57 in file "../src/slave1/system.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -502,7 +496,6 @@ Total ram usage:        0 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    3
  This function calls:
-		_LED_Enable
 		_PWM_R_OpenPWM
 		_SPI_R_OpenSPI
  This function is called by:
@@ -512,7 +505,7 @@ Total ram usage:        0 bytes
 
  *************** function _SPI_R_OpenSPI *****************
  Defined at:
-		line 3 in file "../src/slave1/spi_r.c"
+		line 3 in file "../../../../_ELECTRONIC/inc/spi_r.c"
  Parameters:    Size  Location     Type
   sync_mode       1    wreg     unsigned char 
   bus_mode        1   14[COMRAM] unsigned char 
@@ -544,7 +537,7 @@ Total ram usage:        3 bytes
 
  *************** function _PWM_R_OpenPWM *****************
  Defined at:
-		line 17 in file "../src/slave1/pwm_r.c"
+		line 17 in file "../../../../_ELECTRONIC/inc/pwm_r.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -568,36 +561,6 @@ Total ram usage:        0 bytes
  This function calls:
 		_PWM_R_setPWM1
 		_PWM_R_setPWM2
- This function is called by:
-		_SYSTEM_Initialize
- This function uses a non-reentrant model
-
-
- *************** function _LED_Enable *****************
- Defined at:
-		line 257 in file "../src/slave1/leds.c"
- Parameters:    Size  Location     Type
-  led             1    wreg     enum E2
- Auto vars:     Size  Location     Type
-  led             1   14[COMRAM] enum E2
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         0       0       0       0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		Nothing
  This function is called by:
 		_SYSTEM_Initialize
  This function uses a non-reentrant model
@@ -639,25 +602,25 @@ Total ram usage:        4 bytes
 
  *************** function _SPI_R_getcSPI *****************
  Defined at:
-		line 58 in file "../src/slave1/spi_r.c"
+		line 58 in file "../../../../_ELECTRONIC/inc/spi_r.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  TempVar         1   14[COMRAM] unsigned char 
+  TempVar         1   16[COMRAM] unsigned char 
  Return value:  Size  Location     Type
-                  1    wreg      unsigned char 
+                  2   14[COMRAM] int 
  Registers used:
-		wreg, status,2
+		None
  Tracked objects:
 		On entry : 
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         0       0       0       0       0       0       0       0       0
+      Params:         2       0       0       0       0       0       0       0       0
       Locals:         1       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0       0       0       0
-Total ram usage:        1 bytes
+      Totals:         3       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    1
  This function calls:
@@ -670,7 +633,7 @@ Total ram usage:        1 bytes
 
  *************** function _SPI_R_DataRdySPI *****************
  Defined at:
-		line 51 in file "../src/slave1/spi_r.c"
+		line 51 in file "../../../../_ELECTRONIC/inc/spi_r.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -700,7 +663,7 @@ Total ram usage:        2 bytes
 
  *************** function _PWM_R_setPWM2 *****************
  Defined at:
-		line 11 in file "../src/slave1/pwm_r.c"
+		line 11 in file "../../../../_ELECTRONIC/inc/pwm_r.c"
  Parameters:    Size  Location     Type
   val             2   14[COMRAM] unsigned int 
  Auto vars:     Size  Location     Type
@@ -731,7 +694,7 @@ Total ram usage:        3 bytes
 
  *************** function _PWM_R_setPWM1 *****************
  Defined at:
-		line 5 in file "../src/slave1/pwm_r.c"
+		line 5 in file "../../../../_ELECTRONIC/inc/pwm_r.c"
  Parameters:    Size  Location     Type
   val             2   14[COMRAM] unsigned int 
  Auto vars:     Size  Location     Type
@@ -762,7 +725,7 @@ Total ram usage:        3 bytes
 
  *************** function _SYS_InterruptHigh *****************
  Defined at:
-		line 84 in file "../src/slave1/system.c"
+		line 80 in file "../src/slave1/system.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -793,43 +756,38 @@ Total ram usage:       14 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-../src/slave1/leds.c
-		_LED_Enable    		CODE           	01A0	0000	55
-
-../src/slave1/leds.c estimated size: 55
-
-../src/slave1/spi_r.c
+../../../../_ELECTRONIC/inc/spi_r.c
 		_SPI_R_OpenSPI 		CODE           	0088	0000	87
-		_SPI_R_DataRdySPI		CODE           	0224	0000	25
-		_SPI_R_getcSPI 		CODE           	0258	0000	11
+		_SPI_R_DataRdySPI		CODE           	01F2	0000	25
+		_SPI_R_getcSPI 		CODE           	021C	0000	15
 
-../src/slave1/spi_r.c estimated size: 123
+../../../../_ELECTRONIC/inc/spi_r.c estimated size: 127
 
 ../src/slave1/main.c
-		_main          		CODE           	024E	0000	11
+		_main          		CODE           	022A	0000	11
 
 ../src/slave1/main.c estimated size: 11
 
+../../../../_ELECTRONIC/inc/pwm_r.c
+		_PWM_R_setPWM1 		CODE           	0168	0000	61
+		_PWM_R_setPWM2 		CODE           	012C	0000	61
+		_PWM_R_OpenPWM 		CODE           	01A4	0000	47
+
+../../../../_ELECTRONIC/inc/pwm_r.c estimated size: 169
+
 ../src/slave1/app_slave1.c
-		_APP_tick      		CODE           	00DE	0000	75
+		_APP_tick      		CODE           	00DE	0000	79
 
-../src/slave1/app_slave1.c estimated size: 75
-
-../src/slave1/pwm_r.c
-		_PWM_R_setPWM1 		CODE           	0164	0000	61
-		_PWM_R_setPWM2 		CODE           	0128	0000	61
-		_PWM_R_OpenPWM 		CODE           	01D6	0000	47
-
-../src/slave1/pwm_r.c estimated size: 169
+../src/slave1/app_slave1.c estimated size: 79
 
 shared
-		__initialization		CODE           	023C	0000	5
+		__initialization		CODE           	020A	0000	5
 
 shared estimated size: 5
 
 ../src/slave1/system.c
 		_SYS_InterruptHigh		CODE           	0008	0000	125
-		_SYSTEM_Initialize		CODE           	0204	0000	33
+		_SYSTEM_Initialize		CODE           	01D2	0000	33
 
 ../src/slave1/system.c estimated size: 158
 

@@ -9,11 +9,8 @@
 ../src/master/inc/usb_hal_pic18.h  \
 ../src/master/inc/usb.h  \
 ../src/master/inc/usb_device.h  \
-../src/master/io_mapping.h  \
 ../src/master/system_config.h  \
 ../src/master/inc/usb_ch9.h  \
-../src/master/leds.h  \
 ../src/master/usb_config.h  \
 ../src/master/adc.h  \
-../src/master/fixed_address_memory.h  \
-../src/master/buttons.h 
+../src/master/fixed_address_memory.h 

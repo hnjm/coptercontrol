@@ -1,22 +1,66 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"58 ../src/master/system.c
-[c E4570 0 1 2 .. ]
-[n E4570 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
-"62
-[c E4547 0 1 2 3 4 .. ]
-[n E4547 . LED_NONE LED_D1 LED_D2 LED_D3 LED_D4  ]
-"129 ../src/master/leds.h
-[v _LED_Enable `(v ~T0 @X0 0 ef1`E4547 ]
-"4 ../src/master/spi_r.h
+"57 ../src/master/system.c
+[c E4544 0 1 2 .. ]
+[n E4544 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
+"3144 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"2807
+[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
+"3341
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"2924
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"3352
+[s S235 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S235 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"3362
+[s S236 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S236 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"3351
+[u S234 `S235 1 `S236 1 ]
+[n S234 . . . ]
+"3373
+[v _TRISBbits `VS234 ~T0 @X0 0 e@3987 ]
+"4 ../../../../_ELECTRONIC/inc\spi_r.h
 [v _SPI_R_OpenSPI `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"6 ../src/master/pwm_r.h
+"6 ../../../../_ELECTRONIC/inc\pwm_r.h
 [v _PWM_R_OpenPWM `(v ~T0 @X0 0 ef ]
 [v F4531 `(v ~T0 @X0 1 tf1`ul ]
 "156 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18.h
 [v __delay `JF4531 ~T0 @X0 0 e ]
 [p i __delay ]
-"94 ../src/master/leds.h
-[v _LED_Toggle `(v ~T0 @X0 0 ef1`E4547 ]
+"2930 C:\Program Files (x86)\Microchip\xc8\v1.36\include\pic18f2550.h
+[s S212 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S212 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"2940
+[s S213 :1 `uc 1 ]
+[n S213 . LB0 ]
+"2943
+[s S214 :1 `uc 1 :1 `uc 1 ]
+[n S214 . . LB1 ]
+"2947
+[s S215 :2 `uc 1 :1 `uc 1 ]
+[n S215 . . LB2 ]
+"2951
+[s S216 :3 `uc 1 :1 `uc 1 ]
+[n S216 . . LB3 ]
+"2955
+[s S217 :4 `uc 1 :1 `uc 1 ]
+[n S217 . . LB4 ]
+"2959
+[s S218 :5 `uc 1 :1 `uc 1 ]
+[n S218 . . LB5 ]
+"2963
+[s S219 :6 `uc 1 :1 `uc 1 ]
+[n S219 . . LB6 ]
+"2967
+[s S220 :7 `uc 1 :1 `uc 1 ]
+[n S220 . . LB7 ]
+"2929
+[u S211 `S212 1 `S213 1 `S214 1 `S215 1 `S216 1 `S217 1 `S218 1 `S219 1 `S220 1 ]
+[n S211 . . . . . . . . . . ]
+"2972
+[v _LATBbits `VS211 ~T0 @X0 0 e@3978 ]
 "298 ../src/master/inc\usb_device.h
 [v _USBDeviceTasks `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -4191,40 +4235,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;buttons.h: 29: typedef enum
-[; ;buttons.h: 30: {
-[; ;buttons.h: 31: BUTTON_NONE,
-[; ;buttons.h: 32: BUTTON_S2,
-[; ;buttons.h: 33: BUTTON_S3
-[; ;buttons.h: 35: } BUTTON;
-[; ;buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;leds.h: 29: typedef enum
-[; ;leds.h: 30: {
-[; ;leds.h: 31: LED_NONE,
-[; ;leds.h: 32: LED_D1,
-[; ;leds.h: 33: LED_D2,
-[; ;leds.h: 34: LED_D3,
-[; ;leds.h: 35: LED_D4
-[; ;leds.h: 38: } LED;
-[; ;leds.h: 58: void LED_On(LED led);
-[; ;leds.h: 76: void LED_Off(LED led);
-[; ;leds.h: 94: void LED_Toggle(LED led);
-[; ;leds.h: 112: bool LED_Get(LED led);
-[; ;leds.h: 129: void LED_Enable(LED led);
 [; ;power.h: 27: typedef enum
 [; ;power.h: 28: {
 [; ;power.h: 29: POWER_SOURCE_USB,
 [; ;power.h: 30: POWER_SOURCE_MAINS
 [; ;power.h: 31: } POWER_SOURCE;
 [; ;power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system.h: 40: typedef enum
-[; ;system.h: 41: {
-[; ;system.h: 42: SYSTEM_STATE_USB_START,
-[; ;system.h: 43: SYSTEM_STATE_USB_SUSPEND,
-[; ;system.h: 44: SYSTEM_STATE_USB_RESUME
-[; ;system.h: 45: } SYSTEM_STATE;
-[; ;system.h: 59: void SYSTEM_Initialize( SYSTEM_STATE state );
+[; ;system.h: 37: typedef enum
+[; ;system.h: 38: {
+[; ;system.h: 39: SYSTEM_STATE_USB_START,
+[; ;system.h: 40: SYSTEM_STATE_USB_SUSPEND,
+[; ;system.h: 41: SYSTEM_STATE_USB_RESUME
+[; ;system.h: 42: } SYSTEM_STATE;
+[; ;system.h: 56: void SYSTEM_Initialize( SYSTEM_STATE state );
 [; ;inc\usb_ch9.h: 69: typedef struct  _USB_DEVICE_DESCRIPTOR
 [; ;inc\usb_ch9.h: 70: {
 [; ;inc\usb_ch9.h: 71: uint8_t bLength;
@@ -4749,146 +4772,172 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\usb_hal.h: 531: unsigned int size );
 [; ;inc\usb_hal.h: 569: bool USBHALSetEpConfiguration ( uint8_t ep_num, uint16_t max_pkt_size, uint16_t flags );
 [; ;inc\usb_hal.h: 597: bool USBHALInitialize ( unsigned long flags );
-[; ;spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
-[; ;spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
-[; ;spi_r.h: 6: int SPI_R_DataRdySPI();
-[; ;spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
-[; ;pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
-[; ;pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
-[; ;pwm_r.h: 6: void PWM_R_OpenPWM();
-"18 ../src/master/system.c
+[; ;inc\spi_r.h: 4: void SPI_R_OpenSPI( unsigned char sync_mode, unsigned char bus_mode, unsigned char smp_phase);
+[; ;inc\spi_r.h: 5: void SPI_R_putsSPI( unsigned char *wrptr );
+[; ;inc\spi_r.h: 6: int SPI_R_DataRdySPI();
+[; ;inc\spi_r.h: 7: void SPI_R_getsSPI( unsigned char *rdptr, unsigned char length );
+[; ;inc\pwm_r.h: 4: void PWM_R_setPWM1(unsigned int val);
+[; ;inc\pwm_r.h: 5: void PWM_R_setPWM2(unsigned int val);
+[; ;inc\pwm_r.h: 6: void PWM_R_OpenPWM();
+"17 ../src/master/system.c
 [p x PLLDIV=1 ]
-"19
+"18
 [p x CPUDIV=OSC1_PLL2 ]
-"20
+"19
 [p x USBDIV=2 ]
-"21
+"20
 [p x FOSC=XTPLL_XT ]
-"22
+"21
 [p x FCMEN=OFF ]
-"23
+"22
 [p x IESO=OFF ]
-"24
+"23
 [p x PWRT=OFF ]
-"25
+"24
 [p x BOR=ON ]
-"26
+"25
 [p x BORV=3 ]
-"27
+"26
 [p x VREGEN=ON ]
-"28
+"27
 [p x WDT=OFF ]
-"29
+"28
 [p x WDTPS=32768 ]
-"30
+"29
 [p x MCLRE=ON ]
-"31
+"30
 [p x LPT1OSC=OFF ]
-"32
+"31
 [p x PBADEN=OFF ]
-"34
+"33
 [p x STVREN=ON ]
-"35
+"34
 [p x LVP=OFF ]
-"37
+"36
 [p x XINST=OFF ]
-"38
+"37
 [p x CP0=OFF ]
-"39
+"38
 [p x CP1=OFF ]
-"42
+"41
 [p x CPB=OFF ]
-"44
+"43
 [p x WRT0=OFF ]
-"45
+"44
 [p x WRT1=OFF ]
-"48
+"47
 [p x WRTB=OFF ]
-"49
+"48
 [p x WRTC=OFF ]
-"51
+"50
 [p x EBTR0=OFF ]
-"52
+"51
 [p x EBTR1=OFF ]
-"55
+"54
 [p x EBTRB=OFF ]
-"58
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef1`E4570 ]
+"57
+[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef1`E4544 ]
 {
-[; ;system.c: 58: void SYSTEM_Initialize( SYSTEM_STATE state ) {
+[; ;system.c: 57: void SYSTEM_Initialize( SYSTEM_STATE state ) {
 [e :U _SYSTEM_Initialize ]
-[v _state `E4570 ~T0 @X0 1 r1 ]
+[v _state `E4544 ~T0 @X0 1 r1 ]
 [f ]
-[; ;system.c: 59: switch(state) {
-"59
+[; ;system.c: 58: switch(state) {
+"58
 [e $U 556  ]
 {
-[; ;system.c: 60: case SYSTEM_STATE_USB_START:
-"60
-[e :U 557 ]
-[; ;system.c: 62: LED_Enable(LED_D2);
-"62
-[e ( _LED_Enable (1 . `E4547 2 ]
-[; ;system.c: 74: SPI_R_OpenSPI(0b00000001, 0b00000010, 0b00000000 );
-"74
-[e ( _SPI_R_OpenSPI (3 , , -> -> 1 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;system.c: 80: PWM_R_OpenPWM();
-"80
-[e ( _PWM_R_OpenPWM ..  ]
-[; ;system.c: 83: _delay((unsigned long)((100)*(4000000/4000.0)));
-"83
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;system.c: 84: LED_Toggle(LED_D2);
-"84
-[e ( _LED_Toggle (1 . `E4547 2 ]
-[; ;system.c: 85: _delay((unsigned long)((100)*(4000000/4000.0)));
-"85
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;system.c: 86: LED_Toggle(LED_D2);
-"86
-[e ( _LED_Toggle (1 . `E4547 2 ]
-[; ;system.c: 88: break;
-"88
-[e $U 555  ]
-[; ;system.c: 90: case SYSTEM_STATE_USB_SUSPEND:
-"90
-[e :U 558 ]
-[; ;system.c: 91: break;
-"91
-[e $U 555  ]
-[; ;system.c: 93: case SYSTEM_STATE_USB_RESUME:
-"93
-[e :U 559 ]
-[; ;system.c: 94: break;
-"94
-[e $U 555  ]
-"95
-}
-[; ;system.c: 95: }
-[e $U 555  ]
+[; ;system.c: 59: case SYSTEM_STATE_USB_START:
 "59
-[e :U 556 ]
-[e [\ _state , $ . `E4570 0 557
- , $ . `E4570 1 558
- , $ . `E4570 2 559
- 555 ]
+[e :U 557 ]
+[; ;system.c: 60: TRISA = 0xFF;
+"60
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;system.c: 61: LATA = 0x00;
+"61
+[e = _LATA -> -> 0 `i `uc ]
+[; ;system.c: 63: TRISB = 0xFF;
+"63
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;system.c: 64: LATB = 0x00;
+"64
+[e = _LATB -> -> 0 `i `uc ]
+[; ;system.c: 65: TRISBbits.TRISB2 = 0;
+"65
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;system.c: 77: SPI_R_OpenSPI(0b00000001, 0b00000010, 0b00000000 );
+"77
+[e ( _SPI_R_OpenSPI (3 , , -> -> 1 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;system.c: 83: PWM_R_OpenPWM();
+"83
+[e ( _PWM_R_OpenPWM ..  ]
+[; ;system.c: 86: for(unsigned char n = 0; n < 10; n++)
+"86
+{
+[v _n `uc ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `uc ]
+[e $ < -> _n `i -> 10 `i 558  ]
+[e $U 559  ]
+"87
+[e :U 558 ]
+[; ;system.c: 87: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"86
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i -> 10 `i 558  ]
+[e :U 559 ]
+"87
+}
+[; ;system.c: 89: LATBbits.LATB2 = 1;
+"89
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+[; ;system.c: 90: _delay((unsigned long)((100)*(4000000/4000.0)));
+"90
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;system.c: 91: LATBbits.LATB2 = 0;
+"91
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[; ;system.c: 93: break;
+"93
+[e $U 555  ]
+[; ;system.c: 95: case SYSTEM_STATE_USB_SUSPEND:
 "95
-[e :U 555 ]
-[; ;system.c: 96: }
+[e :U 561 ]
+[; ;system.c: 96: break;
 "96
+[e $U 555  ]
+[; ;system.c: 98: case SYSTEM_STATE_USB_RESUME:
+"98
+[e :U 562 ]
+[; ;system.c: 99: break;
+"99
+[e $U 555  ]
+"100
+}
+[; ;system.c: 100: }
+[e $U 555  ]
+"58
+[e :U 556 ]
+[e [\ _state , $ . `E4544 0 557
+ , $ . `E4544 1 561
+ , $ . `E4544 2 562
+ 555 ]
+"100
+[e :U 555 ]
+[; ;system.c: 101: }
+"101
 [e :UE 554 ]
 }
-[v F5193 `(v ~T0 @X0 1 tf ]
-"101
-[v _SYS_InterruptHigh `IF5193 ~T0 @X0 1 e ]
+[v F5168 `(v ~T0 @X0 1 tf ]
+"106
+[v _SYS_InterruptHigh `IF5168 ~T0 @X0 1 e ]
 {
-[; ;system.c: 101: void interrupt SYS_InterruptHigh(void) {
+[; ;system.c: 106: void interrupt SYS_InterruptHigh(void) {
 [e :U _SYS_InterruptHigh ]
 [f ]
-[; ;system.c: 103: USBDeviceTasks();
-"103
+[; ;system.c: 108: USBDeviceTasks();
+"108
 [e ( _USBDeviceTasks ..  ]
-[; ;system.c: 105: }
-"105
-[e :UE 560 ]
+[; ;system.c: 110: }
+"110
+[e :UE 563 ]
 }

@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"39 ../src/slave1/system.h
+"36 ../src/slave1/system.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "4 ../src/slave1/app_slave1.h
 [v _APP_tick `(v ~T0 @X0 0 ef ]
@@ -4176,34 +4176,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 156: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 158: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 160: extern __nonreentrant void _delay3(unsigned char);
-[; ;buttons.h: 29: typedef enum
-[; ;buttons.h: 30: {
-[; ;buttons.h: 31: BUTTON_NONE,
-[; ;buttons.h: 32: BUTTON_S2,
-[; ;buttons.h: 33: BUTTON_S3
-[; ;buttons.h: 35: } BUTTON;
-[; ;buttons.h: 54: bool BUTTON_IsPressed(BUTTON button);
-[; ;buttons.h: 72: void BUTTON_Enable(BUTTON button);
-[; ;leds.h: 29: typedef enum
-[; ;leds.h: 30: {
-[; ;leds.h: 31: LED_NONE,
-[; ;leds.h: 32: LED_D1,
-[; ;leds.h: 33: LED_D2,
-[; ;leds.h: 34: LED_D3,
-[; ;leds.h: 35: LED_D4
-[; ;leds.h: 38: } LED;
-[; ;leds.h: 58: void LED_On(LED led);
-[; ;leds.h: 76: void LED_Off(LED led);
-[; ;leds.h: 94: void LED_Toggle(LED led);
-[; ;leds.h: 112: bool LED_Get(LED led);
-[; ;leds.h: 129: void LED_Enable(LED led);
 [; ;power.h: 27: typedef enum
 [; ;power.h: 28: {
 [; ;power.h: 29: POWER_SOURCE_USB,
 [; ;power.h: 30: POWER_SOURCE_MAINS
 [; ;power.h: 31: } POWER_SOURCE;
 [; ;power.h: 46: POWER_SOURCE POWER_SourceGet(void);
-[; ;system.h: 39: void SYSTEM_Initialize();
+[; ;system.h: 36: void SYSTEM_Initialize();
 [; ;app_slave1.h: 4: void APP_tick();
 "5 ../src/slave1/main.c
 [v _main `(v ~T0 @X0 1 ef ]
