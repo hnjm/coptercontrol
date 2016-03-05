@@ -17,12 +17,7 @@ void APP_tick() {
      while(!SPI_R_DataRdySPI()) ;
     cArr[1] = SPI_R_getcSPI(); // read a single byte
 
-    //SPI_R_getsSPI(&cArr, 2);
-
-    uint16_t p1 = cArr[0];
-    uint16_t p2 = cArr[1];
-
-    PWM_R_setPWM1(p1); // left
-    PWM_R_setPWM2(p2); // right
+    PWM_R_setPWM1(cArr[0]); // left
+    PWM_R_setPWM2(cArr[1]); // right
 }
 

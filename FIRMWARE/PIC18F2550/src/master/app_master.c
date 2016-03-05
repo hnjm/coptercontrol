@@ -61,8 +61,6 @@ uint16_t currIddlePwm1 = 0;
 uint16_t currIddlePwm2 = 0;
 uint16_t currIddlePwm3 = 0;
 uint16_t currIddlePwm4 = 0;
-uint16_t p1;
-uint16_t p2;
 
 uint8_t LeftRight[2];
 uint8_t Left;
@@ -98,16 +96,13 @@ void APP_iddle() {
 void APP_tick() {
     if(HIDRxHandleBusy(USBOutHandle) == false) {
         switch(ReceivedDataBuffer[0]) {
-            case 0x80:  //Toggle LEDs command
+            /*case 0x80:  //Toggle LEDs command
                 //LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
-                break;
+                break;*/
 
             case 0x54:
-                p1 = ReceivedDataBuffer[1];
-                p2 = ReceivedDataBuffer[2];
-
-                PWM_R_setPWM1(p1); // front
-                PWM_R_setPWM2(p2); // back
+                PWM_R_setPWM1(ReceivedDataBuffer[1]); // front
+                PWM_R_setPWM2(ReceivedDataBuffer[2]); // back
 
                 // Send Left & right to slave 18F2550 by SPI
                 Left = ReceivedDataBuffer[3];
