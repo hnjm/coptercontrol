@@ -67,7 +67,6 @@ public class CopterControl extends GLSurfaceView implements GLSurfaceView.Render
 
 	private byte[] TxData = new byte[64];
 	int result = 0;
-	private Long time = 0L;
 	
 	private UsbEndpoint _endpointOUT = null;
 	private UsbDeviceConnection _connection;
@@ -330,46 +329,38 @@ public class CopterControl extends GLSurfaceView implements GLSurfaceView.Render
         			float[] m = new float[16];
         			SensorManager.getRotationMatrixFromVector(m, new float[]{event.values[0] * -1f, event.values[2], event.values[1]});
 
+
 					// SCEJ sets
         			nodeT.setRotationMatrix(m);
 
+
 					// UI sets
-					text_rotInfo.setText(	"X: " + new Float(event.values[1]).toString() + "\r\n" + // FRONT (0.0 | 0.5...) - BACK (0.0 | -0.5...) // only 90º
-											//new Float(event.values[2]).toString() + "\r\n" +
-											"Z: " + new Float(event.values[0]).toString() + "\r\n"); // LEFT (0.0 | 0.7...) - RIGHT (0.0 | -0.7...) // only 90º
+					// FRONT (0.0 | 0.5...) - BACK (0.0 | -0.5...) // only 90º
+					String FB = "X (F-B): " + new Float(event.values[1]).toString() + "\r\n";
+					// LEFT (0.0 | 0.5...) - RIGHT (0.0 | -0.5...) // only 90º
+					String LR = "Z (L-R): " + new Float(event.values[0]).toString() + "\r\n";
+					text_rotInfo.setText(FB+LR);
+
 
 					// USB sets
 					// 0.0 in -90º; 0.5 in 0º; 1.0 in 90º
-					Double front, back, left, right;
-					Double numX = event.values[1]+0.5;
-					Double numZ = event.values[0]+0.5;
-					if(event.values[1] >= 0.0) { // front
-						front = numX;
-						back = 1.0-numX;
-					} else { // back
-						numX = numX*-1.0;
-						back = numX;
-						front = 1.0-numX;
-					}
-					if(event.values[0] >= 0.0) { // left
-						left = numZ;
-						right = 1.0-numZ;
-					} else { // right
-						numZ = numZ*-1.0;
-						right = numZ;
-						left = 1.0-numZ;
-					}
+					Double numX, front, back, numZ, left, right;
 
-					front = front*255.0;
-					back = back*255.0;
-					left = left*255.0;
-					right = right*255.0;
+					numX = Math.min(0.5, Math.max(0.0, Math.abs(event.values[1])))+0.5; // 0.0 to 1.0
+					if(event.values[1] < 0.0) // front
+						numX *= -1.0;
 
-					Long now = System.currentTimeMillis();
-					//if((now-time) > 20L) {
-						time = now;
-						sendRotation(front, back, left, right);
-					//}
+					numZ = Math.min(0.5, Math.max(0.0, Math.abs(event.values[0])))+0.5; // 0.0 to 1.0
+					if(event.values[0] >= 0.0) // left
+						numZ *= -1.0;
+
+					front = (1.0-numX)*255.0;
+					back = (numX)*255.0;
+					left = (1.0-numZ)*255.0;
+					right = (numZ)*255.0;
+
+
+					sendRotation(front, back, left, right);
         		}
         	}
         	if(event.sensor.getType() == Sensor.TYPE_GRAVITY) {

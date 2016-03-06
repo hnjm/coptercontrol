@@ -17,7 +17,10 @@ void APP_tick() {
      while(!SPI_R_DataRdySPI()) ;
     cArr[1] = SPI_R_getcSPI(); // read a single byte
 
-    PWM_R_setPWM1(cArr[0]); // left
-    PWM_R_setPWM2(cArr[1]); // right
+    if(cArr[0] >=  0 && cArr[0] <= 255)
+        PWM_R_setPWM1(cArr[0]); // left
+    
+    if(cArr[1] >=  0 && cArr[1] <= 255)
+        PWM_R_setPWM2(cArr[1]); // right
 }
 

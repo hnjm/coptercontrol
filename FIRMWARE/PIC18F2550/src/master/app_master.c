@@ -67,28 +67,28 @@ uint8_t Left;
 uint8_t Right;
 
 void APP_iddle() {
-    currIddlePwm1++;
-    currIddlePwm2++;
-    currIddlePwm3++;
-    currIddlePwm4++;
-
-    if(currIddlePwm1 > 254) currIddlePwm1 = 0;
-    if(currIddlePwm2 > 254) currIddlePwm2 = 0;
-    if(currIddlePwm3 > 254) currIddlePwm3 = 0;
-    if(currIddlePwm4 > 254) currIddlePwm4 = 0;
-
     PWM_R_setPWM1(currIddlePwm1); // front
     PWM_R_setPWM2(currIddlePwm2); // back
 
     // Send Left & right to slave 18F2550 by SPI
     Left = currIddlePwm3;
     Right = currIddlePwm4;
-    LeftRight[0] = Left;
-    LeftRight[1] = Right;
+    LeftRight[0] = (Left >=  0 && Left <= 255) ? Left : 256;
+    LeftRight[1] = (Right >=  0 && Right <= 255) ? Right : 256;
     SPI_R_putsSPI(LeftRight);
 
     for(unsigned char n=0; n < 1; n++)
         __delay_ms(50);
+    
+    
+    currIddlePwm1++;
+    currIddlePwm2++;
+    currIddlePwm3++;
+    currIddlePwm4++;
+    if(currIddlePwm1 == 256) currIddlePwm1 = 0;
+    if(currIddlePwm2 == 256) currIddlePwm2 = 0;
+    if(currIddlePwm3 == 256) currIddlePwm3 = 0;
+    if(currIddlePwm4 == 256) currIddlePwm4 = 0;
 }
 
 
@@ -107,9 +107,8 @@ void APP_tick() {
                 // Send Left & right to slave 18F2550 by SPI
                 Left = ReceivedDataBuffer[3];
                 Right = ReceivedDataBuffer[4];
-
-                LeftRight[0] = Left;
-                LeftRight[1] = Right;
+                LeftRight[0] = (Left >=  0 && Left <= 255) ? Left : 256;
+                LeftRight[1] = (Right >=  0 && Right <= 255) ? Right : 256;
                 SPI_R_putsSPI(LeftRight);
 
                 break;
