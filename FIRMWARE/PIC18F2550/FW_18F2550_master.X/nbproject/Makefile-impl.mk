@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=FW_18F2550_master.X
 
 # Active Configuration
-DEFAULTCONF=master
+DEFAULTCONF=coptercontrol_master
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=master 
+ALLCONFS=coptercontrol_master 
 
 
 # build
@@ -45,13 +45,13 @@ ALLCONFS=master
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=master clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=coptercontrol_master clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=master build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=coptercontrol_master build
 
 
 

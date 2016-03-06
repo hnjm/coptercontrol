@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=FW_18F2550_slave1.X
 
 # Active Configuration
-DEFAULTCONF=slave
+DEFAULTCONF=coptercontrol_slave
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=slave 
+ALLCONFS=coptercontrol_slave 
 
 
 # build
@@ -45,13 +45,13 @@ ALLCONFS=slave
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=slave clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=coptercontrol_slave clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=slave build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=coptercontrol_slave build
 
 
 

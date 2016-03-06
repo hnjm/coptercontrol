@@ -1,17 +1,5 @@
 [
     {
-        "merged": "R:\\media\\roberto\\R_EXT_1000\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "R:\\media\\roberto\\R_EXT_1000\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\menu\\main.xml"
-    },
-    {
-        "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\menu\\main.xml"
-    },
-    {
-        "merged": "R:\\media\\roberto\\R_EXT_1000\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "R:\\media\\roberto\\R_EXT_1000\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android\\coptercontrol\\src\\main\\res\\menu\\main.xml"
-    },
-    {
         "merged": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android-brain\\coptercontrol\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "R:\\PROJECTS\\PROGRAMMING\\coptercontrol\\SOFTWARE\\android-brain\\coptercontrol\\src\\main\\res\\menu\\main.xml"
     }
