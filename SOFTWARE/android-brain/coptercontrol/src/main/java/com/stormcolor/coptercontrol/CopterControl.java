@@ -333,12 +333,21 @@ public class CopterControl extends GLSurfaceView implements GLSurfaceView.Render
 					// SCEJ sets
         			nodeT.setRotationMatrix(m);
 
+					float[] mo = new float[3];
+					//SensorManager.getOrientation(m, mo);
+
+
+					Vector3f frontv = new Vector3f(nodeT.mModelMatrix_Rotation[2], nodeT.mModelMatrix_Rotation[6], nodeT.mModelMatrix_Rotation[10]);
+					Vector3f leftv = new Vector3f(nodeT.mModelMatrix_Rotation[0], nodeT.mModelMatrix_Rotation[4], nodeT.mModelMatrix_Rotation[8]);
+					Vector3f Y = new Vector3f(0f, 1f, 0f);
+					float dFront = frontv.dot(Y)/2.0f;
+					float dLeft = leftv.dot(Y)/2.0f;
 
 					// UI sets
 					// FRONT (0.0 | 0.5...) - BACK (0.0 | -0.5...) // only 90º
-					String FB = "X (F-B): " + new Float(event.values[1]).toString() + "\r\n";
+					String FB = "X (Pitch F-B): " + new Float(dFront).toString() + "\r\n";
 					// LEFT (0.0 | 0.5...) - RIGHT (0.0 | -0.5...) // only 90º
-					String LR = "Z (L-R): " + new Float(event.values[0]).toString() + "\r\n";
+					String LR = "Z (Roll L-R): " + new Float(dLeft).toString() + "\r\n";
 					text_rotInfo.setText(FB+LR);
 
 
@@ -346,12 +355,12 @@ public class CopterControl extends GLSurfaceView implements GLSurfaceView.Render
 					// 0.0 in -90º; 0.5 in 0º; 1.0 in 90º
 					Double numX, front, back, numZ, left, right;
 
-					numX = Math.min(0.5, Math.max(0.0, Math.abs(event.values[1])))+0.5; // 0.0 to 1.0
-					if(event.values[1] < 0.0) // front
+					numX = Math.min(0.5, Math.max(0.0, Math.abs(dFront)))+0.5; // 0.0 to 1.0
+					if(dFront < 0.0) // front
 						numX *= -1.0;
 
-					numZ = Math.min(0.5, Math.max(0.0, Math.abs(event.values[0])))+0.5; // 0.0 to 1.0
-					if(event.values[0] >= 0.0) // left
+					numZ = Math.min(0.5, Math.max(0.0, Math.abs(dLeft)))+0.5; // 0.0 to 1.0
+					if(dLeft < 0.0) // left
 						numZ *= -1.0;
 
 					front = (1.0-numX)*255.0;
