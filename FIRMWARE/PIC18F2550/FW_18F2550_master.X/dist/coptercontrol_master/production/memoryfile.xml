@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/coptercontrol_master/production\FW_18F2550_master.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>7076</used>
+      <free>25692</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>2048</length>
+      <used>299</used>
+      <free>1749</free>
+    </memory>
+  </executable>
+</project>

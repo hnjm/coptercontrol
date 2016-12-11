@@ -22,6 +22,7 @@ Includes: <br />
 <img src="FIRMWARE/EXTRAS/capture-ISIS.jpg" /> <br />
 <img src="FIRMWARE/EXTRAS/capture-ARES.jpg" /> <br />
 <img src="FIRMWARE/EXTRAS/capture-3D.jpg" /> <br />
+[![ScreenShot](https://raw.github.com/stormcolor/coptercontrol/capture.jpg)](https://www.youtube.com/watch?v=sSCysgmM9ws) <br />
 
 Changelog: <br />
 - 1. Connection and communication between Android app and Master PIC <br />
@@ -29,10 +30,10 @@ Changelog: <br />
 - 3. Connection and communication between Master and Slave throught SPI <br />
 - 4. Activate 2 PWM in Slave according to Android gyroscope Z (Left/Right) sensor data <br />
 - 5. Proteus schematic <br />
+- 6. PCB & materials <br />
 <br />
  
 Todo´s: <br />
-- 6. PCB & materials <br />
 - 7. Testing with real engines (Stabilization pre-proccess. Find minor elevation forces (50%))<br />
 - 8. Fix stabilization accuracy (50%) using accelerometer <br />
 - 9. Android client application for the control of the Android server (the dron brain) using AppWarp <br />

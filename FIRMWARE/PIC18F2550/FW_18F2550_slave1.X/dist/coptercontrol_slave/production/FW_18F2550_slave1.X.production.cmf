@@ -11,6 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\roberto\AppData\Local\Temp\s53g.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 16 16 4 1
+config CONFIG 0 300000 300000 E 1
 $dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 cinit CODE 0 1FA 1FA 12 1
 intcode_body CODE 0 1A 1A 6E 1
@@ -27,11 +32,6 @@ cstackCOMRAM COMRAM 1 1 1 11 1
 temp COMRAM 1 14 14 1 1
 intcode CODE 0 8 8 E 1
 bssCOMRAM COMRAM 1 12 12 2 1
-$C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-idloc IDLOC 0 200000 200000 8 1
-reset_vec CODE 0 0 0 4 1
-end_init CODE 0 16 16 4 1
-config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -159,18 +159,18 @@ DC text2 CODE >42:R:\PROJECTS\PROGRAMMING/_ELECTRONIC/inc/spi_r.c
 21E text0 CODE >8:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/main.c
 21E text0 CODE >11:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/main.c
 222 text0 CODE >8:R:\PROJECTS\PROGRAMMING\coptercontrol\FIRMWARE\PIC18F2550/src/slave1/main.c
-1FA cinit CODE >2183:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FA cinit CODE >2185:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FA cinit CODE >2188:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FA cinit CODE >2200:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FC cinit CODE >2201:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FE cinit CODE >2207:C:\Users\roberto\AppData\Local\Temp\s1vc.
-1FE cinit CODE >2209:C:\Users\roberto\AppData\Local\Temp\s1vc.
-200 cinit CODE >2210:C:\Users\roberto\AppData\Local\Temp\s1vc.
-202 cinit CODE >2212:C:\Users\roberto\AppData\Local\Temp\s1vc.
-204 cinit CODE >2213:C:\Users\roberto\AppData\Local\Temp\s1vc.
-206 cinit CODE >2214:C:\Users\roberto\AppData\Local\Temp\s1vc.
-208 cinit CODE >2215:C:\Users\roberto\AppData\Local\Temp\s1vc.
+1FA cinit CODE >2183:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FA cinit CODE >2185:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FA cinit CODE >2188:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FA cinit CODE >2200:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FC cinit CODE >2201:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FE cinit CODE >2207:C:\Users\roberto\AppData\Local\Temp\s53g.
+1FE cinit CODE >2209:C:\Users\roberto\AppData\Local\Temp\s53g.
+200 cinit CODE >2210:C:\Users\roberto\AppData\Local\Temp\s53g.
+202 cinit CODE >2212:C:\Users\roberto\AppData\Local\Temp\s53g.
+204 cinit CODE >2213:C:\Users\roberto\AppData\Local\Temp\s53g.
+206 cinit CODE >2214:C:\Users\roberto\AppData\Local\Temp\s53g.
+208 cinit CODE >2215:C:\Users\roberto\AppData\Local\Temp\s53g.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -190,29 +190,29 @@ __Hspace_1 15 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.
 __Hspace_2 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __CFG_VREGEN$ON 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _LATA F89 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _LATB F8A 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+___sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s53g.obj
 _cArr 12 0 COMRAM 1 bssCOMRAM dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _main 21A 0 CODE 0 text0 dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 btemp 14 0 COMRAM 1 temp dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-start 16 0 CODE 0 init C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+start 16 0 CODE 0 init C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __size_of_main 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __size_of_PWM_R_OpenPWM 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __size_of_SYS_InterruptHigh 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Hpowerup 16 0 CODE 0 powerup dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-intlevel0 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-intlevel1 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-intlevel2 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-intlevel3 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+__accesstop 60 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s53g.obj
+intlevel0 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s53g.obj
+intlevel1 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s53g.obj
+intlevel2 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s53g.obj
+intlevel3 0 0 CODE 0 text C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __CFG_USBDIV$2 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
@@ -229,8 +229,8 @@ _ADCON0 FC2 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.pr
 _ADCON2 FC0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _ADRESH FC4 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _ADRESL FC3 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s53g.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\roberto\AppData\Local\Temp\s53g.obj
 _CCP1M2 7DEA 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _CCP1M3 7DEB 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _CCP2M2 7DD2 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
@@ -284,7 +284,7 @@ __Htext8 0 0 ABS 0 text8 dist/coptercontrol_slave/production\FW_18F2550_slave1.X
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 SPI_R_OpenSPI@sync_mode 11 0 COMRAM 1 cstackCOMRAM dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __Hcomram 0 0 ABS 0 comram dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
@@ -366,8 +366,8 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/coptercontrol_slave/production\FW_18F2550_sla
 __end_of_SPI_R_OpenSPI DE 0 CODE 0 text2 dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 _SPI_R_DataRdySPI 1E2 0 CODE 0 text6 dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s1vc.obj
-stacklo 60 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+stackhi 7FF 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s53g.obj
+stacklo 60 0 ABS 0 - C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __Lintcode 8 0 CODE 0 intcode dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
@@ -405,7 +405,7 @@ __ptext7 11C 0 CODE 0 text7 dist/coptercontrol_slave/production\FW_18F2550_slave
 __ptext8 158 0 CODE 0 text8 dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __end_of_SPI_R_getcSPI 21A 0 CODE 0 text5 dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\roberto\AppData\Local\Temp\s1vc.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\roberto\AppData\Local\Temp\s53g.obj
 __Lpowerup 16 0 CODE 0 powerup dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj
 __size_of_PWM_R_setPWM1 0 0 ABS 0 - dist/coptercontrol_slave/production\FW_18F2550_slave1.X.production.obj

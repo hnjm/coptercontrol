@@ -1,0 +1,19 @@
+ build/coptercontrol_master/production/_ext/120498020/app_master.d  \
+ build/coptercontrol_master/production/_ext/120498020/app_master.p1:  \
+ ../src/master/app_master.c  \
+../src/master/inc/usb_common.h  \
+../src/master/inc/usb_device_hid.h  \
+../src/master/inc/usb_hal.h  \
+../../../../_ELECTRONIC/inc/spi_r.h  \
+../src/master/system.h  \
+../src/master/power.h  \
+../src/master/inc/usb_hal_pic18.h  \
+../src/master/system.h  \
+../src/master/inc/usb.h  \
+../src/master/inc/usb_device.h  \
+../src/master/system_config.h  \
+../src/master/inc/usb_ch9.h  \
+../src/master/usb_config.h  \
+../src/master/adc.h  \
+../src/master/fixed_address_memory.h  \
+../../../../_ELECTRONIC/inc/pwm_r.h 
