@@ -22,7 +22,7 @@ Includes: <br />
 <img src="FIRMWARE/EXTRAS/capture-ISIS.jpg" /> <br />
 <img src="FIRMWARE/EXTRAS/capture-ARES.jpg" /> <br />
 <img src="FIRMWARE/EXTRAS/capture-3D.jpg" /> <br />
-[![ScreenShot](https://raw.github.com/stormcolor/coptercontrol/capture.jpg)](https://www.youtube.com/watch?v=sSCysgmM9ws) <br />
+[![ScreenShot](https://raw.github.com/stormcolor/coptercontrol/master/capture.jpg)](https://www.youtube.com/watch?v=sSCysgmM9ws) <br />
 
 Changelog: <br />
 - 1. Connection and communication between Android app and Master PIC <br />
